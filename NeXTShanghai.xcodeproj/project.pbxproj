@@ -29,7 +29,6 @@
 		554AEE242175BA91005F7847 /* TileIterator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED6D2175BA90005F7847 /* TileIterator.cc */; };
 		554AEE252175BA91005F7847 /* GameBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED6E2175BA90005F7847 /* GameBoardView.m */; };
 		554AEE272175BA91005F7847 /* NumberTile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED702175BA90005F7847 /* NumberTile.mm */; };
-		554AEE312175BA91005F7847 /* Shanghai_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDB32175BA90005F7847 /* Shanghai_main.m */; };
 		554AEE322175BA91005F7847 /* GameCoordinator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDB42175BA90005F7847 /* GameCoordinator.mm */; };
 		554AEE3A2175BA91005F7847 /* NumberTileArray.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDBE2175BA90005F7847 /* NumberTileArray.cc */; };
 		554AEE3E2175BA91005F7847 /* IntegerList.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC32175BA90005F7847 /* IntegerList.mm */; };
@@ -143,7 +142,6 @@
 		554AEDAD2175BA90005F7847 /* PlumTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlumTile.h; sourceTree = "<group>"; };
 		554AEDAE2175BA90005F7847 /* WinterSeasonTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinterSeasonTile.h; sourceTree = "<group>"; };
 		554AEDB22175BA90005F7847 /* TileCountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCountManager.h; sourceTree = "<group>"; };
-		554AEDB32175BA90005F7847 /* Shanghai_main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shanghai_main.m; sourceTree = "<group>"; };
 		554AEDB42175BA90005F7847 /* GameCoordinator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameCoordinator.mm; sourceTree = "<group>"; };
 		554AEDB52175BA90005F7847 /* TileCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCountView.h; sourceTree = "<group>"; };
 		554AEDBA2175BA90005F7847 /* InterfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceView.h; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 				554AED462175BA90005F7847 /* NumberTile.h */,
 				554AEDBE2175BA90005F7847 /* NumberTileArray.cc */,
 				554AED472175BA90005F7847 /* NumberTileArray.h */,
-				554AEDB32175BA90005F7847 /* Shanghai_main.m */,
 				554AEDCC2175BA90005F7847 /* Shanghai.iconheader */,
 				554AEDD62175BA90005F7847 /* Shanghai.info */,
 				554AEDCA2175BA90005F7847 /* SHAppManager.h */,
@@ -444,7 +441,6 @@
 				554AEE252175BA91005F7847 /* GameBoardView.m in Sources */,
 				554AEDF02175BA91005F7847 /* MiscColorView.m in Sources */,
 				554AED122175BA27005F7847 /* main.m in Sources */,
-				554AEE312175BA91005F7847 /* Shanghai_main.m in Sources */,
 				554AEE3E2175BA91005F7847 /* IntegerList.mm in Sources */,
 				554AEE162175BA91005F7847 /* TileCountManager.mm in Sources */,
 				554AEE4A2175BA91005F7847 /* Tile.mm in Sources */,
