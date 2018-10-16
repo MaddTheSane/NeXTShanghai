@@ -30,19 +30,18 @@
     IBOutlet NSWindow*		window;
     IBOutlet GameBoardView*	gameBoardView;
     IBOutlet TileCountView*	tileCountView;
-
 }
 
-												// This is the designated initializer
-												//	for this class.  This method creates
-												//	the Game Coordinator which sets off
-												//	a chain reaction of object creation.
+//! This is the designated initializer
+//! for this class.  This method creates
+//! the Game Coordinator which sets off
+//! a chain reaction of object creation.
 - (id)init;
 												// This object is the delegate of the
 												//	application.  This method completes
 												//	the initialization by creating the
 												//	Tile Count Manager and Game Coordinator.
-- appDidInit:sender;
+- (void)awakeFromNib;
 												// These methods are targets of buttons 
 												//	and views.  The interface translates
 												//	the Objective-C calls to C++ calls of
@@ -57,9 +56,9 @@
 - (void)gameBoardDraw;
 - (void)click:(NSPoint)aPoint;
 - (void)doubleClick:(NSPoint)aPoint;
-												// These are interface methods
-												//	between the Time Count's view
-												//	and the Tile Count Manager.
+//! These are interface methods
+//! between the Time Count's view
+//! and the Tile Count Manager.
 - (void)tileCountDraw;
 
 @end

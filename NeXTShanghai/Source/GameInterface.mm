@@ -33,8 +33,8 @@ extern "C" {
 
 
 
-- appDidInit:sender {
-
+- (void)awakeFromNib {
+	[super awakeFromNib];
 
 	assert( tileCountView );
 	assert( gameBoardView );
@@ -44,23 +44,21 @@ extern "C" {
 	
 	application_initialized = YES;
 	
-	[ tileCountView display ];
-	[ gameBoardView display ];
-
-	return self;
+	[ tileCountView setNeedsDisplay:YES ];
+	[ gameBoardView setNeedsDisplay:YES ];
 }
 
 
 - (void)undoClick:sender {
 
 
-	(( GameCoordinator* )gameCoordinator )->undoClick();
+	gameCoordinator->undoClick();
 }
 
 
 - (void)helpClick:sender {
 
-	(( GameCoordinator* )gameCoordinator )->helpClick();
+	gameCoordinator->helpClick();
 
 }
 
@@ -68,14 +66,14 @@ extern "C" {
 - (void)againClick:sender {
 
 
-	(( GameCoordinator* )gameCoordinator )->againClick();
+	gameCoordinator->againClick();
 
 }
 
 - (void)newClick:sender {
 
 
-	(( GameCoordinator* )gameCoordinator )->newClick();
+	gameCoordinator->newClick();
 
 }
 
@@ -84,7 +82,7 @@ extern "C" {
 
 
 	if( application_initialized )
-		(( GameCoordinator* )gameCoordinator )->drawImage();
+		gameCoordinator->drawImage();
 }
 
 
@@ -92,14 +90,14 @@ extern "C" {
 
 
 	if( application_initialized )
-		(( TileCountManager* )tileCountManager )->drawImage();
+		gameCoordinator->drawImage();
 }
 
 
 - (void)click:(NSPoint)aPoint {
 
 
-	(( GameCoordinator* )gameCoordinator )->click( aPoint );
+	gameCoordinator->click( aPoint );
 	
 }
 
@@ -107,7 +105,7 @@ extern "C" {
 - (void)doubleClick:(NSPoint)aPoint {
 
 
-	(( GameCoordinator* )gameCoordinator )->doubleClick( aPoint );
+	gameCoordinator->doubleClick( aPoint );
 
 }
 
