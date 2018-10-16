@@ -7,7 +7,7 @@
  * Note: To make the whole thing a little bit nicer I added some animation 
  *       stuff. In first place it was some kind of NeXTSTEP learning action. My
  *		 first step in the OOP-area. Doing this little Info object was so easy. 
- *		 NeXTSTEP is realy realy nice....no...itÂs great.
+ *		 NeXTSTEP is realy realy nice....no...itÂ´s great.
  * 		 The Info is unique for every App so I made not attempt to design a
  * 		 very reusable class. Anyway...it might be reused.
  *
@@ -16,22 +16,22 @@
  * Last modified: 	07.05.1994
  */
 
-#import <appkit/appkit.h>
+#import <AppKit/AppKit.h>
 
-@interface SHInfo:Object
+@interface SHInfo:NSObject
 {
-	id		panel;
-	id		imageButton;
-	id		textField;
+	IBOutlet NSPanel *panel;
+	IBOutlet id		imageButton;
+	IBOutlet id		textField;
 	
 	int		currentIcon;
 
-	id		appImage;			// Buttons containing the images.
-	id		appText;			// ...plus text.
-	id		tomiImage;
-	id		tomiText;
-	id		wolfyImage;
-	id		wolfyText;
+	IBOutlet id		appImage;			// Buttons containing the images.
+	IBOutlet id		appText;			// ...plus text.
+	IBOutlet id		tomiImage;
+	IBOutlet id		tomiText;
+	IBOutlet id		wolfyImage;
+	IBOutlet id		wolfyText;
 		
 	BOOL	animationRunning;
 	id		currentAnimator;
@@ -40,24 +40,24 @@
 
 - init;
 
-- makeKeyAndOrderFront:sender;
+- (IBAction)makeKeyAndOrderFront:sender;
 
 // Switching between icons. Triggered by buttons inside the Panel.
 
-- switchToNextIcon:sender;
-- switchToAppIcon:sender;
-- switchToTomiIcon:sender;
-- switchToWolfyIcon:sender;
+- (IBAction)switchToNextIcon:sender;
+- (IBAction)switchToAppIcon:sender;
+- (IBAction)switchToTomiIcon:sender;
+- (IBAction)switchToWolfyIcon:sender;
 
-- _switchTo:(int)aStyle with:aImageButton :aTextField;
+- (void)_switchTo:(int)aStyle with:aImageButton :aTextField;
 
-- startRandomAnimation:sender;
+- (IBAction)startRandomAnimation:sender;
 
 // Delegatemethods to stop a animation properly even when our window closes.
-// Attention. WeÂre the animators delegate and the windows delegate. 
+// Attention. WeÂ´re the animators delegate and the windows delegate. 
 
-- animationDidStop:sender;
-- windowWillClose:sender;
+- (void)animationDidStop:sender;
+- (void)windowWillClose:sender;
 
 @end
 

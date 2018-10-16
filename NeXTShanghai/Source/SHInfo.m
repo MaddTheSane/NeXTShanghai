@@ -14,7 +14,7 @@ Note:	For a detailed description please read the class documentation.
 -------------------------------------------------------------------------- */
 
 
-#import <SHInfo.h>
+#import "SHInfo.h"
 
 #define _InfoShowingAppIcon		1		// please use enum..
 #define _InfoShowingTomiIcon	2
@@ -37,49 +37,50 @@ Note:	For a detailed description please read the class documentation.
 	return self;
 }
 
-- makeKeyAndOrderFront:sender
+- (IBAction)makeKeyAndOrderFront:sender
 {
 	if( !panel )
 	{
-		if( [NXApp loadNibSection:"Info.nib" owner:self] == nil )
-			NXRunAlertPanel( NULL, "Couldn't load Info.nib",
-							 "OK", NULL, NULL );
+        if (![NSBundle loadNibNamed:@"Info" owner:self]) {
+            NSAlert *alert = [[NSAlert alloc] init];
+            alert.messageText = @"Couldn't load Info.nib";
+            alert.informativeText = @"Couldn't load Info.nib";
+            
+            [alert runModal];
+        }
 	}
 	[panel makeKeyAndOrderFront:self];
-	
-	return self;
 }
 
-- switchToNextIcon:sender
+- (IBAction)switchToNextIcon:sender
 {
 	switch( currentIcon )
 	{
 		case _InfoShowingAppIcon:
-			return [self switchToTomiIcon:self];
+            [self switchToTomiIcon:self];
 		case _InfoShowingTomiIcon:
-			return [self switchToWolfyIcon:self];
+            [self switchToWolfyIcon:self];
 		case _InfoShowingWolfyIcon:
-			return [self switchToAppIcon:self];
+            [self switchToAppIcon:self];
 	}
-	return self;
 }
 
-- switchToAppIcon:sender
+- (IBAction)switchToAppIcon:sender
 {
-	return [self _switchTo:_InfoShowingAppIcon with:appImage :appText];
+    [self _switchTo:_InfoShowingAppIcon with:appImage :appText];
 }
 
-- switchToTomiIcon:sender
+- (IBAction)switchToTomiIcon:sender
 {
-	return [self _switchTo:_InfoShowingTomiIcon with:tomiImage :tomiText];
+    [self _switchTo:_InfoShowingTomiIcon with:tomiImage :tomiText];
 }
 
-- switchToWolfyIcon:sender
+- (IBAction)switchToWolfyIcon:sender
 {
-	return [self _switchTo:_InfoShowingWolfyIcon with:wolfyImage :wolfyText];
+    [self _switchTo:_InfoShowingWolfyIcon with:wolfyImage :wolfyText];
 }
 
-- _switchTo:(int)aStyle with:aImageButton :aTextField
+- (void)_switchTo:(int)aStyle with:aImageButton :aTextField
 {
 	if( !animationRunning && currentIcon != aStyle )
 	{
@@ -87,14 +88,13 @@ Note:	For a detailed description please read the class documentation.
 		[textField setStringValue:[aTextField stringValue]];
 		currentIcon = aStyle;
 	}
-	return self;
 }
 
-- startRandomAnimation:sender
+- (IBAction)startRandomAnimation:sender
 {
 	// if there is no animation running right now...
 	
-	if( animationRunning ) return self;
+	if( animationRunning ) return;
 	
 	// register that a animation will run and choose a random animator-obj
 	// To be able to switch to a original Image we have to tell this object
@@ -108,27 +108,23 @@ Note:	For a detailed description please read the class documentation.
 		
 	[currentAnimator setDelegate:self];
 	[currentAnimator startAnimation:self];
-	return self;
 }
 
-- animationDidStop:sender
+- (IBAction)animationDidStop:sender
 {
 	// After the animation we have to switch to the original BeakerIcon
 	// we are also registered as the animators delegate.
 
 	animationRunning = NO;
 	[self switchToAppIcon:self];
-	return self;
 }
 
-- windowWillClose:sender
+- (void)windowWillClose:sender
 {
-	// WeÂre the InfoPanels delegate. So we can stop an animation even if it
+	// WeÂ´re the InfoPanels delegate. So we can stop an animation even if it
 	// has not finished yet.
 
 	if( animationRunning ) [currentAnimator stopAnimation];
-
-	return self;
 }
 
 @end
