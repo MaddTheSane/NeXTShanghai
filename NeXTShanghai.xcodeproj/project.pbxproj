@@ -15,7 +15,6 @@
 		554AEDF42175BA91005F7847 /* MiscPaperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED2A2175BA90005F7847 /* MiscPaperView.m */; };
 		554AEDF52175BA91005F7847 /* MiscColorView.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 554AED2B2175BA90005F7847 /* MiscColorView.rtf */; };
 		554AEDF62175BA91005F7847 /* MiscPaperView.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 554AED2D2175BA90005F7847 /* MiscPaperView.rtf */; };
-		554AEDF72175BA91005F7847 /* Info.nib in Resources */ = {isa = PBXBuildFile; fileRef = 554AED2E2175BA90005F7847 /* Info.nib */; };
 		554AEDF82175BA91005F7847 /* Shanghai.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554AED302175BA90005F7847 /* Shanghai.xib */; };
 		554AEE082175BA91005F7847 /* GameTile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED492175BA90005F7847 /* GameTile.mm */; };
 		554AEE0C2175BA91005F7847 /* GameTileArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED4E2175BA90005F7847 /* GameTileArray.mm */; };
@@ -212,18 +211,18 @@
 				554AED492175BA90005F7847 /* GameTile.mm */,
 				554AED512175BA90005F7847 /* GameTileArray.h */,
 				554AED4E2175BA90005F7847 /* GameTileArray.mm */,
-				554AED1F2175BA90005F7847 /* Help.mm */,
 				554AED1A2175BA90005F7847 /* Help.h */,
+				554AED1F2175BA90005F7847 /* Help.mm */,
 				554AED682175BA90005F7847 /* IntegerList.h */,
 				554AEDC32175BA90005F7847 /* IntegerList.mm */,
 				554AEDBA2175BA90005F7847 /* InterfaceView.h */,
 				554AED522175BA90005F7847 /* InterfaceView.m */,
 				554AED232175BA90005F7847 /* MiscPaperView.subproj */,
 				554AED652175BA90005F7847 /* mj.h */,
-				554AED702175BA90005F7847 /* NumberTile.mm */,
 				554AED462175BA90005F7847 /* NumberTile.h */,
-				554AEDBE2175BA90005F7847 /* NumberTileArray.mm */,
+				554AED702175BA90005F7847 /* NumberTile.mm */,
 				554AED472175BA90005F7847 /* NumberTileArray.h */,
+				554AEDBE2175BA90005F7847 /* NumberTileArray.mm */,
 				554AEDCA2175BA90005F7847 /* SHAppManager.h */,
 				554AED602175BA90005F7847 /* SHAppManager.m */,
 				554AED672175BA90005F7847 /* SHInfo.h */,
@@ -238,8 +237,8 @@
 				554AED5F2175BA90005F7847 /* TileDescription.mm */,
 				554AED1B2175BA90005F7847 /* TileDescriptionArray.h */,
 				554AEDC92175BA90005F7847 /* TileDescriptionArray.mm */,
-				554AED6D2175BA90005F7847 /* TileIterator.cc */,
 				554AEDC12175BA90005F7847 /* TileIterator.h */,
+				554AED6D2175BA90005F7847 /* TileIterator.cc */,
 				554AED782175BA90005F7847 /* Tiles */,
 			);
 			path = Source;
@@ -399,7 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				554AEDF82175BA91005F7847 /* Shanghai.xib in Resources */,
-				554AEDF72175BA91005F7847 /* Info.nib in Resources */,
 				554AED0C2175BA27005F7847 /* Assets.xcassets in Resources */,
 				554AEE5B2175BA91005F7847 /* GNU-General Public License in Resources */,
 				554AEE5D2175BA91005F7847 /* 1_IntroShanghai.rtfd in Resources */,

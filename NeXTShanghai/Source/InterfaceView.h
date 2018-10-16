@@ -23,15 +23,13 @@
 
 @interface InterfaceView:NSView {
 
-												// This is the Game Interface
-												//	object.  We have to use a generic ID
-												//	here otherwise the header files
-												//	would be cross dependent.
-    GameInterface	*gameInterface;
+	//! This is the Game Interface
+	//! object.
+    IBOutlet GameInterface	*gameInterface;
 }
 
-												// Sets up some additional View
-												//	defaults.
+//! Sets up some additional View
+//! defaults.
 - (instancetype)initWithFrame:(NSRect)frameRect;
 
 
