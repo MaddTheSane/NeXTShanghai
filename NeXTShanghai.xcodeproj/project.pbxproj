@@ -31,10 +31,8 @@
 		554AEE3A2175BA91005F7847 /* NumberTileArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDBE2175BA90005F7847 /* NumberTileArray.mm */; };
 		554AEE3E2175BA91005F7847 /* IntegerList.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC32175BA90005F7847 /* IntegerList.mm */; };
 		554AEE442175BA91005F7847 /* TileDescriptionArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC92175BA90005F7847 /* TileDescriptionArray.mm */; };
-		554AEE452175BA91005F7847 /* Shanghai.iconheader in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDCC2175BA90005F7847 /* Shanghai.iconheader */; };
 		554AEE462175BA91005F7847 /* GameInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDCD2175BA90005F7847 /* GameInterface.mm */; };
 		554AEE4A2175BA91005F7847 /* Tile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDD12175BA90005F7847 /* Tile.mm */; };
-		554AEE4F2175BA91005F7847 /* Shanghai.info in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDD62175BA90005F7847 /* Shanghai.info */; };
 		554AEE572175BA91005F7847 /* SHInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDDF2175BA90005F7847 /* SHInfo.m */; };
 		554AEE5B2175BA91005F7847 /* GNU-General Public License in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDE42175BA90005F7847 /* GNU-General Public License */; };
 		554AEE5C2175BA91005F7847 /* 2_ReleaseNotes.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDE52175BA90005F7847 /* 2_ReleaseNotes.rtfd */; };
@@ -58,7 +56,7 @@
 		554AED2B2175BA90005F7847 /* MiscColorView.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = MiscColorView.rtf; sourceTree = "<group>"; };
 		554AED2C2175BA90005F7847 /* MiscColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscColorView.h; sourceTree = "<group>"; };
 		554AED2D2175BA90005F7847 /* MiscPaperView.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = MiscPaperView.rtf; sourceTree = "<group>"; };
-		554AED2F2175BA90005F7847 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/Info.nib; sourceTree = "<group>"; };
+		554AED2F2175BA90005F7847 /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = en.lproj/Info.nib; sourceTree = "<group>"; };
 		554AED312175BA90005F7847 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Shanghai.xib; sourceTree = "<group>"; };
 		554AED442175BA90005F7847 /* AllNumberTiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllNumberTiles.h; sourceTree = "<group>"; };
 		554AED462175BA90005F7847 /* NumberTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberTile.h; sourceTree = "<group>"; };
@@ -146,16 +144,14 @@
 		554AEDC92175BA90005F7847 /* TileDescriptionArray.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TileDescriptionArray.mm; sourceTree = "<group>"; };
 		554AEDCA2175BA90005F7847 /* SHAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAppManager.h; sourceTree = "<group>"; };
 		554AEDCB2175BA90005F7847 /* TileDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileDescription.h; sourceTree = "<group>"; };
-		554AEDCC2175BA90005F7847 /* Shanghai.iconheader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shanghai.iconheader; sourceTree = "<group>"; };
 		554AEDCD2175BA90005F7847 /* GameInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameInterface.mm; sourceTree = "<group>"; };
 		554AEDD12175BA90005F7847 /* Tile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tile.mm; sourceTree = "<group>"; };
-		554AEDD62175BA90005F7847 /* Shanghai.info */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = Shanghai.info; sourceTree = "<group>"; };
 		554AEDDE2175BA90005F7847 /* GameBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoardView.h; sourceTree = "<group>"; };
 		554AEDDF2175BA90005F7847 /* SHInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHInfo.m; sourceTree = "<group>"; };
 		554AEDE42175BA90005F7847 /* GNU-General Public License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GNU-General Public License"; sourceTree = "<group>"; };
 		554AEDE52175BA90005F7847 /* 2_ReleaseNotes.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = 2_ReleaseNotes.rtfd; sourceTree = "<group>"; };
 		554AEDE62175BA90005F7847 /* 1_IntroShanghai.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = 1_IntroShanghai.rtfd; sourceTree = "<group>"; };
-		554AEE602175BB30005F7847 /* English */ = {isa = PBXFileReference; lastKnownFileType = folder; name = en; path = en.lproj/Help; sourceTree = "<group>"; };
+		554AEE602175BB30005F7847 /* en */ = {isa = PBXFileReference; lastKnownFileType = folder; name = en; path = en.lproj/Help; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +224,6 @@
 				554AED462175BA90005F7847 /* NumberTile.h */,
 				554AEDBE2175BA90005F7847 /* NumberTileArray.mm */,
 				554AED472175BA90005F7847 /* NumberTileArray.h */,
-				554AEDCC2175BA90005F7847 /* Shanghai.iconheader */,
-				554AEDD62175BA90005F7847 /* Shanghai.info */,
 				554AEDCA2175BA90005F7847 /* SHAppManager.h */,
 				554AED602175BA90005F7847 /* SHAppManager.m */,
 				554AED672175BA90005F7847 /* SHInfo.h */,
@@ -408,11 +402,9 @@
 				554AEDF72175BA91005F7847 /* Info.nib in Resources */,
 				554AED0C2175BA27005F7847 /* Assets.xcassets in Resources */,
 				554AEE5B2175BA91005F7847 /* GNU-General Public License in Resources */,
-				554AEE452175BA91005F7847 /* Shanghai.iconheader in Resources */,
 				554AEE5D2175BA91005F7847 /* 1_IntroShanghai.rtfd in Resources */,
 				554AEDF52175BA91005F7847 /* MiscColorView.rtf in Resources */,
 				554AEE612175BB30005F7847 /* Help in Resources */,
-				554AEE4F2175BA91005F7847 /* Shanghai.info in Resources */,
 				554AEDF62175BA91005F7847 /* MiscPaperView.rtf in Resources */,
 				554AEE5C2175BA91005F7847 /* 2_ReleaseNotes.rtfd in Resources */,
 			);
@@ -456,7 +448,7 @@
 		554AED2E2175BA90005F7847 /* Info.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				554AED2F2175BA90005F7847 /* English */,
+				554AED2F2175BA90005F7847 /* en */,
 			);
 			name = Info.nib;
 			sourceTree = "<group>";
@@ -472,7 +464,7 @@
 		554AEE5F2175BB30005F7847 /* Help */ = {
 			isa = PBXVariantGroup;
 			children = (
-				554AEE602175BB30005F7847 /* English */,
+				554AEE602175BB30005F7847 /* en */,
 			);
 			name = Help;
 			sourceTree = "<group>";
