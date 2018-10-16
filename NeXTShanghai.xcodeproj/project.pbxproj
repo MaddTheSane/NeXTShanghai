@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		554AED0A2175BA26005F7847 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED092175BA26005F7847 /* AppDelegate.m */; };
 		554AED0C2175BA27005F7847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554AED0B2175BA27005F7847 /* Assets.xcassets */; };
-		554AED0F2175BA27005F7847 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554AED0D2175BA27005F7847 /* MainMenu.xib */; };
 		554AED122175BA27005F7847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED112175BA27005F7847 /* main.m */; };
 		554AEDE92175BA91005F7847 /* TileCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED1D2175BA90005F7847 /* TileCountView.m */; };
 		554AEDEB2175BA91005F7847 /* Help.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED1F2175BA90005F7847 /* Help.mm */; };
@@ -30,7 +28,7 @@
 		554AEE252175BA91005F7847 /* GameBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED6E2175BA90005F7847 /* GameBoardView.m */; };
 		554AEE272175BA91005F7847 /* NumberTile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED702175BA90005F7847 /* NumberTile.mm */; };
 		554AEE322175BA91005F7847 /* GameCoordinator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDB42175BA90005F7847 /* GameCoordinator.mm */; };
-		554AEE3A2175BA91005F7847 /* NumberTileArray.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDBE2175BA90005F7847 /* NumberTileArray.cc */; };
+		554AEE3A2175BA91005F7847 /* NumberTileArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDBE2175BA90005F7847 /* NumberTileArray.mm */; };
 		554AEE3E2175BA91005F7847 /* IntegerList.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC32175BA90005F7847 /* IntegerList.mm */; };
 		554AEE442175BA91005F7847 /* TileDescriptionArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC92175BA90005F7847 /* TileDescriptionArray.mm */; };
 		554AEE452175BA91005F7847 /* Shanghai.iconheader in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDCC2175BA90005F7847 /* Shanghai.iconheader */; };
@@ -46,10 +44,7 @@
 
 /* Begin PBXFileReference section */
 		554AED052175BA26005F7847 /* NeXTShanghai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeXTShanghai.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		554AED082175BA26005F7847 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		554AED092175BA26005F7847 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		554AED0B2175BA27005F7847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		554AED0E2175BA27005F7847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		554AED102175BA27005F7847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		554AED112175BA27005F7847 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		554AED132175BA27005F7847 /* NeXTShanghai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NeXTShanghai.entitlements; sourceTree = "<group>"; };
@@ -145,7 +140,7 @@
 		554AEDB42175BA90005F7847 /* GameCoordinator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameCoordinator.mm; sourceTree = "<group>"; };
 		554AEDB52175BA90005F7847 /* TileCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCountView.h; sourceTree = "<group>"; };
 		554AEDBA2175BA90005F7847 /* InterfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceView.h; sourceTree = "<group>"; };
-		554AEDBE2175BA90005F7847 /* NumberTileArray.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NumberTileArray.cc; sourceTree = "<group>"; };
+		554AEDBE2175BA90005F7847 /* NumberTileArray.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NumberTileArray.mm; sourceTree = "<group>"; };
 		554AEDC12175BA90005F7847 /* TileIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileIterator.h; sourceTree = "<group>"; };
 		554AEDC32175BA90005F7847 /* IntegerList.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IntegerList.mm; sourceTree = "<group>"; };
 		554AEDC92175BA90005F7847 /* TileDescriptionArray.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TileDescriptionArray.mm; sourceTree = "<group>"; };
@@ -181,7 +176,7 @@
 				554AED062175BA26005F7847 /* Products */,
 			);
 			sourceTree = "<group>";
-			usesTabs = 0;
+			usesTabs = 1;
 		};
 		554AED062175BA26005F7847 /* Products */ = {
 			isa = PBXGroup;
@@ -197,10 +192,7 @@
 				554AEE6221766458005F7847 /* Resources */,
 				554AEDE32175BA90005F7847 /* Documentation */,
 				554AED192175BA90005F7847 /* Source */,
-				554AED082175BA26005F7847 /* AppDelegate.h */,
-				554AED092175BA26005F7847 /* AppDelegate.m */,
 				554AED0B2175BA27005F7847 /* Assets.xcassets */,
-				554AED0D2175BA27005F7847 /* MainMenu.xib */,
 				554AED102175BA27005F7847 /* Info.plist */,
 				554AED112175BA27005F7847 /* main.m */,
 				554AED132175BA27005F7847 /* NeXTShanghai.entitlements */,
@@ -234,7 +226,7 @@
 				554AED652175BA90005F7847 /* mj.h */,
 				554AED702175BA90005F7847 /* NumberTile.mm */,
 				554AED462175BA90005F7847 /* NumberTile.h */,
-				554AEDBE2175BA90005F7847 /* NumberTileArray.cc */,
+				554AEDBE2175BA90005F7847 /* NumberTileArray.mm */,
 				554AED472175BA90005F7847 /* NumberTileArray.h */,
 				554AEDCC2175BA90005F7847 /* Shanghai.iconheader */,
 				554AEDD62175BA90005F7847 /* Shanghai.info */,
@@ -415,7 +407,6 @@
 				554AEDF82175BA91005F7847 /* Shanghai.nib in Resources */,
 				554AEDF72175BA91005F7847 /* Info.nib in Resources */,
 				554AED0C2175BA27005F7847 /* Assets.xcassets in Resources */,
-				554AED0F2175BA27005F7847 /* MainMenu.xib in Resources */,
 				554AEE5B2175BA91005F7847 /* GNU-General Public License in Resources */,
 				554AEE452175BA91005F7847 /* Shanghai.iconheader in Resources */,
 				554AEE5D2175BA91005F7847 /* 1_IntroShanghai.rtfd in Resources */,
@@ -452,8 +443,7 @@
 				554AEE572175BA91005F7847 /* SHInfo.m in Sources */,
 				554AEE442175BA91005F7847 /* TileDescriptionArray.mm in Sources */,
 				554AEE242175BA91005F7847 /* TileIterator.cc in Sources */,
-				554AEE3A2175BA91005F7847 /* NumberTileArray.cc in Sources */,
-				554AED0A2175BA26005F7847 /* AppDelegate.m in Sources */,
+				554AEE3A2175BA91005F7847 /* NumberTileArray.mm in Sources */,
 				554AEE0E2175BA91005F7847 /* InterfaceView.m in Sources */,
 				554AEE082175BA91005F7847 /* GameTile.mm in Sources */,
 				554AEE1A2175BA91005F7847 /* TileDescription.mm in Sources */,
@@ -463,14 +453,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		554AED0D2175BA27005F7847 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				554AED0E2175BA27005F7847 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 		554AED2E2175BA90005F7847 /* Info.nib */ = {
 			isa = PBXVariantGroup;
 			children = (

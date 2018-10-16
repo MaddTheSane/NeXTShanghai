@@ -21,12 +21,9 @@
 #import	"TileDescriptionArray.h"
 
 
-extern "Objective-C" {
-#import	<appkit/appkit.h>
+#import	<AppKit/AppKit.h>
 
 #import	"GameBoardView.h"
-}
-
 
 class GameCoordinator {
 private:
@@ -65,15 +62,15 @@ public:
 												// As tiles are clicked they are selected
 												//	for removal.  A double click on a selected
 												//	set completes the removal.
-	void					click( const NXPoint* ),
-							doubleClick( const NXPoint* );
+	void					click( NSPoint ),
+							doubleClick( NSPoint );
 private:
 												// This method is used by the click methods
 												//	to return an index into the tile array
 												//	to a tile that corresponds to a point
 												//	on the Game Board.  This method returns
 												//	-1 if no tile is found.
-	int						tileForClick( const NXPoint* );
+	int						tileForClick( NSPoint );
 						
 private:
 												// This is another object passed in the
@@ -171,7 +168,7 @@ private:
 												//	index into tile_array.  This function
 												//	will return -1 if no tile is found
 												//	at the point.
-	int						findTileForPoint( NXPoint* );
+	int						findTileForPoint( NSPoint );
 
 public:
 												// These methods are called by the interface

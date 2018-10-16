@@ -9,11 +9,11 @@
 
 
 #import	"NumberTileArray.h"
-#import <AllNumberTiles.h>
+#import "AllNumberTiles.h"
 
 
 extern "C" {
-#import	<assert.h>
+#include	<assert.h>
 }
 
 

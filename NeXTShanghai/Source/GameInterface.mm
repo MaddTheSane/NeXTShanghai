@@ -12,6 +12,14 @@ extern "C" {
 
 
 @implementation GameInterface
+{
+    GameCoordinator     *gameCoordinator;
+    TileCountManager    *tileCountManager;
+    // This flag is used to prevent draw messages
+    //    from being sent to the C++ object before
+    //    the application has finished initializing.
+    BOOL            application_initialized;
+}
 
 - init {
 
@@ -43,75 +51,64 @@ extern "C" {
 }
 
 
-- undoClick:sender {
+- (void)undoClick:sender {
 
 
 	(( GameCoordinator* )gameCoordinator )->undoClick();
-	
-    return self;
 }
 
 
-- helpClick:sender {
+- (void)helpClick:sender {
 
 	(( GameCoordinator* )gameCoordinator )->helpClick();
 
-    return self;
 }
 
 
-- againClick:sender {
+- (void)againClick:sender {
 
 
 	(( GameCoordinator* )gameCoordinator )->againClick();
 
-    return self;
 }
 
-- newClick:sender {
+- (void)newClick:sender {
 
 
 	(( GameCoordinator* )gameCoordinator )->newClick();
 
-    return self;
 }
 
 
-- gameBoardDraw {
+- (void)gameBoardDraw {
 
 
 	if( application_initialized )
 		(( GameCoordinator* )gameCoordinator )->drawImage();
-	
-	return self;
 }
 
 
-- tileCountDraw {
+- (void)tileCountDraw {
 
 
 	if( application_initialized )
 		(( TileCountManager* )tileCountManager )->drawImage();
-	
-	return self;
 }
 
 
-- click:( const NXPoint * )aPoint {
+- (void)click:(NSPoint)aPoint {
 
 
 	(( GameCoordinator* )gameCoordinator )->click( aPoint );
 	
-	return self;
 }
 
 
-- doubleClick:( const NXPoint * )aPoint {
+- (void)doubleClick:(NSPoint)aPoint {
 
 
 	(( GameCoordinator* )gameCoordinator )->doubleClick( aPoint );
 
-	return self;
 }
 
 

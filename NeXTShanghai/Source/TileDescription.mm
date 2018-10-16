@@ -19,7 +19,7 @@ extern "C" {
 
 TileDescription::TileDescription( int loc ) {
 
-	int	my_loc_z;
+	int	my_loc_z = 0;
 	
 	
 												// Set up default cases.
@@ -326,7 +326,7 @@ IntegerList& TileDescription::coveredList( void ) {
 }
 
 
-NXPoint TileDescription::tileLocation( void ) {
+NSPoint TileDescription::tileLocation( void ) {
 		
 		
 	return my_loc;

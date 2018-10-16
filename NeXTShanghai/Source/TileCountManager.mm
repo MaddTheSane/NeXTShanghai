@@ -40,7 +40,7 @@ void TileCountManager::updateView( void ) {
 
 
 	[ my_view setNeedsDisplay:YES ];
-	[my_view displayFromOpaqueAncestor:0 :0 :NO ];
+	//[my_view displayFromOpaqueAncestor:0 :0 :NO ];
 }
 
 
@@ -91,8 +91,8 @@ void TileCountManager::drawImage( void ) {
 			i;
 			
 	
-	assert([ my_view isFocusView ]);
-	[ my_view	getBounds:&bounds ];
+	//assert([ my_view isFocusView ]);
+    bounds = my_view.bounds;
 	
 	for( i = 0; i < NUMBER_OF_DIGITS; ++i )  {
 		int		digit = tmp_value / ( int )pow( 10, ( NUMBER_OF_DIGITS - 1 - i ));

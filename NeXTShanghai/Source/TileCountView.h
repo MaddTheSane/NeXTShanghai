@@ -17,12 +17,6 @@
 
 #import "InterfaceView.h"
 
-@interface TileCountView:InterfaceView {
-
-}
-
-
-- drawSelf:(const NXRect *)rects :(int)rectCount;
-
+@interface TileCountView:InterfaceView
 
 @end

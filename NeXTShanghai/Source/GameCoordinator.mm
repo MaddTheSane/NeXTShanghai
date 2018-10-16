@@ -12,10 +12,12 @@
 #import	"TileIterator.h"
 
 extern "C" {
-#import	<assert.h>
-#import	<string.h>
+#include	<assert.h>
+#include	<string.h>
 }
 
+extern int NXArgc;
+extern char **NXArgv;
 
 GameCoordinator::GameCoordinator( GameBoardView* view, TileCountManager* manager ) {
 
@@ -80,13 +82,13 @@ void GameCoordinator::updateView( void ) {
 void GameCoordinator::drawImage( void ) {
 
 	BOOL didDrawTouchedTiles = NO;
-	NXPoint backgroundOrigin;
-	NXPoint aPoint;
-	NXRect	aClipRect;
-	NXPoint checkPoint;
-	NXRect	checkClipRect;
+	NSPoint backgroundOrigin;
+	NSPoint aPoint;
+	NSRect	aClipRect;
+	NSPoint checkPoint;
+	NSRect	checkClipRect;
 	
-	assert([ my_view isFocusView ]);
+	//assert([ my_view isFocusView ]);
 											// Have each tile that is marked as 
 											//	not removed to draw itself on the
 											//	Game Board.
@@ -119,13 +121,12 @@ void GameCoordinator::drawImage( void ) {
 			
 			// Make sure the clipping will work for more tiles !
 			
-			PSgsave();
-			PSrectclip( aClipRect.origin.x, aClipRect.origin.y, 
-						aClipRect.size.width, aClipRect.size.height );
+            [NSGraphicsContext saveGraphicsState];
+            [[NSBezierPath bezierPathWithRect:aClipRect] setClip];
 
 			// Draw the background is correct. This really is dirty, dirty, dirty !!!
 
-			[ [NXImage findImageNamed:"Background"] composite:NX_COPY toPoint:&backgroundOrigin ];
+			[[NSImage imageNamed:@"Background"] drawAtPoint:backgroundOrigin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1];
 			
 			
 			// Now draw all the tiles which are necessary for the right layering
@@ -140,7 +141,7 @@ void GameCoordinator::drawImage( void ) {
 					checkClipRect.size.width = TILE_WIDTH_WITH_SHADOW;
 					checkClipRect.size.height = TILE_HEIGHT;
 
-					if( NXIntersectsRect( &aClipRect, &checkClipRect ))
+					if( NSIntersectsRect( aClipRect, checkClipRect ))
 						tile_array[ t ].drawImage( checkPoint );
 				}
 			tile_array[ i ].markTouched( NO );	
@@ -148,7 +149,7 @@ void GameCoordinator::drawImage( void ) {
 			
 			// Get the WindowServer where we want it to be again
 			
-			PSgrestore();
+            [NSGraphicsContext restoreGraphicsState];
 		}
 	}
 	
@@ -157,7 +158,7 @@ void GameCoordinator::drawImage( void ) {
 	
 	if( !didDrawTouchedTiles )
 	{
-		[ [NXImage findImageNamed:"Background"] composite:NX_COPY toPoint:&backgroundOrigin ];
+		[[NSImage imageNamed:@"Background"] drawAtPoint:backgroundOrigin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1];
 	
 		for( int i = 0; i < tile_array.size(); ++i )
 			if( !tile_array[ i ].isRemoved())
@@ -205,7 +206,7 @@ void GameCoordinator::undoClick( void ) {
 
 		tile_count_manager->addTwo();
 	} else
-		NXBeep();
+		NSBeep();
 
 	unselectTiles();
 	updateView();
@@ -314,7 +315,7 @@ BOOL GameCoordinator::isFree( IntegerList& list ) {
 }
 
 
-void GameCoordinator::click( const NXPoint* aPoint ) {
+void GameCoordinator::click( NSPoint aPoint ) {
 
 	int	theTile = tileForClick( aPoint );
 	
@@ -370,13 +371,13 @@ void GameCoordinator::click( const NXPoint* aPoint ) {
 				
 			updateView();
 		} else
-			NXBeep();
+			NSBeep();
 	} else
-		NXBeep();
+		NSBeep();
 }
 
 
-void GameCoordinator::doubleClick( const NXPoint* aPoint ) {
+void GameCoordinator::doubleClick( NSPoint aPoint ) {
 
 	int	theTile = tileForClick( aPoint );
 
@@ -402,15 +403,15 @@ void GameCoordinator::doubleClick( const NXPoint* aPoint ) {
 				
 				unselectTiles();
 			} else
-				NXBeep();
+				NSBeep();
 		} else
-			NXBeep();
+			NSBeep();
 	} else
-		NXBeep();
+		NSBeep();
 }
 
 
-int GameCoordinator::tileForClick( const NXPoint* aPoint ) {
+int GameCoordinator::tileForClick( NSPoint aPoint ) {
 
 	TileIterator	index = ( NUMBER_OF_TILES - 1 );
 	int				theTile = -1;
@@ -418,11 +419,11 @@ int GameCoordinator::tileForClick( const NXPoint* aPoint ) {
 	
 	do { 
 		if( !tile_array[ index.value() ].isRemoved()) {
-			NXRect	r = {	0, 0,
+			NSRect	r = {	0, 0,
 							TILE_WIDTH - TILE_SHIFT, TILE_HEIGHT - TILE_SHIFT };
 		
 			r.origin = description_array[ index.value() ]->tileLocation();
-			if( NXPointInRect( aPoint, &r )) 
+			if( NSPointInRect( aPoint, r ))
 				theTile = index.value();
 		}
 	} while(( theTile == -1 ) && ( --index >= 0 ));

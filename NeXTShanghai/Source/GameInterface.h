@@ -30,20 +30,7 @@
     IBOutlet NSWindow*		window;
     IBOutlet GameBoardView*	gameBoardView;
     IBOutlet TileCountView*	tileCountView;
-												// These are actually C++ objects.
-												//	They are casted from void* type
-												//	to their respective object when
-												//	accesses.  
-												// This is done because this header
-												//	file is compiled with the Objective-C
-												//	compiler and the source is compiled 
-												//	with the C++.
-	void			*gameCoordinator,
-					*tileCountManager;
-												// This flag is used to prevent draw messages
-												//	from being sent to the C++ object before
-												//	the application has finished initializing.
-	BOOL			application_initialized;
+
 }
 
 												// This is the designated initializer
@@ -60,19 +47,19 @@
 												//	and views.  The interface translates
 												//	the Objective-C calls to C++ calls of
 												//	the apprpriate object.
-- undoClick:sender;
-- helpClick:sender;
-- againClick:sender;
-- newClick:sender;
+- (IBAction)undoClick:sender;
+- (IBAction)helpClick:sender;
+- (IBAction)againClick:sender;
+- (IBAction)newClick:sender;
 												// These are interface methods
 												//	between the Game Board's
 												//	view and the Game Coordinator.
-- gameBoardDraw;
-- click:( const NXPoint * )aPoint;
-- doubleClick:( const NXPoint * )aPoint;
+- (void)gameBoardDraw;
+- (void)click:(NSPoint)aPoint;
+- (void)doubleClick:(NSPoint)aPoint;
 												// These are interface methods
 												//	between the Time Count's view
 												//	and the Tile Count Manager.
-- tileCountDraw;
+- (void)tileCountDraw;
 
 @end

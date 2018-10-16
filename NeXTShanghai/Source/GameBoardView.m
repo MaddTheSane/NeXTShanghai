@@ -12,43 +12,38 @@
 
 #import "GameBoardView.h"
 #import	"GameInterface.h"
-#import <appkit/graphics.h>
-#import	<dpsclient/psops.h>
+#import <AppKit/AppKit.h>
 
-#import	<assert.h>
+#include	<assert.h>
 
 
 @implementation GameBoardView
 
 
-- mouseDown:( NXEvent* )theEvent {
+- (void)mouseDown:(NSEvent *)theEvent {
 
-	NXPoint	clickPoint = theEvent->location;
+	NSPoint	clickPoint = theEvent.locationInWindow;
 	
 	
-	[ self convertPoint:&clickPoint fromView:nil];
+	clickPoint = [ self convertPoint:clickPoint fromView:nil];
 	
-	if( theEvent->data.mouse.click == 1 )
-		[( GameInterface* )gameInterface click:&clickPoint];
+	if( theEvent.clickCount == 1 )
+		[( GameInterface* )gameInterface click:clickPoint];
 	
 	else
-		if( theEvent->data.mouse.click == 2 )
-			[( GameInterface* )gameInterface doubleClick:&clickPoint];
-
-	return self;
+		if( theEvent.clickCount == 2 )
+			[( GameInterface* )gameInterface doubleClick:clickPoint];
 }
 
 
-- drawSelf:(const NXRect *)rects :(int)rectCount {
+- (void)drawRect:(NSRect)dirtyRect {
 
 	
 	assert( gameInterface );
 	
 //	PSsetgray( NX_WHITE );
 //	NXRectFillList( rects, rectCount );
-	[( GameInterface* )gameInterface gameBoardDraw ];
-	
-	return self;
+	[gameInterface gameBoardDraw ];
 }
 
 

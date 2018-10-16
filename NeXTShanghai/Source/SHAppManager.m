@@ -11,14 +11,13 @@
  * Last modified: 	07.05.1994
  */
 
-#import <SHAppManager.h>
-#import <SHInfo.h>
-
-#import <misckit/misckit.h>
+#import "SHAppManager.h"
+#import "SHInfo.h"
+#import <Cocoa/Cocoa.h>
 
 @implementation SHAppManager
 
-- appWillInit:sender
+- (void)applicationWillFinishLaunching:(NSNotification *)notification
 {
 	// This is the init part we need to pass before we get the messages that
 	// we have to open some files.
@@ -27,16 +26,14 @@
 	// preferences = [CEPreferencesManager new];
 	
 	[self _readPreferences];
-	return self;
 }
 
-- appDidInit:sender
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
 	// This is some kind of late init. These object are need for working but
 	// not for reading the classes or having a class initialized.
 
 	
-	return self;
 }
 
 - (BOOL)appAcceptsAnotherFile:sender
@@ -45,27 +42,25 @@
 	return NO;
 }
 
-- appDidBecomeActive:sender
+- (void)applicationDidBecomeActive:(NSNotification *)notification
 {
-	return self;
 }
 
-- appWillTerminate:sender
+- (void)applicationWillTerminate:(NSNotification *)notification
 {
 	// Now lets see what we have...ask every window what is going on.
-	return self;
 }
 
-- showInfo:sender
+- (IBAction)showInfo:sender
 {
 	if( !info ) info = [SHInfo new];
 		
 	[info makeKeyAndOrderFront:self];
-	return self;
 }
 
-- sendSuggestion:sender
+- (IBAction)sendSuggestion:sender
 {
+#if 0
 	id	mailer;
 	id	tomiAdr;
 	id	subject;
@@ -87,12 +82,14 @@
 	[subject free];
 	
 	return self;
+#else
+    NSBeep();
+#endif
 }
 
-- showPreferences:sender
+- (IBAction)showPreferences:sender
 {
 //	if( preferences ) [preferences makeKeyAndOrderFront:self];
-	return self;
 }
 
 - preferences
@@ -100,9 +97,9 @@
 	return self;
 }
 
-- _readPreferences
+- (void)_readPreferences
 {
-	return self;
+
 }
 
 @end

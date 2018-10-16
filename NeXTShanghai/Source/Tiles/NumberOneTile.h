@@ -8,7 +8,7 @@
  $Log$
  */
 
-#import	<NumberTile.h>
+#import "NumberTile.h"
 
 class NumberOneTile : public NumberTile {
 

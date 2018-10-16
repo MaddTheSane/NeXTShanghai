@@ -12,8 +12,7 @@
 
 #import "TileCountView.h"
 #import	"GameInterface.h"
-#import <appkit/graphics.h>
-#import	<dpsclient/psops.h>
+#import <Cocoa/Cocoa.h>
 
 #import	<assert.h>
 
@@ -21,16 +20,14 @@
 @implementation TileCountView
 
 
-- drawSelf:(const NXRect *)rects :(int)rectCount {
-
+- (void)drawRect:(NSRect)dirtyRect
+{
 	
 	assert( gameInterface );
 	
 //	PSsetgray( NX_WHITE );
 //	NXRectFillList( rects, rectCount );
 	[( GameInterface* )gameInterface tileCountDraw ];
-	
-	return self;
 }
 
 

@@ -10,29 +10,27 @@
  * Last modified: 	07.05.1994
  */
 
-#import <appkit/appkit.h>
+#import <Cocoa/Cocoa.h>
 
-@interface SHAppManager:Object
+@class SHInfo;
+
+@interface SHAppManager:NSObject <NSApplicationDelegate>
 {
-	id	info;
-	id	preferences;
+	IBOutlet SHInfo	*info;
+	IBOutlet id	preferences;
 }
 
 // Some methods need to get the app started..
 
-- appWillInit:sender;
-- appDidInit:sender;
 - (BOOL)appAcceptsAnotherFile:sender;
-- appDidBecomeActive:sender;
-- appWillTerminate:sender;
 
 // Here we do the handling of our Panels & Tools
 
-- showInfo:sender;
-- sendSuggestion:sender;
-- showPreferences:sender;
+- (IBAction)showInfo:sender;
+- (IBAction)sendSuggestion:sender;
+- (IBAction)showPreferences:sender;
 - preferences;
-- _readPreferences;
+- (void)_readPreferences;
 
 @end
 

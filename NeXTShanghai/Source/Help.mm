@@ -8,12 +8,10 @@
 
 #import	"Help.h"
 
-extern "Objective-C" {
-#import <appkit/appkit.h>
-}
+#import <AppKit/AppKit.h>
 
 extern "C" {
-#import	<assert.h>
+#include <assert.h>
 
 #import	"mj.h"
 }
@@ -65,9 +63,9 @@ void Help::helpClick( GameTileArray& board ) {
 												//	next tile.
 			++my_iterator;
 		} else
-			NXBeep();
+			NSBeep();
 	} else
-		NXBeep();
+		NSBeep();
 }
 
 

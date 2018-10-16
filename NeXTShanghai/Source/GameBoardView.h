@@ -27,11 +27,11 @@
 												//	overrides the mouseDown: method such
 												//	that click: and doubleClick: methods
 												//	can be sent to the interface object.
-- mouseDown:( NXEvent* )theEvent;
+//- mouseDown:( NXEvent* )theEvent;
 												// This object paints itself which and 
 												//	informs the interface object to draw
 												//	the tiles.
-- drawSelf:(const NXRect *)rects :(int)rectCount;
+//- drawSelf:(const NXRect *)rects :(int)rectCount;
 
 
 @end
