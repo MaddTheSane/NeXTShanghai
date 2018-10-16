@@ -12,7 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Shanghai" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" animationBehavior="default" id="9" userLabel="GameBoard" customClass="Window">
+        <window title="Shanghai" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" animationBehavior="default" id="9" userLabel="GameBoard">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="142" y="124" width="785" height="579"/>
@@ -104,20 +104,39 @@
                 <menuItem title="Info" id="12">
                     <menu key="submenu" title="Info" id="35">
                         <items>
-                            <menuItem title="Info Panel..." id="16">
+                            <menuItem title="About NeXTShanghai" id="16">
                                 <connections>
                                     <action selector="showInfo:" target="14" id="80"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Suggestion..." id="15">
+                            <menuItem isSeparatorItem="YES" id="9ot-9X-uU6"/>
+                            <menuItem title="Preferences..." keyEquivalent="," id="4"/>
+                            <menuItem isSeparatorItem="YES" id="8BG-vC-0Y5"/>
+                            <menuItem title="Services" id="37">
+                                <menu key="submenu" title="Services" systemMenu="services" id="51"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="15t-W4-4yl"/>
+                            <menuItem title="Hide NeXTShanghai" keyEquivalent="h" id="10">
                                 <connections>
-                                    <action selector="sendSuggestion:" target="14" id="81"/>
+                                    <action selector="hide:" target="-2" id="63"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Preferences..." id="4"/>
-                            <menuItem title="Help..." keyEquivalent="?" id="26">
+                            <menuItem title="Hide Others" keyEquivalent="h" id="tiO-Kb-I5F">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="75"/>
+                                    <action selector="hideOtherApplications:" target="-2" id="yyF-ZX-eCN"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="Z4z-dX-LXO">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-2" id="2FH-Xn-RzP"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="s0u-BL-BZm"/>
+                            <menuItem title="Quit NeXTShanghai" keyEquivalent="q" id="44">
+                                <connections>
+                                    <action selector="terminate:" target="-2" id="64"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -129,6 +148,11 @@
                             <menuItem title="New" keyEquivalent="n" id="25">
                                 <connections>
                                     <action selector="newClick:" target="33" id="77"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Close Window" keyEquivalent="w" id="60">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="83"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Undo Move" keyEquivalent="z" id="58">
@@ -188,36 +212,36 @@
                 <menuItem title="Windows" id="55">
                     <menu key="submenu" title="Windows" systemMenu="window" id="45">
                         <items>
-                            <menuItem title="Arrange in Front" id="13">
-                                <connections>
-                                    <action selector="arrangeInFront:" target="-1" id="84"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Miniaturize Window" keyEquivalent="m" id="18">
+                            <menuItem title="Minimize" keyEquivalent="m" id="18">
                                 <connections>
                                     <action selector="performMiniaturize:" target="-1" id="82"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Close Window" keyEquivalent="w" id="60">
+                            <menuItem isSeparatorItem="YES" id="Jez-OS-tRc"/>
+                            <menuItem title="Bring All to Front" id="13">
                                 <connections>
-                                    <action selector="performClose:" target="-1" id="83"/>
+                                    <action selector="arrangeInFront:" target="-1" id="84"/>
                                 </connections>
                             </menuItem>
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Services" id="37">
-                    <menu key="submenu" title="Services" systemMenu="services" id="51"/>
-                </menuItem>
-                <menuItem title="Hide" keyEquivalent="h" id="10">
-                    <connections>
-                        <action selector="hide:" target="-2" id="63"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Quit" keyEquivalent="q" id="44">
-                    <connections>
-                        <action selector="terminate:" target="-2" id="64"/>
-                    </connections>
+                <menuItem title="Help" id="tgL-vq-axi">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="Avt-RC-NQ0">
+                        <items>
+                            <menuItem title="NeXTShanghai Help" keyEquivalent="?" id="26">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="75"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Send Suggestion..." id="15">
+                                <connections>
+                                    <action selector="sendSuggestion:" target="14" id="81"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                 </menuItem>
             </items>
         </menu>
@@ -228,7 +252,7 @@
                 <outlet property="window" destination="9" id="71"/>
             </connections>
         </customObject>
-        <window title="Info" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="59" userLabel="InfoPanel" customClass="Panel">
+        <window title="Info" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="59" userLabel="InfoPanel" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="297" y="506" width="568" height="192"/>
@@ -289,7 +313,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" baseWritingDirection="leftToRight" usesFontPanel="YES" usesRuler="YES" spellingCorrection="YES" smartInsertDelete="YES" id="105">
-                                    <rect key="frame" x="0.0" y="0.0" width="273" height="336"/>
+                                    <rect key="frame" x="0.0" y="-26" width="273" height="336"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
