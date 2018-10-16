@@ -49,7 +49,7 @@
 		554AEE172175BA91005F7847 /* s_winter.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED5B2175BA90005F7847 /* s_winter.tiff */; };
 		554AEE182175BA91005F7847 /* Background.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED5C2175BA90005F7847 /* Background.tiff */; };
 		554AEE192175BA91005F7847 /* d_red_bild.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED5E2175BA90005F7847 /* d_red_bild.tiff */; };
-		554AEE1A2175BA91005F7847 /* TileDescription.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED5F2175BA90005F7847 /* TileDescription.cc */; };
+		554AEE1A2175BA91005F7847 /* TileDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED5F2175BA90005F7847 /* TileDescription.mm */; };
 		554AEE1B2175BA91005F7847 /* SHAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED602175BA90005F7847 /* SHAppManager.m */; };
 		554AEE1C2175BA91005F7847 /* s_autumn.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED612175BA90005F7847 /* s_autumn.tiff */; };
 		554AEE1D2175BA91005F7847 /* BoardScramble.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED622175BA90005F7847 /* BoardScramble.mm */; };
@@ -89,7 +89,7 @@
 		554AEE402175BA91005F7847 /* circ2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDC52175BA90005F7847 /* circ2.tiff */; };
 		554AEE412175BA91005F7847 /* w_south.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDC62175BA90005F7847 /* w_south.tiff */; };
 		554AEE432175BA91005F7847 /* circ9.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDC82175BA90005F7847 /* circ9.tiff */; };
-		554AEE442175BA91005F7847 /* TileDescriptionArray.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC92175BA90005F7847 /* TileDescriptionArray.cc */; };
+		554AEE442175BA91005F7847 /* TileDescriptionArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC92175BA90005F7847 /* TileDescriptionArray.mm */; };
 		554AEE452175BA91005F7847 /* Shanghai.iconheader in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDCC2175BA90005F7847 /* Shanghai.iconheader */; };
 		554AEE462175BA91005F7847 /* GameInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDCD2175BA90005F7847 /* GameInterface.mm */; };
 		554AEE472175BA91005F7847 /* NewButtonH.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDCE2175BA90005F7847 /* NewButtonH.tiff */; };
@@ -175,7 +175,7 @@
 		554AED5C2175BA90005F7847 /* Background.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Background.tiff; sourceTree = "<group>"; };
 		554AED5D2175BA90005F7847 /* GameInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInterface.h; sourceTree = "<group>"; };
 		554AED5E2175BA90005F7847 /* d_red_bild.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = d_red_bild.tiff; sourceTree = "<group>"; };
-		554AED5F2175BA90005F7847 /* TileDescription.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileDescription.cc; sourceTree = "<group>"; };
+		554AED5F2175BA90005F7847 /* TileDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TileDescription.mm; sourceTree = "<group>"; };
 		554AED602175BA90005F7847 /* SHAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAppManager.m; sourceTree = "<group>"; };
 		554AED612175BA90005F7847 /* s_autumn.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = s_autumn.tiff; sourceTree = "<group>"; };
 		554AED622175BA90005F7847 /* BoardScramble.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BoardScramble.mm; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 		554AEDC52175BA90005F7847 /* circ2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = circ2.tiff; sourceTree = "<group>"; };
 		554AEDC62175BA90005F7847 /* w_south.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = w_south.tiff; sourceTree = "<group>"; };
 		554AEDC82175BA90005F7847 /* circ9.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = circ9.tiff; sourceTree = "<group>"; };
-		554AEDC92175BA90005F7847 /* TileDescriptionArray.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileDescriptionArray.cc; sourceTree = "<group>"; };
+		554AEDC92175BA90005F7847 /* TileDescriptionArray.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TileDescriptionArray.mm; sourceTree = "<group>"; };
 		554AEDCA2175BA90005F7847 /* SHAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAppManager.h; sourceTree = "<group>"; };
 		554AEDCB2175BA90005F7847 /* TileDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileDescription.h; sourceTree = "<group>"; };
 		554AEDCC2175BA90005F7847 /* Shanghai.iconheader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shanghai.iconheader; sourceTree = "<group>"; };
@@ -458,10 +458,10 @@
 				554AED5A2175BA90005F7847 /* TileCountManager.mm */,
 				554AEDB52175BA90005F7847 /* TileCountView.h */,
 				554AED1D2175BA90005F7847 /* TileCountView.m */,
-				554AED5F2175BA90005F7847 /* TileDescription.cc */,
 				554AEDCB2175BA90005F7847 /* TileDescription.h */,
-				554AEDC92175BA90005F7847 /* TileDescriptionArray.cc */,
+				554AED5F2175BA90005F7847 /* TileDescription.mm */,
 				554AED1B2175BA90005F7847 /* TileDescriptionArray.h */,
+				554AEDC92175BA90005F7847 /* TileDescriptionArray.mm */,
 				554AED6A2175BA90005F7847 /* TileH.tiff */,
 				554AED6D2175BA90005F7847 /* TileIterator.cc */,
 				554AEDC12175BA90005F7847 /* TileIterator.h */,
@@ -733,13 +733,13 @@
 				554AEE462175BA91005F7847 /* GameInterface.mm in Sources */,
 				554AEDF42175BA91005F7847 /* MiscPaperView.m in Sources */,
 				554AEE572175BA91005F7847 /* SHInfo.m in Sources */,
-				554AEE442175BA91005F7847 /* TileDescriptionArray.cc in Sources */,
+				554AEE442175BA91005F7847 /* TileDescriptionArray.mm in Sources */,
 				554AEE242175BA91005F7847 /* TileIterator.cc in Sources */,
 				554AEE3A2175BA91005F7847 /* NumberTileArray.cc in Sources */,
 				554AED0A2175BA26005F7847 /* AppDelegate.m in Sources */,
 				554AEE0E2175BA91005F7847 /* InterfaceView.m in Sources */,
 				554AEE082175BA91005F7847 /* GameTile.mm in Sources */,
-				554AEE1A2175BA91005F7847 /* TileDescription.cc in Sources */,
+				554AEE1A2175BA91005F7847 /* TileDescription.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

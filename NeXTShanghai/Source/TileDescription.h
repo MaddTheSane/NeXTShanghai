@@ -16,11 +16,7 @@
 
 
 #import	"IntegerList.h"
-
-extern "Objective-C" {
-#import	<dpsclient/event.h>
-}
-
+#import <Foundation/NSGeometry.h>
 
 class TileDescription {
 
@@ -46,11 +42,11 @@ public:
 private:
 												// Location of tile in the Game Board
 												//	view.
-	NXPoint	my_loc;
+	NSPoint	my_loc;
 public:
 												// This function returns a point where
 												//	the tile should draw itself.
-	NXPoint tileLocation( void );
+	NSPoint tileLocation( void );
 
 public:
 	TileDescription( int );

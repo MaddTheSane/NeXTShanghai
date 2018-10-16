@@ -12,9 +12,6 @@ extern "C" {
 #import	<assert.h>
 }
 
-extern "Objective-C" {
-}
-
 
 TileDescriptionArray::TileDescriptionArray( void ) {
 

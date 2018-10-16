@@ -8,7 +8,7 @@
  $Log$
  */
 
-#import	<GameTile.h>
+#import	"GameTile.h"
 
 class NorthWindTile : public GameTile {
 
@@ -16,7 +16,7 @@ public:
 	NorthWindTile( void ) {
 	
 		my_tile_type = NORTH_WIND;
-		loadImageFromFile( "w_north.tiff" );
+		loadImageFromFile( @"w_north" );
 	}
 };
 

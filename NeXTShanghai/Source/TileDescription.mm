@@ -15,10 +15,7 @@ extern "C" {
 #import	"mj.h"
 }
 
-extern "Objective-C" {
-#import	<objc/objc.h>
-}
-
+#import <Foundation/Foundation.h>
 
 TileDescription::TileDescription( int loc ) {
 

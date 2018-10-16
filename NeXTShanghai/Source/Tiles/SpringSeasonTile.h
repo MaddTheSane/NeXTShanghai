@@ -8,14 +8,14 @@
  $Log$
  */
 
-#import	<SeasonTile.h>
+#import	"SeasonTile.h"
 
 class SpringSeasonTile : public SeasonTile {
 
 public:
 	SpringSeasonTile( void ) {
 	
-		loadImageFromFile( "s_spring.tiff" );
+		loadImageFromFile( @"s_spring" );
 	}
 };
 

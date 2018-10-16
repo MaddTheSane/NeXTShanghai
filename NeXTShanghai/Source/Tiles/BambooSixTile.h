@@ -8,7 +8,7 @@
  $Log$
  */
 
-#import	<GameTile.h>
+#import	"GameTile.h"
 
 class BambooSixTile : public GameTile {
 
@@ -16,7 +16,7 @@ public:
 	BambooSixTile( void ) {
 	
 		my_tile_type = BAMBOO_6;
-		loadImageFromFile( "bam6.tiff" );
+		loadImageFromFile( @"bam6" );
 	}
 };
 

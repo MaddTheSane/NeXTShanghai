@@ -42,7 +42,7 @@ protected:
 												// This member function is called by 
 												//	subclasses to load a tiff file for
 												//	tile rendering.
-	void	loadImageFromFile( NSString * );
+	void	loadImageFromFile( NSImageName );
 
 protected:
 												// This function does the actual drawing of

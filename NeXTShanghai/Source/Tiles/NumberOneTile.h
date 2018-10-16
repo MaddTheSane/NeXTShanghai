@@ -15,7 +15,7 @@ class NumberOneTile : public NumberTile {
 public:
 	NumberOneTile( void ) {
 	
-		loadImageFromFile( "n_1.tiff" );
+		loadImageFromFile( @"n_1" );
 	}
 };
 

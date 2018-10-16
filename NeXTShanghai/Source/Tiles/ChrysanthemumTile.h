@@ -8,14 +8,14 @@
  $Log$
  */
 
-#import	<FlowerTile.h>
+#import	"FlowerTile.h"
 
 class ChrysanthemumTile : public FlowerTile {
 
 public:
 	ChrysanthemumTile( void ) {
 	
-		loadImageFromFile( "f_mum.tiff" );
+		loadImageFromFile( @"f_mum" );
 	}
 };
 

@@ -8,7 +8,7 @@
  $Log$
  */
 
-#import	<GameTile.h>
+#import	"GameTile.h"
 
 class CharacterTwoTile : public GameTile {
 
@@ -16,7 +16,7 @@ public:
 	CharacterTwoTile( void ) {
 	
 		my_tile_type = CHARACTER_2;
-		loadImageFromFile( "char2.tiff" );
+		loadImageFromFile( @"char2" );
 	}
 };
 

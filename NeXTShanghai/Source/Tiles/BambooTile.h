@@ -15,7 +15,7 @@ class BambooTile : public FlowerTile {
 public:
 	BambooTile( void ) {
 	
-		loadImageFromFile( @"f_bam.tiff" );
+		loadImageFromFile( @"f_bam" );
 	}
 };
 
