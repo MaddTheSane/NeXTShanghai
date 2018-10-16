@@ -1,0 +1,807 @@
+{\rtf0\ansi{\fonttbl\f0\fnil Times-Roman;\f1\ftech Symbol;\f2\fswiss Helvetica;\f3\fmodern Ohlfs;}
+\margl40
+\margr40
+{\colortbl;\red0\green0\blue0;}
+\f0\b0\i0\ulnone\ql\fs24\fi0\li0\gray0\fc0\cf0\up0\dn0 Release 1.0  Copyleft 
+\f1 ã
+\f0 1995 by Thomas Engel.  All Rights Reserved.\
+\
+
+\f2\b\fs56\li2100 MiscPaperView\
+
+\pard\tx4880\f0\b0\fs80\fi-2780\li4880\fc0\cf0 \
+
+\f2\b\fs28 Inherits From:	
+\f0\b0 MiscColorView : View : Responder : Object\
+
+\fs20 \
+
+\f2\b\fs28 Declared In:
+\f0\b0 	misckit/MiscPaperView.h\
+
+\fs20 \
+
+\pard\f2\b\fs52\li1360\fc0\cf0 \
+
+\fs36 Class Description\
+
+\fs14 \
+
+\pard\tx2480\tx2860\tx3240\f0\b0\fs28\li2100\fc0\cf0 This class can draw its contents in many different papertypes¼white lined, gray grid, yellow card with border, etc.\
+It was inspired by the NoteBook application which itself stole the idea from the paper store down the road.\
+
+\fs14\fc1\cf1 \
+
+\fs28\fc0\cf0 You can change the background color, line or grid color/size and the type of border to draw. See the single method descriptions for detailed information on the possible settings.\
+
+\fs14\fc1\cf1 \
+
+\fs28\fc0\cf0 Sidelines (borders) use the same settings but can be turn on and off for the single sides of the view. \
+
+\fs14 \
+
+\pard\f2\b\fs56\li1360\fc0\cf0 \
+
+\fs36 Instance Variables\
+
+\fs14 \
+
+\pard\tx2860\f0\b0\fs28\li2100\fc0\cf0 int 
+\b gridType
+\b0 ;\
+
+\fs4 \
+
+\fs28 int 
+\b gridVertOffset
+\b0 ;\
+
+\fs4 \
+
+\fs28 int 
+\b gridHorOffset
+\b0 ;\
+
+\fs4 \
+
+\fs28 NXColor 
+\b gridColor
+\b0 ;\
+
+\fs4 \
+
+\fs28 int 
+\b gridOrigin
+\b0 ;\
+
+\fs4 \
+
+\fs28 int 
+\b sidelineType
+\b0 ;\
+
+\fs4 \
+
+\fs28 int 
+\b sidelineOffset
+\b0 ;\
+
+\fs4 \
+
+\fs28 NXColor 
+\b sidelineColor
+\b0 ;\
+
+\pard\tx6140\tx9660\tx10180\fs48\fi-4040\li6140\fc0\cf0 \
+
+\fs28 gridType	Holds the type of grid.\
+
+\fs10 \
+
+\fs28 gridVertOffset	The vertical offset (this is what separates horizontal lines).\
+
+\fs10 \
+
+\fs28 gridHorOffset	The horizontal offset (this is what separates horizontal lines).\
+
+\fs10 \
+
+\fs28 gridColor	The grids color.\
+
+\fs10 \
+
+\fs28 gridOrigin	Specifies in which corner the grid starts.\
+
+\fs10 \
+
+\fs28 sidelineType	Holds the type of borders we will draw.\
+
+\fs10 \
+
+\fs28 sidelineOffset	The offset each of the single borderlines has to the Views bounding box.\
+
+\fs10 \
+
+\fs28 sidelineColor	The border color.\
+
+\f2\b\fs70\fi0\li1360 \
+
+\pard\fs36\li1360\fc0\cf0 Method Types\
+
+\fs14 \
+
+\pard\tx6140\tx9660\tx10180\f0\b0\fs28\fi-4040\li6140\fc0\cf0 Initializing the class object	
+\f1\fc1\cf1 +
+\f0\fc0\cf0  initialize\
+
+\fs10 \
+
+\fs28 Initializing a new object 	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  initFrame:\
+
+\fs10 \
+
+\fs28 Controlling the grid	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  setGridColor:\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  gridColor\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  setGridType:withOrigin:\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  gridType\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  gridOrigin\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  setGridSizeVertical:horizontal:\
+
+\f1\fc1\cf1 	-
+\f0\fc0\cf0  verticalGridSize\
+
+\f1\fc1\cf1 	-
+\f0\fc0\cf0  horizontalGridSize\
+
+\fs10 \
+
+\fs28 Controlling the sidelines/borders\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  setSidelineColor:\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  sidelineColor\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  setSidelineType:\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  sidelineType\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  setSidelineOffset:\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  sidelineOffset\
+
+\fs10 \
+
+\fs28 Drawing	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  drawSelf::\
+
+\fs10 \
+
+\fs28 Archiving	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  read:\
+	
+\f1\fc1\cf1 -
+\f0\fc0\cf0  write:\
+\
+
+\pard\f2\b\fs70\li1360\fc0\cf0 \
+
+\fs36 Class Methods\
+
+\fs14 \
+
+\fs28\fi-380\li2480 initialize\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 +
+\f0  
+\b initialize
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Initializes the class.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b initFrame:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs36\fi0\li1360 Instance Methods\
+
+\fs14 \
+
+\fs28\fi-380\li2480 drawSelf::\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b drawSelf:
+\b0 (const NXRect *)
+\i rects
+\b\i0  :
+\b0 (int)
+\i rectCount
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Draws the grid and the borderlines according to the current settings.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setGridType:withOrigin:
+\b0 , 
+\f1 -
+\f0  
+\b setSidelineType:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 gridColor\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (NXColor)
+\b gridColor
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns the grid color.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setGridColor:
+\b0 , 
+\f1 -
+\f0  
+\b gridType
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 gridOrigin\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (int)
+\b gridOrigin
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns the grids origin.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setGridType:withOrigin:
+\b0 , 
+\f1 -
+\f0  
+\b gridType
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 gridType\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (int)
+\b gridType
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns the type of grid we will draw.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setGridType:withOrigin:
+\b0 , 
+\f1 -
+\f0  
+\b gridColor
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 horizontalGridSize\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (int)
+\b horizontalGridSize
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns the horizontal grid size. This is the space between vertical lines.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setGridSizeVertical:horizontal:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 initFrame:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b initFrame:
+\b0 (const NXRect *)
+\i frameRect
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 The grid is by default light gray (33%) with offsets set to 20 in both directions. We will only draw horizontal lines starting in the top of the view on the left side.\
+The borders will be dark gray (66%) and one will be visible on the right side with and offset of 4 units (pixels)\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b initialize
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 read:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b read:
+\b0 (NXTypedStream *)
+\i stream
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Reads the object fro
+\fc1\cf1 m a stream. We take 
+\fc0\cf0 care of versioning.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b write:
+\b0 , 
+\f1 -
+\f0  
+\b initialize
+\b0 , 
+\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 setGridColor:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b setGridColor:
+\b0 (NXColor)
+\i color
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Sets the grids color to a color.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b gridColor
+\b0 , 
+\f1 -
+\f0  
+\b setGridType:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 setGridSizeVertical:horizontal:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b setGridSizeVertical:
+\b0 (int)
+\i vert
+\b\i0  horizontal:
+\b0 (int)
+\i hor
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Sets the grid size in the vertical and horizontal direction. The code ensures that both are always at least 1.\
+Remember that vertical lines are seperated by horizontal space! So never mix the direction of the lines with the space between them.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b verticalGridSize
+\b0 , 
+\f1 -
+\f0  
+\b horizontalGridSize
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 setGridType:withOrigin:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b setGridType:
+\b0 (int)
+\i aType
+\b\i0  withOrigin:
+\b0 (int)
+\i theOrigin
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Sets the grids type and origin. The possible grid types are:\
+
+\fs14 \
+
+\pard\tx6980\tx10180\f2\b\fs28\fi-4500\li6980\fc0\cf0 Constant	Grid \
+
+\f0\b0 Misc_PaperGridNone	No grid \
+Misc_PaperGridHorizontal	Horizonal lines only \
+Misc_PaperGridVertical	Vertical lines only \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 To get a full grid combin both linetypes with an OR operation.\
+The grid origin can be set using:\
+
+\fs14 \
+
+\pard\tx6980\tx10180\f2\b\fs28\fi-4500\li6980\fc0\cf0 Constant	Origin \
+
+\f0\b0 Misc_PaperGridStartsUpperLeft	Left side on the top \
+Misc_PaperGridStartsUpperRight	Right side on the top \
+Misc_PaperGridStartsLowerLeft	Left side on the bottom \
+Misc_PaperGridStartsLowerRight	Right side on the bottom\
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b gridType
+\b0 , 
+\f1 -
+\f0  
+\b gridOrigin
+\b0\fc1\cf1 , 
+\f1\fc0\cf0 -
+\f0  
+\b setGridSizeVertical:horizontal:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 setSidelineColor:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b setSidelineColor:
+\b0 (NXColor)
+\i color
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Sets the sidelines color to color.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b sidelineColor
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 setSidelineOffset:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b setSidelineOffset:
+\b0 (int)
+\i offset
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Sets the off the borderlines have to their relating view border. The offset is the same for every line we have to draw.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b sidelineOffset
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 setSidelineType:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b setSidelineType:
+\b0 (int)
+\i aType
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Specifies which sidelines get drawn or no.\
+
+\pard\tx6140\tx10180\fs14\li2480\fc1\cf1 \
+
+\f2\b\fs28\fc0\cf0 Constant	Lineposition \
+
+\f0\b0 Misc_PaperSidelineNone	Nowhere \
+Misc_PaperSidelineTop	On the top \
+Misc_PaperSidelineBottom	On the bottom \
+Misc_PaperSidelineLeft	On the left side\
+Misc_PaperSidelineRight	On the right side\
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc1\cf1 \
+
+\fs28\fc0\cf0 You can create more then a single line by combining the single type with an OR operation.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b sidelineType
+\b0 , 
+\f1 -
+\f0  
+\b setSidelineColor:
+\pard\tx6140\tx10180\b0\li2480\fc0\cf0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 sidelineColor\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (NXColor)
+\b sidelineColor
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns the color of the sidelines.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setSidelineColor:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 sidelineOffset\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (int)
+\b sidelineOffset
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns the offset in which we will place the borderlines from the views frame.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setSidelineOffset:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 sidelineType\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (int)
+\b sidelineType
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns the type of borders we will draw.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setSidelineType:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 verticalGridSize\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (int)
+\b verticalGridSize
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns the vertical grid size. This is the space between horizontal lines.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setGridSizeVertical:horizontal:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 write:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b write:
+\b0 (NXTypedStream *)
+\i stream
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Writes the object to a stream using the latest archiving version.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b read:
+\b0 , 
+\f1 -
+\f0  
+\b initialize
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+}

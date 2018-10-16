@@ -1,0 +1,13 @@
+FILESTABLE = {
+    OTHER_SOURCES = (Makefile.preamble, Makefile, Makefile.postamble);
+    H_FILES = (MiscColorView.h, MiscPaperView.h);
+    CLASSES = (MiscColorView.m, MiscPaperView.m);
+};
+LANGUAGE = English;
+LOCALIZABLE_FILES = {
+};
+PROJECTVERSION = 1.1;
+PROJECTTYPE = Subproject;
+PROJECTNAME = MiscPaperView;
+GENERATEMAIN = YES;
+DOCICONFILES = ();

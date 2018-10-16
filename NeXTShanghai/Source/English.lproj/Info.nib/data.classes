@@ -1,0 +1,65 @@
+PHInfo = {
+    ACTIONS = {
+	"animationDidStop:" = "animationDidStop:"; 
+	"makeKeyAndOrderFront:" = "makeKeyAndOrderFront:"; 
+	"startRandomAnimation:" = "startRandomAnimation:"; 
+	"switchToAppIcon:" = "switchToAppIcon:"; 
+	"switchToNextIcon:" = "switchToNextIcon:"; 
+	"switchToTomiIcon:" = "switchToTomiIcon:"; 
+	"switchToWolfyIcon:" = "switchToWolfyIcon:"; 
+	"windowWillClose:" = "windowWillClose:"; 
+    }; 
+    OUTLETS = {
+	appImage = appImage; 
+	appText = appText; 
+	currentAnimator = currentAnimator; 
+	imageButton = imageButton; 
+	panel = panel; 
+	someAnimator = someAnimator; 
+	textField = textField; 
+	tomiImage = tomiImage; 
+	tomiText = tomiText; 
+	wolfyImage = wolfyImage; 
+	wolfyText = wolfyText; 
+    }; 
+    SUPERCLASS = Object; 
+};
+FirstResponder = {ACTIONS = {}; SUPERCLASS = Object; };
+BBImageAnimator = {
+    ACTIONS = {"startAnimation:" = "startAnimation:"; }; 
+    OUTLETS = {
+	bounceSettingField = bounceSettingField; 
+	delegate = delegate; 
+	frameCountSettingField = frameCountSettingField; 
+	sourceImageMatrix = sourceImageMatrix; 
+	speedSettingField = speedSettingField; 
+	targetButton = targetButton; 
+    }; 
+    SUPERCLASS = Object; 
+};
+BBInfo = {
+    ACTIONS = {
+	"animationDidStop:" = "animationDidStop:"; 
+	"makeKeyAndOrderFront:" = "makeKeyAndOrderFront:"; 
+	"startRandomAnimation:" = "startRandomAnimation:"; 
+	"switchToBeakerIcon:" = "switchToBeakerIcon:"; 
+	"switchToNextIcon:" = "switchToNextIcon:"; 
+	"switchToTomiIcon:" = "switchToTomiIcon:"; 
+	"switchToWolfyIcon:" = "switchToWolfyIcon:"; 
+	"windowWillClose:" = "windowWillClose:"; 
+    }; 
+    OUTLETS = {
+	beakerImage = beakerImage; 
+	beakerText = beakerText; 
+	currentAnimator = currentAnimator; 
+	eyeCloseAnimator = eyeCloseAnimator; 
+	imageButton = imageButton; 
+	panel = panel; 
+	textField = textField; 
+	tomiImage = tomiImage; 
+	tomiText = tomiText; 
+	wolfyImage = wolfyImage; 
+	wolfyText = wolfyText; 
+    }; 
+    SUPERCLASS = Object; 
+};

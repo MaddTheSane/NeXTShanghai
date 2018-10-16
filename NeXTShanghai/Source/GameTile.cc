@@ -1,0 +1,106 @@
+
+/*
+ $Author$
+ $Header$
+ *
+ $Log$
+ */
+
+#import	"GameTile.h"
+
+extern "C" {
+#import	<assert.h>
+
+#import	"mj.h"
+}
+
+
+GameTile::GameTile( void ) {
+
+
+	selected		= NO;
+	selectable		= NO;
+	touched			= NO;
+}
+
+
+BOOL GameTile::isSelected( void ) {
+
+
+	return	selected;
+}
+	
+
+void GameTile::setSelected( BOOL flag ) {
+
+
+	selected = flag;
+}
+
+
+BOOL GameTile::gotTouched( void ) {
+
+
+	return touched;
+}
+
+
+void GameTile::markTouched( BOOL flag ) {
+
+
+	touched = flag;
+}
+
+TILE_TYPE GameTile::tileType( void ) {
+		
+		
+		return my_tile_type;
+}
+
+
+BOOL GameTile::isTileType( TILE_TYPE aType ) {
+	
+	
+		return aType == my_tile_type ? YES : NO ;
+}
+
+
+BOOL GameTile::isSelectable( void ) {
+	
+	
+	return selectable;
+}	
+
+
+void GameTile::setSelectable( BOOL flag ) {
+
+
+	selectable = flag;
+}
+
+
+BOOL GameTile::isRemoved( void ) {
+	
+	
+	return removed;
+}	
+
+
+void GameTile::setRemoved( BOOL flag ) {
+
+
+	removed = flag;
+}
+
+
+void GameTile::drawImage( NXPoint aPoint ) {
+
+
+	if( selected )
+		compositeImage( aPoint, NX_PLUS );
+	else
+		compositeImage( aPoint, NX_COPY );
+}
+
+
+

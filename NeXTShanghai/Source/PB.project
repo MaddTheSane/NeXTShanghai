@@ -1,0 +1,34 @@
+INSTALLDIR = "$(HOME)/Apps";
+COMPILEROPTIONS = "";
+APPICON = Shanghai.tiff;
+GENERATEMAIN = YES;
+DOCICONFILES = ();
+FILESTABLE = {
+    M_FILES = (Shanghai_main.m);
+    OTHER_LINKED = ();
+    H_FILES = (GameBoardView.h, InterfaceView.h, NumberTile.h, NumberTileArray.h, Tile.h, TileCountManager.h, TileCountView.h, TileDescription.h, TileDescriptionArray.h, TileIterator.h, BoardScramble.h, GameCoordinator.h, GameInterface.h, GameTileArray.h, GameTile.h, Help.h, IntegerList.h, SHAppManager.h, SHInfo.h);
+    CLASSES = (GameBoardView.m, InterfaceView.m, TileCountView.m, SHAppManager.m, SHInfo.m);
+    IMAGES = (Background.tiff, bam1.tiff, bam2.tiff, bam3.tiff, bam4.tiff, bam5.tiff, bam6.tiff, bam7.tiff, bam8.tiff, bam9.tiff, char1.tiff, char2.tiff, char3.tiff, char4.tiff, char5.tiff, char6.tiff, char7.tiff, char8.tiff, char9.tiff, circ1.tiff, circ2.tiff, circ3.tiff, circ4.tiff, circ5.tiff, circ6.tiff, circ7.tiff, circ8.tiff, circ9.tiff, d_green.tiff, d_green_bild.tiff, d_red.tiff, d_red_bild.tiff, d_white.tiff, d_white_bild.tiff, d_white_really_white.tiff, f_bam.tiff, f_mum.tiff, f_orch.tiff, f_plum.tiff, NewButton.tiff, NewButtonH.tiff, n_0.tiff, n_1.tiff, n_2.tiff, n_3.tiff, n_4.tiff, n_5.tiff, n_6.tiff, n_7.tiff, n_8.tiff, n_9.tiff, RestartButton.tiff, RestartButtonH.tiff, SuggestButton.tiff, SuggestButtonH.tiff, s_autumn.tiff, s_spring.tiff, s_summer.tiff, s_winter.tiff, Tile.tiff, TileH.tiff, UndoButton.tiff, UndoButtonH.tiff, w_east.tiff, w_north.tiff, w_south.tiff, w_west.tiff);
+    HEADERSEARCH = (./Tiles);
+    OTHER_RESOURCES = (Help, Shanghai.info);
+    CCFILES = (NumberTile.cc, NumberTileArray.cc, Tile.cc, TileCountManager.cc, TileDescription.cc, TileDescriptionArray.cc, TileIterator.cc, BoardScramble.cc, GameCoordinator.cc, GameInterface.cc, GameTileArray.cc, GameTile.cc, Help.cc, IntegerList.cc);
+    OTHER_SOURCES = (Makefile.preamble, Makefile, Makefile.postamble);
+    SUBPROJECTS = (MiscPaperView.subproj);
+    LIBRARYSEARCH = (/LocalDeveloper/Libraries);
+    OTHER_LIBS = (NeXT_s, Media_s, Indexing_s, MiscKit);
+    INTERFACES = (Info.nib, Shanghai.nib);
+};
+APPCLASS = Application;
+MAINNIB = Shanghai;
+DOCEXTENSIONS = ();
+LINKEROPTIONS = "-all_load";
+PROJECTTYPE = Application;
+LOCALIZABLE_FILES = {
+    Help;
+    Shanghai.nib;
+    Info.nib;
+};
+PROJECTVERSION = 1.1;
+PROJECTNAME = Shanghai;
+SYSTEMEXTENSIONS = ();
+LANGUAGE = English;

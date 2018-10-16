@@ -1,0 +1,32 @@
+GameInterface = {
+    ACTIONS = {
+	"againClick:" = "againClick:"; 
+	"boardNumberTarget:" = "boardNumberTarget:"; 
+	"helpClick:" = "helpClick:"; 
+	"newClick:" = "newClick:"; 
+	"undoClick:" = "undoClick:"; 
+    }; 
+    OUTLETS = {
+	gameBoardView = gameBoardView; 
+	tileCountView = tileCountView; 
+	window = window; 
+    }; 
+    SUPERCLASS = Object; 
+};
+InterfaceView = {OUTLETS = {gameInterface = gameInterface; }; SUPERCLASS = View; };
+SHAppManager = {
+    ACTIONS = {
+	"appDidBecomeActive:" = "appDidBecomeActive:"; 
+	"appDidInit:" = "appDidInit:"; 
+	"appWillInit:" = "appWillInit:"; 
+	"appWillTerminate:" = "appWillTerminate:"; 
+	"sendSuggestion:" = "sendSuggestion:"; 
+	"showInfo:" = "showInfo:"; 
+	"showPreferences:" = "showPreferences:"; 
+    }; 
+    OUTLETS = {info = info; preferences = preferences; }; 
+    SUPERCLASS = Object; 
+};
+TileCountView = {SUPERCLASS = InterfaceView; };
+FirstResponder = {ACTIONS = {}; SUPERCLASS = Object; };
+GameBoardView = {SUPERCLASS = InterfaceView; };

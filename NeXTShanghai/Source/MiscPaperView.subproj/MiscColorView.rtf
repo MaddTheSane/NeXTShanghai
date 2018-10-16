@@ -1,0 +1,391 @@
+{\rtf0\ansi{\fonttbl\f0\fnil Times-Roman;\f1\ftech Symbol;\f2\fswiss Helvetica;\f3\fmodern Ohlfs;}
+\paperw9840
+\paperh8400
+\margl40
+\margr40
+{\colortbl;\red0\green0\blue0;}
+\f0\b0\i0\ulnone\ql\fs24\fi0\li0\gray0\fc0\cf0\up0\dn0 Release 1.0  Copyleft 
+\f1 ã
+\f0 1995 by Thomas Engel.  All Rights Reserved.\
+\
+
+\f2\b\fs56\li2100 MiscColorView\
+
+\pard\tx4880\f0\b0\fs80\fi-2780\li4880\fc0\cf0 \
+
+\f2\b\fs28 Inherits From:	
+\f0\b0 View : Responder : Object\
+
+\fs20 \
+
+\f2\b\fs28 Declared In:
+\f0\b0 	misckit/MiscColorView.h\
+
+\fs20 \
+
+\pard\f2\b\fs52\li1360\fc0\cf0 \
+
+\fs36 Class Description\
+
+\fs14 \
+
+\pard\tx2480\tx2860\tx3240\f0\b0\fs28\li2100\fc0\cf0 This view fills its contents with a specified color (
+\b setBackgroundColor:
+\b0 ). You can also use the 
+\f1  
+\f0\b setUseSameColorAsDesktop:
+\b0  method to force it to use the color of the users desktop background.\
+
+\fs14\fc1\cf1 \
+
+\fs28\fc0\cf0 In this release you can not use transparency in the background.\
+
+\fs14 \
+
+\pard\f2\b\fs56\li1360\fc0\cf0 \
+
+\fs36 Instance Variables\
+
+\fs14 \
+
+\pard\tx2860\f0\b0\fs28\li2100\fc0\cf0 NXColor 
+\b backgroundColor
+\b0 ;\
+
+\fs4 \
+
+\fs28 BOOL 
+\b sameColorAsDesktop
+\b0 ;\
+
+\pard\tx6140\tx9660\tx10180\fs48\fi-4040\li6140\fc0\cf0 \
+
+\fs28 backgroundColor	The views background color.\
+
+\fs10 \
+
+\fs28 sameColorAsDesktop	True if we draw in the desktop color.\
+
+\f2\b\fs70\fi0\li1360 \
+
+\pard\fs36\li1360\fc0\cf0 Method Types\
+
+\fs14 \
+
+\pard\tx6140\tx9660\tx10180\f0\b0\fs28\fi-4040\li6140\fc0\cf0 Initializing the class object	
+\f1\fc1\cf1 +
+\f0\fc0\cf0  initialize\
+
+\fs10 \
+
+\pard\tx6140\fs28\fi-4040\li6140\fc0\cf0 Initializing a new object	
+\f1 -
+\f0  initFrame:\
+
+\pard\tx6140\tx9660\tx10180\fs10\fi-4040\li6140\fc0\cf0 \
+
+\fs28 Adjusting appearance	
+\f1 -
+\f0  setBackgroundColor:\
+	
+\f1 -
+\f0  backgroundColor\
+	
+\f1 -
+\f0  setUseSameColorAsDesktop:\
+	
+\f1 -
+\f0  hasSameColorAsDesktop\
+
+\fs10 \
+
+\fs28\fc1\cf1 Drawing
+\f1\fc0\cf0 	-
+\f0  drawSelf::\
+
+\fs10 \
+
+\fs28\fc1\cf1 Archiving	
+\f1\fc0\cf0 -
+\f0  read:\
+
+\f1 	-
+\f0  write:\
+\
+
+\pard\f2\b\fs70\li1360\fc0\cf0 \
+
+\fs36 Class Methods\
+
+\fs14 \
+
+\fs28\fi-380\li2480 initialize\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 +
+\f0  
+\b initialize
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Initializes the class.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b initFrame:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs36\fi0\li1360 Instance Methods\
+
+\fs14 \
+
+\fs28\fi-380\li2480 backgroundColor\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (NXColor)
+\b backgroundColor
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns the background color.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setBackgroundColor:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 drawSelf::\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b drawSelf:
+\b0 (const NXRect *)
+\i rects
+\b\i0  :
+\b0 (int)
+\i rectCount
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Redraws the views whole area using the 
+\b\fc1\cf1 backgroundColor
+\b0\fc0\cf0 . If we should appear in the same color as the desktop then we will read the NeXT1/BackgroundColor default. If there is no such defaut it will use the blue color with RGB values: 0.333, 0.333, 0.466.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setUseSameColorAsDesktop:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 hasSameColorAsDesktop\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  (BOOL)
+\b hasSameColorAsDesktop
+\b0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Returns YES is we will always draw our background in the same color as the desktop.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setUseSameColorAsDesktop:
+\b0 , 
+\f1 -
+\f0  
+\b setBackgroundColor:
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 initFrame:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b initFrame:
+\b0 (const NXRect *)
+\i frameRect
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 The views designated init method sets the default background color to white.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b initialize
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 read:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b read:
+\b0 (NXTypedStream *)
+\i stream
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Reads the object fro
+\fc1\cf1 m a stream. We take 
+\fc0\cf0 care of versioning.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b write:
+\b0 , 
+\f1 -
+\f0  
+\b initialize
+\b0 , 
+\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 setBackgroundColor:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b setBackgroundColor:
+\b0 (NXColor)
+\i color
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Sets the background color to use if we do not restict the view to the desktop color.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b setUseSameColorAsDesktop:
+\b0 , 
+\f1 -
+\f0  
+\b drawSelf::
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 setUseSameColorAsDesktop:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b setUseSameColorAsDesktop:
+\b0 (BOOL)
+\i flag
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 If flag is YES then we will use the desktops color for our background.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b hasSameColorAsDesktop
+\b0\fc1\cf1 , 
+\f1\fc0\cf0 -
+\f0  
+\b drawSelf::
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+\fs28 write:\
+
+\fs6 \
+
+\f1\b0\fs28\fi-760\li3240 -
+\f0  
+\b write:
+\b0 (NXTypedStream *)
+\i stream
+\i0 \
+
+\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+
+\fs28 Writes the object to a stream using the latest archiving version.\
+
+\fs14 \
+
+\f2\b\fs28 See also:  
+\f1\b0 -
+\f0  
+\b read:
+\b0 , 
+\f1 -
+\f0  
+\b initialize
+\b0\fs16 \
+
+\fs14 \
+
+\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+
+}
