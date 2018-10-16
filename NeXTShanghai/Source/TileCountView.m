@@ -27,7 +27,7 @@
 	
 //	PSsetgray( NX_WHITE );
 //	NXRectFillList( rects, rectCount );
-	[( GameInterface* )gameInterface tileCountDraw ];
+	[gameInterface tileCountDraw ];
 }
 
 

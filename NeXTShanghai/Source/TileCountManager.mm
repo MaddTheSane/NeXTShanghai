@@ -12,7 +12,6 @@
 
 extern "C" {
 #import	<assert.h>
-#import	<math.h>
 }
 
 #include <cmath>

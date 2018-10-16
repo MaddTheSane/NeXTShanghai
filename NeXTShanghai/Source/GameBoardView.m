@@ -28,11 +28,11 @@
 	clickPoint = [ self convertPoint:clickPoint fromView:nil];
 	
 	if( theEvent.clickCount == 1 )
-		[( GameInterface* )gameInterface click:clickPoint];
+		[gameInterface click:clickPoint];
 	
 	else
 		if( theEvent.clickCount == 2 )
-			[( GameInterface* )gameInterface doubleClick:clickPoint];
+			[gameInterface doubleClick:clickPoint];
 }
 
 
