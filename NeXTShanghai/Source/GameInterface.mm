@@ -90,7 +90,7 @@ extern "C" {
 
 
 	if( application_initialized )
-		gameCoordinator->drawImage();
+		tileCountManager->drawImage();
 }
 
 
