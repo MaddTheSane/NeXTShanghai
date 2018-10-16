@@ -9,7 +9,7 @@
 //	for a list of all applicable permissions and restrictions.
 //	
 
-#import <appkit/appkit.h>
+#import <Cocoa/Cocoa.h>
 
 @interface MiscColorView:NSView
 {
@@ -21,8 +21,8 @@
 - (instancetype)initWithFrame:(NSRect)frameRect;
 
 @property (strong) NSColor *backgroundColor;
-- (void)setUseSameColorAsDesktop:(BOOL)flag;
-- (BOOL)hasSameColorAsDesktop;
+@property (getter=hasSameColorAsDesktop) BOOL sameColorAsDesktop;
+- (void)setUseSameColorAsDesktop:(BOOL)flag DEPRECATED_ATTRIBUTE;
 
 - (void)drawRect:(NSRect)dirtyRect;
 

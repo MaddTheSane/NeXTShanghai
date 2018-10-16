@@ -44,15 +44,11 @@
 }
 
 @synthesize backgroundColor;
+@synthesize sameColorAsDesktop;
 
 - (void)setUseSameColorAsDesktop:(BOOL)flag
 {
-	sameColorAsDesktop = flag;
-}
-
-- (BOOL)hasSameColorAsDesktop
-{
-	return sameColorAsDesktop;
+	self.sameColorAsDesktop = flag;
 }
 
 - (void)drawRect:(NSRect)dirtyRect
@@ -66,24 +62,23 @@
 	{
 		// Read the desktops color form the defaults database.
 
-		defaultVal = NXReadDefault( "NeXT1", "BackgroundColor" );
+		defaultVal = /*NXReadDefault( "NeXT1", "BackgroundColor" );*/ NULL;
 
-		if( defaultVal != NULL )
+		if( defaultVal != NULL ) {
 			sscanf( defaultVal, "%f %f %f",&red, &green, &blue );
-		
-		// If there is no default we will take a shade of blue.
-		// This seems to be the color NeXT uses as a default.
 
-		else
-		{	
+			// If there is no default we will take a shade of blue.
+			// This seems to be the color NeXT uses as a default.
+
+		} else {
 			red = 0.333333;
 			green = 0.333333;
 			blue = 0.466666;
 		}
-        [[NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1] set];
-		}
-	else	
+		[[NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1] set];
+	} else {
 		[backgroundColor set];
+	}
 
 	NSRectFill( self.bounds );
 }

@@ -17,7 +17,7 @@
 
 @implementation MiscPaperView
 
-+ initialize
++ (void)initialize
 {
 	// Initialize the current version number which is used when archiving 
 	// objects. This way we will be able to read all versions if we are 
@@ -25,62 +25,49 @@
 
 	if( self == [MiscPaperView class] )
 		[self setVersion:MISC_PAPERVIEW_VERSION];
-		
-	return self;
 }
 
-- initFrame:(const NXRect *)frameRect
+- (instancetype)initWithFrame:(NSRect)frameRect
 {
 	// Designated initilizer. We will set allow resizing by default and
 	// we will draw in Lightgray if we have to swap 'nil' in.
 
-	self = [super initFrame:frameRect];
-	if( !self ) return self;
+    if (self = [super initWithFrame:frameRect]) {
 
 	// By default will draw a simple horizontal light gray grid with a dark
 	// gray right side border.
 
-	gridColor = NX_COLORLTGRAY;
+	gridColor = [NSColor lightGrayColor];
 	gridType = Misc_PaperGridHorizontal;
 	gridOrigin = Misc_PaperGridStartsUpperLeft;
 	gridVertOffset = gridHorOffset = 20;
 
-	sidelineColor = NX_COLORDKGRAY;
+	sidelineColor = [NSColor darkGrayColor];
 	sidelineType = Misc_PaperSidelineRight;
 	sidelineOffset = 4;
-
+    }
 	return self;
 }
 
-- setGridColor:(NXColor)color
-{
-	gridColor = color;
-	return self;
-}
+@synthesize gridColor;
 
-- (NXColor)gridColor
-{
-	return gridColor;
-}
-
-- setGridType:(int)aType withOrigin:(int)theOrigin
+- (void)setGridType:(Misc_PaperGridType)aType withOrigin:(Misc_PaperGridOrigin)theOrigin
 {
 	gridType = aType;
 	gridOrigin = theOrigin;
-	return self;
 }
 
-- (int)gridType
+- (Misc_PaperGridType)gridType
 {
 	return gridType;
 }
 
-- (int)gridOrigin
+- (Misc_PaperGridOrigin)gridOrigin
 {
 	return gridOrigin;
 }
 
-- setGridSizeVertical:(int)vert horizontal:(int)hor
+- (void)setGridSizeVertical:(int)vert horizontal:(int)hor
 {
 	// Well there has to be some progress so forbit useless offsets
 
@@ -89,66 +76,28 @@
 
 	gridVertOffset = vert;
 	gridHorOffset = hor;
-
-	return self;
 }
 
-- (int)verticalGridSize
-{
-	return gridVertOffset;
-}
+@synthesize verticalGridSize=gridVertOffset;
+@synthesize horizontalGridSize=gridHorOffset;
+@synthesize sidelineColor;
+@synthesize sidelineType;
+@synthesize sidelineOffset;
 
-- (int)horizontalGridSize
-{
-	return gridHorOffset;
-}
-
-- setSidelineColor:(NXColor)color
-{
-	sidelineColor = color;
-	return self;
-}
-
-- (NXColor)sidelineColor
-{
-	return sidelineColor;
-}
-
-- setSidelineType:(int)aType
-{
-	sidelineType = aType;
-	return self;
-}
-
-- (int)sidelineType
-{
-	return sidelineType;
-}
-
-- setSidelineOffset:(int)offset
-{
-	sidelineOffset = offset;
-	return self;
-}
-
-- (int)sidelineOffset
-{
-	return sidelineOffset;
-}
-
-- drawSelf:(const NXRect *)rects :(int)rectCount
+- (void)drawRect:(NSRect)rects
 {	
-	float	xMin;
-	float	xMax;
-	float	yMin;
-	float	yMax;
+	CGFloat	xMin;
+	CGFloat	xMax;
+	CGFloat	yMin;
+	CGFloat	yMax;
+    NSRect bounds = self.bounds;
 
-	float	offset;
-	float	coord;
+	CGFloat	offset;
+	CGFloat	coord;
 	int		i;
 	int		count;
 
-	[super drawSelf:rects :rectCount];
+	[super drawRect:rects];
 
 	xMin = bounds.origin.x;
 	xMax = bounds.origin.x + bounds.size.width - 1;
@@ -168,9 +117,11 @@
 	// Draw the grid first...but lets see where we have to start from
 	// and how many lines we need.
 
-	PSsetlinewidth( 1.0 );
-	NXSetColor( gridColor );
+    [gridColor set];
 
+	NSBezierPath *lines = [NSBezierPath bezierPath];
+	lines.lineWidth = 1;
+	
 	if( gridType & Misc_PaperGridHorizontal )
 	{
 		count = bounds.size.height / gridVertOffset;
@@ -190,9 +141,8 @@
 		for( i=0; i<count; i++ )
 		{
 			coord += offset;
-			PSmoveto( xMin, coord );
-			PSlineto( xMax, coord );
-			PSstroke();
+			[lines moveToPoint:NSMakePoint(xMin, coord)];
+			[lines lineToPoint:NSMakePoint(xMax, coord)];
 		}
 	}
 
@@ -217,47 +167,45 @@
 		for( i=0; i<count; i++ )
 		{
 			coord += offset;
-			PSmoveto( coord, yMin );
-			PSlineto( coord, yMax );
-			PSstroke();
+			[lines moveToPoint:NSMakePoint(coord, yMin)];
+			[lines lineToPoint:NSMakePoint(coord, yMax)];
 		}
 	}	
+	[lines stroke];
 
 	// Now draw the borders..
 
-	NXSetColor( sidelineColor );
+	[sidelineColor set];
+	lines = [NSBezierPath bezierPath];
+	lines.lineWidth = 1.0;
 	
 	if( sidelineType & Misc_PaperSidelineTop )
 	{
-		PSmoveto( xMin, yMax - sidelineOffset );
-		PSlineto( xMax, yMax - sidelineOffset );
-		PSstroke();
+		[lines moveToPoint:NSMakePoint(xMin, yMax - sidelineOffset)];
+		[lines lineToPoint:NSMakePoint(xMax, yMax - sidelineOffset)];
 	}
 
 	if( sidelineType & Misc_PaperSidelineBottom )
 	{
-		PSmoveto( xMin, yMin + sidelineOffset );
-		PSlineto( xMax, yMin + sidelineOffset );
-		PSstroke();
+		[lines moveToPoint:NSMakePoint(xMin, yMin - sidelineOffset)];
+		[lines lineToPoint:NSMakePoint(xMax, yMin - sidelineOffset)];
 	}
 
 	if( sidelineType & Misc_PaperSidelineLeft )
 	{
-		PSmoveto( xMin + sidelineOffset, yMin );
-		PSlineto( xMin + sidelineOffset, yMax );
-		PSstroke();
+		[lines moveToPoint:NSMakePoint( xMin + sidelineOffset, yMin )];
+		[lines lineToPoint:NSMakePoint( xMin + sidelineOffset, yMax )];
 	}
 
 	if( sidelineType & Misc_PaperSidelineRight )
 	{
-		PSmoveto( xMax - sidelineOffset, yMin );
-		PSlineto( xMax - sidelineOffset, yMax );
-		PSstroke();
+		[lines moveToPoint:NSMakePoint( xMax - sidelineOffset, yMin )];
+		[lines lineToPoint:NSMakePoint( xMax - sidelineOffset, yMax )];
 	}
-
-	return self;
+	[lines stroke];
 }
 
+#if 0
 - read:(NXTypedStream *)stream
 {
 	int  version;
@@ -303,5 +251,6 @@
 
 	return self;
 }
+#endif
 
 @end

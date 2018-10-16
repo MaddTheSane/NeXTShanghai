@@ -11,64 +11,59 @@
 
 #import "MiscColorView.h"
 
-#define Misc_PaperGridNone			0
-#define Misc_PaperGridHorizontal	1
-#define Misc_PaperGridVertical		2
+typedef NS_OPTIONS(unsigned int, Misc_PaperGridType) {
+	Misc_PaperGridNone			= 0,
+	Misc_PaperGridHorizontal	= 1,
+	Misc_PaperGridVertical		= 2
+};
 
-#define Misc_PaperSidelineNone		0
-#define Misc_PaperSidelineTop		1
-#define Misc_PaperSidelineBottom	2
-#define Misc_PaperSidelineLeft		4
-#define Misc_PaperSidelineRight		8
+typedef NS_OPTIONS(unsigned int, Misc_PaperSideline) {
+	Misc_PaperSidelineNone		= 0,
+	Misc_PaperSidelineTop		= 1 << 0,
+	Misc_PaperSidelineBottom	= 1 << 1,
+	Misc_PaperSidelineLeft		= 1 << 2,
+	Misc_PaperSidelineRight		= 1 << 3
+};
 
-#define Misc_PaperGridStartsRight	1
-#define Misc_PaperGridStartsLow		2
-
+typedef NS_OPTIONS(int, Misc_PaperGridOrigin)
+{
+	Misc_PaperGridStartsRight	= 1,
+	Misc_PaperGridStartsLow		= 2,
+	
 // The above bitfield defines can be combined to the following flags:
 
-typedef enum
-{
 	Misc_PaperGridStartsUpperLeft = 0,
-	Misc_PaperGridStartsUpperRight,
-	Misc_PaperGridStartsLowerLeft,
-	Misc_PaperGridStartsLowerRight
-} Misc_PaperGridOrigin;
+	Misc_PaperGridStartsUpperRight = Misc_PaperGridStartsRight | 0,
+	Misc_PaperGridStartsLowerLeft = 0 | Misc_PaperGridStartsLow,
+	Misc_PaperGridStartsLowerRight = Misc_PaperGridStartsRight | Misc_PaperGridStartsLow
+};
 
 @interface MiscPaperView:MiscColorView 
 {
-	int		gridType;
+	Misc_PaperGridType		gridType;
 	int		gridVertOffset;
 	int		gridHorOffset;
-	NXColor	gridColor;
-	int		gridOrigin;
+	NSColor	*gridColor;
+	Misc_PaperGridOrigin		gridOrigin;
 	
-	int		sidelineType;
+	Misc_PaperSideline		sidelineType;
 	int		sidelineOffset;
-	NXColor	sidelineColor;
+	NSColor	*sidelineColor;
 }
 
-+ initialize;
-- initFrame:(const NXRect *)frameRect;
+@property (strong) NSColor *gridColor;
+- (void)setGridType:(Misc_PaperGridType)aType withOrigin:(Misc_PaperGridOrigin)theOrigin;
+@property (readonly) Misc_PaperGridType gridType;
+@property (readonly) Misc_PaperGridOrigin gridOrigin;
+- (void)setGridSizeVertical:(int)vert horizontal:(int)hor;
+@property (readonly) int verticalGridSize;
+@property (readonly) int horizontalGridSize;
 
-- setGridColor:(NXColor)color;
-- (NXColor)gridColor;
-- setGridType:(int)aType withOrigin:(int)theOrigin;
-- (int)gridType;
-- (int)gridOrigin;
-- setGridSizeVertical:(int)vert horizontal:(int)hor;
-- (int)verticalGridSize;
-- (int)horizontalGridSize;
+@property (strong) NSColor *sidelineColor;
+@property Misc_PaperSideline sidelineType;
+@property int sidelineOffset;
 
-- setSidelineColor:(NXColor)color;
-- (NXColor)sidelineColor;
-- setSidelineType:(int)aType;
-- (int)sidelineType;
-- setSidelineOffset:(int)offset;
-- (int)sidelineOffset;
-
-- drawSelf:(const NXRect *)rects :(int)rectCount;
-
-- read:(NXTypedStream *)stream;
-- write:(NXTypedStream *)stream;
+//- read:(NXTypedStream *)stream;
+//- write:(NXTypedStream *)stream;
 
 @end
