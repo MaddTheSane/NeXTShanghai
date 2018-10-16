@@ -1,32 +1,28 @@
-GameInterface = {
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GameBoardView" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = InterfaceView; };
+"GameInterface" = {
     ACTIONS = {
-	"againClick:" = "againClick:"; 
-	"boardNumberTarget:" = "boardNumberTarget:"; 
-	"helpClick:" = "helpClick:"; 
-	"newClick:" = "newClick:"; 
-	"undoClick:" = "undoClick:"; 
+        "againClick:" = id; 
+        "boardNumberTarget:" = id; 
+        "helpClick:" = id; 
+        "newClick:" = id; 
+        "undoClick:" = id; 
     }; 
-    OUTLETS = {
-	gameBoardView = gameBoardView; 
-	tileCountView = tileCountView; 
-	window = window; 
-    }; 
+    OUTLETS = {gameBoardView = id; tileCountView = id; window = id; }; 
     SUPERCLASS = Object; 
 };
-InterfaceView = {OUTLETS = {gameInterface = gameInterface; }; SUPERCLASS = View; };
-SHAppManager = {
+"InterfaceView" = {ACTIONS = {}; OUTLETS = {gameInterface = id; }; SUPERCLASS = NSView; };
+"SHAppManager" = {
     ACTIONS = {
-	"appDidBecomeActive:" = "appDidBecomeActive:"; 
-	"appDidInit:" = "appDidInit:"; 
-	"appWillInit:" = "appWillInit:"; 
-	"appWillTerminate:" = "appWillTerminate:"; 
-	"sendSuggestion:" = "sendSuggestion:"; 
-	"showInfo:" = "showInfo:"; 
-	"showPreferences:" = "showPreferences:"; 
+        "appDidBecomeActive:" = id; 
+        "appDidInit:" = id; 
+        "appWillInit:" = id; 
+        "appWillTerminate:" = id; 
+        "sendSuggestion:" = id; 
+        "showInfo:" = id; 
+        "showPreferences:" = id; 
     }; 
-    OUTLETS = {info = info; preferences = preferences; }; 
+    OUTLETS = {info = id; preferences = id; }; 
     SUPERCLASS = Object; 
 };
-TileCountView = {SUPERCLASS = InterfaceView; };
-FirstResponder = {ACTIONS = {}; SUPERCLASS = Object; };
-GameBoardView = {SUPERCLASS = InterfaceView; };
+"TileCountView" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = InterfaceView; };
