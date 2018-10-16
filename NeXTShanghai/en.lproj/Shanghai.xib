@@ -15,30 +15,30 @@
         <window title="Shanghai" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" animationBehavior="default" id="9" userLabel="GameBoard">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="142" y="124" width="785" height="579"/>
+            <rect key="contentRect" x="142" y="124" width="792" height="585"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="50">
-                <rect key="frame" x="0.0" y="0.0" width="785" height="579"/>
+                <rect key="frame" x="0.0" y="0.0" width="792" height="585"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button imageHugsTitle="YES" id="40">
-                        <rect key="frame" x="-2" y="-5" width="792" height="517"/>
+                        <rect key="frame" x="0.0" y="0.0" width="792" height="517"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <buttonCell key="cell" type="bevel" title="Cell" image="Background" imagePosition="only" alignment="center" enabled="NO" inset="2" id="96">
+                        <buttonCell key="cell" type="bevel" title="Cell" image="Background" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="96">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="cellTitle"/>
                         </buttonCell>
                     </button>
                     <button imageHugsTitle="YES" id="46">
-                        <rect key="frame" x="-2" y="509" width="792" height="71"/>
+                        <rect key="frame" x="0.0" y="514" width="792" height="71"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <buttonCell key="cell" type="bevel" title="Cell" image="Title" imagePosition="only" alignment="center" enabled="NO" inset="2" id="97">
+                        <buttonCell key="cell" type="bevel" title="Cell" image="Title" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="97">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="cellTitle"/>
                         </buttonCell>
                     </button>
                     <button imageHugsTitle="YES" id="3">
-                        <rect key="frame" x="385" y="518" width="115" height="44"/>
+                        <rect key="frame" x="387" y="523" width="115" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="bevel" title="Cell" image="SuggestButton" imagePosition="only" alignment="center" alternateImage="SuggestButtonH" imageScaling="proportionallyDown" inset="2" id="92">
                             <behavior key="behavior" lightByContents="YES"/>
@@ -49,7 +49,7 @@
                         </connections>
                     </button>
                     <button imageHugsTitle="YES" id="8">
-                        <rect key="frame" x="569" y="516" width="112" height="47"/>
+                        <rect key="frame" x="571" y="521" width="112" height="47"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="bevel" title="Cell" image="RestartButton" imagePosition="only" alignment="center" alternateImage="RestartButtonH" imageScaling="proportionallyDown" inset="2" id="93">
                             <behavior key="behavior" lightByContents="YES"/>
@@ -60,7 +60,7 @@
                         </connections>
                     </button>
                     <button imageHugsTitle="YES" id="20">
-                        <rect key="frame" x="688" y="518" width="76" height="44"/>
+                        <rect key="frame" x="690" y="523" width="76" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="bevel" title="Cell" image="NewButton" imagePosition="only" alignment="center" alternateImage="NewButtonH" imageScaling="proportionallyDown" inset="2" id="94">
                             <behavior key="behavior" lightByContents="YES"/>
@@ -71,7 +71,7 @@
                         </connections>
                     </button>
                     <button imageHugsTitle="YES" id="36">
-                        <rect key="frame" x="285" y="516" width="97" height="47"/>
+                        <rect key="frame" x="287" y="521" width="97" height="47"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="bevel" title="Cell" image="UndoButton" imagePosition="only" alignment="center" alternateImage="UndoButtonH" imageScaling="proportionallyDown" inset="2" id="95">
                             <behavior key="behavior" lightByContents="YES"/>
@@ -82,14 +82,14 @@
                         </connections>
                     </button>
                     <customView id="29" customClass="GameBoardView">
-                        <rect key="frame" x="7" y="20" width="776" height="477"/>
+                        <rect key="frame" x="9" y="25" width="776" height="477"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <outlet property="gameInterface" destination="33" id="74"/>
                         </connections>
                     </customView>
                     <customView id="32" customClass="TileCountView">
-                        <rect key="frame" x="90" y="526" width="82" height="36"/>
+                        <rect key="frame" x="92" y="531" width="82" height="36"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <outlet property="gameInterface" destination="33" id="73"/>
@@ -97,6 +97,7 @@
                     </customView>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="142" y="149.5"/>
         </window>
         <customObject id="14" userLabel="SHAppManager" customClass="SHAppManager"/>
         <menu title="Shanghai" systemMenu="main" id="30" userLabel="MainMenu">
@@ -310,10 +311,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="9d7-C6-ASo">
                             <rect key="frame" x="1" y="1" width="294" height="142"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" baseWritingDirection="leftToRight" usesFontPanel="YES" usesRuler="YES" spellingCorrection="YES" smartInsertDelete="YES" id="105">
-                                    <rect key="frame" x="0.0" y="-26" width="273" height="336"/>
+                                    <rect key="frame" x="0.0" y="-52" width="273" height="336"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
