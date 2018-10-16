@@ -15,21 +15,21 @@
  */
 
 
-#import <objc/Object.h>
-#import	<appkit/Window.h>
+#import <Foundation/NSObject.h>
+#import	<AppKit/NSWindow.h>
 
 #import	"GameBoardView.h"
 #import	"TileCountView.h"
 
 
-@interface GameInterface:Object
+@interface GameInterface:NSObject
 {
 												// These variables are outlets.
 												//	They include the game window
 												//	and two views that display tiles.
-    Window*			window;
-    GameBoardView*	gameBoardView;
-    TileCountView*	tileCountView;
+    IBOutlet NSWindow*		window;
+    IBOutlet GameBoardView*	gameBoardView;
+    IBOutlet TileCountView*	tileCountView;
 												// These are actually C++ objects.
 												//	They are casted from void* type
 												//	to their respective object when
@@ -50,9 +50,8 @@
 												//	for this class.  This method creates
 												//	the Game Coordinator which sets off
 												//	a chain reaction of object creation.
-- init;
-- free;
-												// This object is the delegate of the 
+- (id)init;
+												// This object is the delegate of the
 												//	application.  This method completes
 												//	the initialization by creating the
 												//	Tile Count Manager and Game Coordinator.

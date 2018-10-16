@@ -15,9 +15,7 @@
 
 #import	"NumberTileArray.h"
 
-extern "Objective-C" {
 #import	"TileCountView.h"
-}
 
 
 class TileCountManager {

@@ -6,10 +6,10 @@
 @implementation InterfaceView
 
 
-- initFrame:( const NXRect * )frameRect {
+- (instancetype)initWithFrame:(NSRect)frameRect {
 
 
-	self = [ super initFrame:frameRect ];
+	self = [ super initWithFrame:frameRect ];
 
 	return self;
 }

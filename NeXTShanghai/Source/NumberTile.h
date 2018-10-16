@@ -12,15 +12,13 @@
 
 #import	"Tile.h"
 
-extern "Objective-C" {
-#import	<objc/objc.h>
-}
+#import	<Foundation/Foundation.h>
 
 
 class NumberTile : public Tile {
 
 public:
-	virtual void	drawImage( NXPoint );
+	virtual void	drawImage( NSPoint );
 
 };
 

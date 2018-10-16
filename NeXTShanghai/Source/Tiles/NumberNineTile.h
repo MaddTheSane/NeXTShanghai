@@ -8,14 +8,14 @@
  $Log$
  */
 
-#import	<NumberTile.h>
+#import	"NumberTile.h"
 
 class NumberNineTile : public NumberTile {
 
 public:
 	NumberNineTile( void ) {
 	
-		loadImageFromFile( "n_9.tiff" );
+		loadImageFromFile( @"n_9.tiff" );
 	}
 };
 

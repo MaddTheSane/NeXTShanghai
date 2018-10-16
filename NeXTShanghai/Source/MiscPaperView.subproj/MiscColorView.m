@@ -17,7 +17,7 @@
 
 @implementation  MiscColorView
 
-+ initialize
++ (void)initialize
 {
 	// Initialize the current version number which is used when archiving 
 	// objects. This way we will be able to read all versions if we are 
@@ -25,41 +25,29 @@
 
 	if( self == [MiscColorView class] )
 		[self setVersion:MISC_COLORVIEW_VERSION];
-		
-	return self;
 }
 
-- initFrame:(const NXRect *)frameRect
+- (instancetype)initWithFrame:(NSRect)frameRect
 {
 	// Designated initilizer. We will set allow resizing by default and
 	// we will draw in Lightgray if we have to swap 'nil' in.
 
-	self = [super initFrame:frameRect];
+	self = [super initWithFrame:frameRect];
 	if( !self ) return self;
 
 	// By default we have a white background and don't focus on the
 	// desktops background.
 
-	backgroundColor = NXConvertRGBToColor( 1.0, 1.0, 1.0 );
+	backgroundColor = [NSColor whiteColor];
 
 	return self;
 }
 
-- setBackgroundColor:(NXColor)color
-{
-	backgroundColor = color;
-	return self;
-}
+@synthesize backgroundColor;
 
-- (NXColor)backgroundColor
-{
-	return backgroundColor;
-}
-
-- setUseSameColorAsDesktop:(BOOL)flag
+- (void)setUseSameColorAsDesktop:(BOOL)flag
 {
 	sameColorAsDesktop = flag;
-	return self;
 }
 
 - (BOOL)hasSameColorAsDesktop
@@ -67,7 +55,7 @@
 	return sameColorAsDesktop;
 }
 
-- drawSelf:(const NXRect *)rects :(int)rectCount
+- (void)drawRect:(NSRect)dirtyRect
 {
 	const char *	defaultVal;
 	float	red;
@@ -92,14 +80,15 @@
 			green = 0.333333;
 			blue = 0.466666;
 		}
-		NXSetColor( NXConvertRGBToColor( red, green, blue ));	}
+        [[NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1] set];
+		}
 	else	
-		NXSetColor( backgroundColor );
+		[backgroundColor set];
 
-	NXRectFill( &bounds );
-	return self;
+	NSRectFill( self.bounds );
 }
 
+#if 0
 - read:(NXTypedStream *)stream
 {
 	int  version;
@@ -131,5 +120,6 @@
 
 	return self;
 }
+#endif
 
 @end

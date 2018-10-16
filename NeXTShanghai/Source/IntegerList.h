@@ -14,9 +14,7 @@
  $Log$
  */
 
-extern "Objective-C" {
-#import	<objc/List.h>
-}
+#import	<Foundation/NSArray.h>
 
 
 class IntegerList {
@@ -24,7 +22,7 @@ class IntegerList {
 private:
 												// This is the Objective-C object used
 												//	to hold a list of integers.
-	List	*my_list;
+	NSMutableArray	*my_list;
 												// Used when iterating through the 
 												//	list.
 	int		iterator;

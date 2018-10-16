@@ -11,23 +11,22 @@
 
 #import <appkit/appkit.h>
 
-@interface MiscColorView:View 
+@interface MiscColorView:NSView
 {
-	NXColor	backgroundColor;
+	NSColor	*backgroundColor;
 	BOOL		sameColorAsDesktop;
 }
 
-+ initialize;
-- initFrame:(const NXRect *)frameRect;
++ (void)initialize;
+- (instancetype)initWithFrame:(NSRect)frameRect;
 
-- setBackgroundColor:(NXColor)color;
-- (NXColor)backgroundColor;
-- setUseSameColorAsDesktop:(BOOL)flag;
+@property (strong) NSColor *backgroundColor;
+- (void)setUseSameColorAsDesktop:(BOOL)flag;
 - (BOOL)hasSameColorAsDesktop;
 
-- drawSelf:(const NXRect *)rects :(int)rectCount;
+- (void)drawRect:(NSRect)dirtyRect;
 
-- read:(NXTypedStream *)stream;
-- write:(NXTypedStream *)stream;
+//- read:(NXTypedStream *)stream;
+//- write:(NXTypedStream *)stream;
 
 @end

@@ -47,12 +47,12 @@ void Tile::compositeImage( NSPoint aPoint, NSCompositingOperation aMode ) {
 	
 	// HACK: We use the compos Mode to check the tiles state...thats stupid.
 	// Sorry will change that later...
-	// NX_DOVER means...no background please...
+	// NSCompositingOperationDestinationOver means...no background please...
 	
 	if( aMode == NSCompositingOperationCopy )
-		[ [NXImage findImageNamed:"Tile"] composite:NX_SOVER toPoint:&aPoint ];
-	else if( aMode != NX_DOVER )
-		[ [NXImage findImageNamed:"TileH"] composite:NX_SOVER toPoint:&aPoint ];
+		[ [NSImage imageNamed:@"Tile"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
+	else if( aMode != NSCompositingOperationDestinationOver )
+		[ [NSImage imageNamed:@"TileH"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
 
 	if( aMode != NSCompositingOperationDestinationOver )
 	{

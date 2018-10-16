@@ -22,7 +22,7 @@ extern "C" {
 IntegerList::IntegerList( void ) {
 
 
-	my_list		= [[ List alloc ] init ];
+	my_list		= [[ NSMutableArray alloc ] init ];
 	iterator = 0;
 }
 
@@ -30,7 +30,6 @@ IntegerList::IntegerList( void ) {
 IntegerList::~IntegerList( void ) {
 
 
-	[ my_list free ];
 }
 
 
@@ -40,7 +39,7 @@ int IntegerList::operator()() {
 	
 	
 	if( [ my_list count ] > iterator )
-		rVal = decodeValue(( int )[ my_list objectAt:iterator++ ]);
+		rVal = decodeValue([[ my_list objectAtIndex:iterator++ ] intValue]);
 	
 	return rVal;
 }
@@ -56,21 +55,21 @@ void IntegerList::beginIterate( void ) {
 void IntegerList::operator+=( int integer ) {
 
 
-	[ my_list addObject:( id )encodeValue( integer ) ];
+	[ my_list addObject:@(encodeValue( integer )) ];
 }
 
 
 void IntegerList::operator-=( int integer ) {
 
 
-	[ my_list removeObject:( id )encodeValue( integer ) ];
+	[ my_list removeObject:@(encodeValue( integer )) ];
 }
 
 
 void IntegerList::empty( void ) {
 
 
-	[ my_list empty ];
+	[ my_list removeAllObjects ];
 }
 
 
@@ -84,7 +83,7 @@ int IntegerList::count( void ) {
 int IntegerList::lastValue( void ) {
 
 
-	return count() == 0 ? -1 : decodeValue(( int )[ my_list lastObject ]);
+	return count() == 0 ? -1 : decodeValue([[my_list lastObject] intValue]);
 }
 
 

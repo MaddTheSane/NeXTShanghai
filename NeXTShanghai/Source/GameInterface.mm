@@ -4,9 +4,7 @@
 #import	"TileCountManager.h"
 #import	"GameCoordinator.h"
 
-extern "Objective-C" {
 #import "GameInterface.h"
-}
 
 extern "C" {
 #import	<assert.h>
@@ -17,7 +15,7 @@ extern "C" {
 
 - init {
 
-	[ super init ];
+	self = [ super init ];
 	
 	gameCoordinator		= NULL;
 	tileCountManager	= NULL;
@@ -25,15 +23,6 @@ extern "C" {
 	return self;
 }
 
-
-- free {
-
-
-	delete gameCoordinator;
-	delete tileCountManager;
-	
-	return [ super free ];
-}
 
 
 - appDidInit:sender {

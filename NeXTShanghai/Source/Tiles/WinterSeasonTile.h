@@ -8,14 +8,14 @@
  $Log$
  */
 
-#import	<SeasonTile.h>
+#import	"SeasonTile.h"
 
 class WinterSeasonTile : public SeasonTile {
 
 public:
 	WinterSeasonTile( void ) {
 	
-		loadImageFromFile( "s_winter.tiff" );
+		loadImageFromFile( @"s_winter" );
 	}
 };
 

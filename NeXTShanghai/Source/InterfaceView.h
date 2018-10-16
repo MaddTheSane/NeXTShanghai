@@ -17,20 +17,22 @@
  */
 
 
-#import <appkit/View.h>
+#import <appkit/NSView.h>
 
-@interface InterfaceView:View {
+@class GameInterface;
+
+@interface InterfaceView:NSView {
 
 												// This is the Game Interface
 												//	object.  We have to use a generic ID
 												//	here otherwise the header files
 												//	would be cross dependent.
-    id	gameInterface;
+    GameInterface	*gameInterface;
 }
 
 												// Sets up some additional View
 												//	defaults.
-- initFrame:( const NXRect * )frameRect;
+- (instancetype)initWithFrame:(NSRect)frameRect;
 
 
 @end

@@ -14,7 +14,7 @@
 		554AEDE82175BA91005F7847 /* char6.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED1C2175BA90005F7847 /* char6.tiff */; };
 		554AEDE92175BA91005F7847 /* TileCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED1D2175BA90005F7847 /* TileCountView.m */; };
 		554AEDEA2175BA91005F7847 /* n_8.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED1E2175BA90005F7847 /* n_8.tiff */; };
-		554AEDEB2175BA91005F7847 /* Help.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED1F2175BA90005F7847 /* Help.cc */; };
+		554AEDEB2175BA91005F7847 /* Help.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED1F2175BA90005F7847 /* Help.mm */; };
 		554AEDEC2175BA91005F7847 /* NewButton.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED202175BA90005F7847 /* NewButton.tiff */; };
 		554AEDED2175BA91005F7847 /* n_4.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED212175BA90005F7847 /* n_4.tiff */; };
 		554AEDEE2175BA91005F7847 /* circ7.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED222175BA90005F7847 /* circ7.tiff */; };
@@ -32,11 +32,11 @@
 		554AEE052175BA91005F7847 /* SuggestButton.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED432175BA90005F7847 /* SuggestButton.tiff */; };
 		554AEE062175BA91005F7847 /* circ6.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED452175BA90005F7847 /* circ6.tiff */; };
 		554AEE072175BA91005F7847 /* n_5.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED482175BA90005F7847 /* n_5.tiff */; };
-		554AEE082175BA91005F7847 /* GameTile.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED492175BA90005F7847 /* GameTile.cc */; };
+		554AEE082175BA91005F7847 /* GameTile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED492175BA90005F7847 /* GameTile.mm */; };
 		554AEE092175BA91005F7847 /* d_green_bild.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED4A2175BA90005F7847 /* d_green_bild.tiff */; };
 		554AEE0A2175BA91005F7847 /* bam1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED4B2175BA90005F7847 /* bam1.tiff */; };
 		554AEE0B2175BA91005F7847 /* SuggestButtonH.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED4C2175BA90005F7847 /* SuggestButtonH.tiff */; };
-		554AEE0C2175BA91005F7847 /* GameTileArray.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED4E2175BA90005F7847 /* GameTileArray.cc */; };
+		554AEE0C2175BA91005F7847 /* GameTileArray.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED4E2175BA90005F7847 /* GameTileArray.mm */; };
 		554AEE0D2175BA91005F7847 /* n_9.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED4F2175BA90005F7847 /* n_9.tiff */; };
 		554AEE0E2175BA91005F7847 /* InterfaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED522175BA90005F7847 /* InterfaceView.m */; };
 		554AEE0F2175BA91005F7847 /* char7.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED532175BA90005F7847 /* char7.tiff */; };
@@ -45,14 +45,14 @@
 		554AEE122175BA91005F7847 /* d_green.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED562175BA90005F7847 /* d_green.tiff */; };
 		554AEE142175BA91005F7847 /* n_2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED582175BA90005F7847 /* n_2.tiff */; };
 		554AEE152175BA91005F7847 /* circ1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED592175BA90005F7847 /* circ1.tiff */; };
-		554AEE162175BA91005F7847 /* TileCountManager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED5A2175BA90005F7847 /* TileCountManager.cc */; };
+		554AEE162175BA91005F7847 /* TileCountManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED5A2175BA90005F7847 /* TileCountManager.mm */; };
 		554AEE172175BA91005F7847 /* s_winter.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED5B2175BA90005F7847 /* s_winter.tiff */; };
 		554AEE182175BA91005F7847 /* Background.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED5C2175BA90005F7847 /* Background.tiff */; };
 		554AEE192175BA91005F7847 /* d_red_bild.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED5E2175BA90005F7847 /* d_red_bild.tiff */; };
 		554AEE1A2175BA91005F7847 /* TileDescription.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED5F2175BA90005F7847 /* TileDescription.cc */; };
 		554AEE1B2175BA91005F7847 /* SHAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED602175BA90005F7847 /* SHAppManager.m */; };
 		554AEE1C2175BA91005F7847 /* s_autumn.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED612175BA90005F7847 /* s_autumn.tiff */; };
-		554AEE1D2175BA91005F7847 /* BoardScramble.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED622175BA90005F7847 /* BoardScramble.cc */; };
+		554AEE1D2175BA91005F7847 /* BoardScramble.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED622175BA90005F7847 /* BoardScramble.mm */; };
 		554AEE1E2175BA91005F7847 /* f_plum.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED632175BA90005F7847 /* f_plum.tiff */; };
 		554AEE1F2175BA91005F7847 /* w_east.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED642175BA90005F7847 /* w_east.tiff */; };
 		554AEE202175BA91005F7847 /* char1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED662175BA90005F7847 /* char1.tiff */; };
@@ -61,7 +61,7 @@
 		554AEE242175BA91005F7847 /* TileIterator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED6D2175BA90005F7847 /* TileIterator.cc */; };
 		554AEE252175BA91005F7847 /* GameBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED6E2175BA90005F7847 /* GameBoardView.m */; };
 		554AEE262175BA91005F7847 /* n_3.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED6F2175BA90005F7847 /* n_3.tiff */; };
-		554AEE272175BA91005F7847 /* NumberTile.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AED702175BA90005F7847 /* NumberTile.cc */; };
+		554AEE272175BA91005F7847 /* NumberTile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AED702175BA90005F7847 /* NumberTile.mm */; };
 		554AEE282175BA91005F7847 /* f_orch.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED712175BA90005F7847 /* f_orch.tiff */; };
 		554AEE292175BA91005F7847 /* d_red.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED722175BA90005F7847 /* d_red.tiff */; };
 		554AEE2A2175BA91005F7847 /* bam7.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED732175BA90005F7847 /* bam7.tiff */; };
@@ -72,7 +72,7 @@
 		554AEE2F2175BA91005F7847 /* UndoButtonH.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDB02175BA90005F7847 /* UndoButtonH.tiff */; };
 		554AEE302175BA91005F7847 /* bam4.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDB12175BA90005F7847 /* bam4.tiff */; };
 		554AEE312175BA91005F7847 /* Shanghai_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDB32175BA90005F7847 /* Shanghai_main.m */; };
-		554AEE322175BA91005F7847 /* GameCoordinator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDB42175BA90005F7847 /* GameCoordinator.cc */; };
+		554AEE322175BA91005F7847 /* GameCoordinator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDB42175BA90005F7847 /* GameCoordinator.mm */; };
 		554AEE332175BA91005F7847 /* char2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDB62175BA90005F7847 /* char2.tiff */; };
 		554AEE342175BA91005F7847 /* w_west.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDB72175BA90005F7847 /* w_west.tiff */; };
 		554AEE352175BA91005F7847 /* bam8.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDB82175BA90005F7847 /* bam8.tiff */; };
@@ -84,14 +84,14 @@
 		554AEE3B2175BA91005F7847 /* s_summer.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDBF2175BA90005F7847 /* s_summer.tiff */; };
 		554AEE3C2175BA91005F7847 /* d_white.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDC02175BA90005F7847 /* d_white.tiff */; };
 		554AEE3D2175BA91005F7847 /* bam5.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDC22175BA90005F7847 /* bam5.tiff */; };
-		554AEE3E2175BA91005F7847 /* IntegerList.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC32175BA90005F7847 /* IntegerList.cc */; };
+		554AEE3E2175BA91005F7847 /* IntegerList.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC32175BA90005F7847 /* IntegerList.mm */; };
 		554AEE3F2175BA91005F7847 /* n_1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDC42175BA90005F7847 /* n_1.tiff */; };
 		554AEE402175BA91005F7847 /* circ2.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDC52175BA90005F7847 /* circ2.tiff */; };
 		554AEE412175BA91005F7847 /* w_south.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDC62175BA90005F7847 /* w_south.tiff */; };
 		554AEE432175BA91005F7847 /* circ9.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDC82175BA90005F7847 /* circ9.tiff */; };
 		554AEE442175BA91005F7847 /* TileDescriptionArray.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDC92175BA90005F7847 /* TileDescriptionArray.cc */; };
 		554AEE452175BA91005F7847 /* Shanghai.iconheader in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDCC2175BA90005F7847 /* Shanghai.iconheader */; };
-		554AEE462175BA91005F7847 /* GameInterface.cc in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDCD2175BA90005F7847 /* GameInterface.cc */; };
+		554AEE462175BA91005F7847 /* GameInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554AEDCD2175BA90005F7847 /* GameInterface.mm */; };
 		554AEE472175BA91005F7847 /* NewButtonH.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDCE2175BA90005F7847 /* NewButtonH.tiff */; };
 		554AEE482175BA91005F7847 /* char4.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDCF2175BA90005F7847 /* char4.tiff */; };
 		554AEE492175BA91005F7847 /* circ5.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AEDD02175BA90005F7847 /* circ5.tiff */; };
@@ -131,7 +131,7 @@
 		554AED1C2175BA90005F7847 /* char6.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = char6.tiff; sourceTree = "<group>"; };
 		554AED1D2175BA90005F7847 /* TileCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileCountView.m; sourceTree = "<group>"; };
 		554AED1E2175BA90005F7847 /* n_8.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = n_8.tiff; sourceTree = "<group>"; };
-		554AED1F2175BA90005F7847 /* Help.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Help.cc; sourceTree = "<group>"; };
+		554AED1F2175BA90005F7847 /* Help.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Help.mm; sourceTree = "<group>"; };
 		554AED202175BA90005F7847 /* NewButton.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = NewButton.tiff; sourceTree = "<group>"; };
 		554AED212175BA90005F7847 /* n_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = n_4.tiff; sourceTree = "<group>"; };
 		554AED222175BA90005F7847 /* circ7.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = circ7.tiff; sourceTree = "<group>"; };
@@ -154,12 +154,12 @@
 		554AED462175BA90005F7847 /* NumberTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberTile.h; sourceTree = "<group>"; };
 		554AED472175BA90005F7847 /* NumberTileArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberTileArray.h; sourceTree = "<group>"; };
 		554AED482175BA90005F7847 /* n_5.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = n_5.tiff; sourceTree = "<group>"; };
-		554AED492175BA90005F7847 /* GameTile.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTile.cc; sourceTree = "<group>"; };
+		554AED492175BA90005F7847 /* GameTile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameTile.mm; sourceTree = "<group>"; };
 		554AED4A2175BA90005F7847 /* d_green_bild.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = d_green_bild.tiff; sourceTree = "<group>"; };
 		554AED4B2175BA90005F7847 /* bam1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = bam1.tiff; sourceTree = "<group>"; };
 		554AED4C2175BA90005F7847 /* SuggestButtonH.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SuggestButtonH.tiff; sourceTree = "<group>"; };
 		554AED4D2175BA90005F7847 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
-		554AED4E2175BA90005F7847 /* GameTileArray.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTileArray.cc; sourceTree = "<group>"; };
+		554AED4E2175BA90005F7847 /* GameTileArray.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameTileArray.mm; sourceTree = "<group>"; };
 		554AED4F2175BA90005F7847 /* n_9.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = n_9.tiff; sourceTree = "<group>"; };
 		554AED502175BA90005F7847 /* BoardScramble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardScramble.h; sourceTree = "<group>"; };
 		554AED512175BA90005F7847 /* GameTileArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTileArray.h; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		554AED562175BA90005F7847 /* d_green.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = d_green.tiff; sourceTree = "<group>"; };
 		554AED582175BA90005F7847 /* n_2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = n_2.tiff; sourceTree = "<group>"; };
 		554AED592175BA90005F7847 /* circ1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = circ1.tiff; sourceTree = "<group>"; };
-		554AED5A2175BA90005F7847 /* TileCountManager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileCountManager.cc; sourceTree = "<group>"; };
+		554AED5A2175BA90005F7847 /* TileCountManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TileCountManager.mm; sourceTree = "<group>"; };
 		554AED5B2175BA90005F7847 /* s_winter.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = s_winter.tiff; sourceTree = "<group>"; };
 		554AED5C2175BA90005F7847 /* Background.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Background.tiff; sourceTree = "<group>"; };
 		554AED5D2175BA90005F7847 /* GameInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInterface.h; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 		554AED5F2175BA90005F7847 /* TileDescription.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileDescription.cc; sourceTree = "<group>"; };
 		554AED602175BA90005F7847 /* SHAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAppManager.m; sourceTree = "<group>"; };
 		554AED612175BA90005F7847 /* s_autumn.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = s_autumn.tiff; sourceTree = "<group>"; };
-		554AED622175BA90005F7847 /* BoardScramble.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoardScramble.cc; sourceTree = "<group>"; };
+		554AED622175BA90005F7847 /* BoardScramble.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BoardScramble.mm; sourceTree = "<group>"; };
 		554AED632175BA90005F7847 /* f_plum.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = f_plum.tiff; sourceTree = "<group>"; };
 		554AED642175BA90005F7847 /* w_east.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = w_east.tiff; sourceTree = "<group>"; };
 		554AED652175BA90005F7847 /* mj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mj.h; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 		554AED6D2175BA90005F7847 /* TileIterator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileIterator.cc; sourceTree = "<group>"; };
 		554AED6E2175BA90005F7847 /* GameBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoardView.m; sourceTree = "<group>"; };
 		554AED6F2175BA90005F7847 /* n_3.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = n_3.tiff; sourceTree = "<group>"; };
-		554AED702175BA90005F7847 /* NumberTile.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NumberTile.cc; sourceTree = "<group>"; };
+		554AED702175BA90005F7847 /* NumberTile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NumberTile.mm; sourceTree = "<group>"; };
 		554AED712175BA90005F7847 /* f_orch.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = f_orch.tiff; sourceTree = "<group>"; };
 		554AED722175BA90005F7847 /* d_red.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = d_red.tiff; sourceTree = "<group>"; };
 		554AED732175BA90005F7847 /* bam7.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = bam7.tiff; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 		554AEDB12175BA90005F7847 /* bam4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = bam4.tiff; sourceTree = "<group>"; };
 		554AEDB22175BA90005F7847 /* TileCountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCountManager.h; sourceTree = "<group>"; };
 		554AEDB32175BA90005F7847 /* Shanghai_main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shanghai_main.m; sourceTree = "<group>"; };
-		554AEDB42175BA90005F7847 /* GameCoordinator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameCoordinator.cc; sourceTree = "<group>"; };
+		554AEDB42175BA90005F7847 /* GameCoordinator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameCoordinator.mm; sourceTree = "<group>"; };
 		554AEDB52175BA90005F7847 /* TileCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCountView.h; sourceTree = "<group>"; };
 		554AEDB62175BA90005F7847 /* char2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = char2.tiff; sourceTree = "<group>"; };
 		554AEDB72175BA90005F7847 /* w_west.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = w_west.tiff; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 		554AEDC02175BA90005F7847 /* d_white.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = d_white.tiff; sourceTree = "<group>"; };
 		554AEDC12175BA90005F7847 /* TileIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileIterator.h; sourceTree = "<group>"; };
 		554AEDC22175BA90005F7847 /* bam5.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = bam5.tiff; sourceTree = "<group>"; };
-		554AEDC32175BA90005F7847 /* IntegerList.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IntegerList.cc; sourceTree = "<group>"; };
+		554AEDC32175BA90005F7847 /* IntegerList.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IntegerList.mm; sourceTree = "<group>"; };
 		554AEDC42175BA90005F7847 /* n_1.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = n_1.tiff; sourceTree = "<group>"; };
 		554AEDC52175BA90005F7847 /* circ2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = circ2.tiff; sourceTree = "<group>"; };
 		554AEDC62175BA90005F7847 /* w_south.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = w_south.tiff; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		554AEDCA2175BA90005F7847 /* SHAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAppManager.h; sourceTree = "<group>"; };
 		554AEDCB2175BA90005F7847 /* TileDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileDescription.h; sourceTree = "<group>"; };
 		554AEDCC2175BA90005F7847 /* Shanghai.iconheader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shanghai.iconheader; sourceTree = "<group>"; };
-		554AEDCD2175BA90005F7847 /* GameInterface.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameInterface.cc; sourceTree = "<group>"; };
+		554AEDCD2175BA90005F7847 /* GameInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameInterface.mm; sourceTree = "<group>"; };
 		554AEDCE2175BA90005F7847 /* NewButtonH.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = NewButtonH.tiff; sourceTree = "<group>"; };
 		554AEDCF2175BA90005F7847 /* char4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = char4.tiff; sourceTree = "<group>"; };
 		554AEDD02175BA90005F7847 /* circ5.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = circ5.tiff; sourceTree = "<group>"; };
@@ -327,6 +327,7 @@
 				554AED062175BA26005F7847 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		554AED062175BA26005F7847 /* Products */ = {
 			isa = PBXGroup;
@@ -366,8 +367,8 @@
 				554AED732175BA90005F7847 /* bam7.tiff */,
 				554AEDB82175BA90005F7847 /* bam8.tiff */,
 				554AEDBD2175BA90005F7847 /* bam9.tiff */,
-				554AED622175BA90005F7847 /* BoardScramble.cc */,
 				554AED502175BA90005F7847 /* BoardScramble.h */,
+				554AED622175BA90005F7847 /* BoardScramble.mm */,
 				554AED662175BA90005F7847 /* char1.tiff */,
 				554AEDB62175BA90005F7847 /* char2.tiff */,
 				554AEDBC2175BA90005F7847 /* char3.tiff */,
@@ -399,20 +400,20 @@
 				554AED632175BA90005F7847 /* f_plum.tiff */,
 				554AEDDE2175BA90005F7847 /* GameBoardView.h */,
 				554AED6E2175BA90005F7847 /* GameBoardView.m */,
-				554AEDB42175BA90005F7847 /* GameCoordinator.cc */,
 				554AED742175BA90005F7847 /* GameCoordinator.h */,
-				554AEDCD2175BA90005F7847 /* GameInterface.cc */,
+				554AEDB42175BA90005F7847 /* GameCoordinator.mm */,
 				554AED5D2175BA90005F7847 /* GameInterface.h */,
-				554AED492175BA90005F7847 /* GameTile.cc */,
+				554AEDCD2175BA90005F7847 /* GameInterface.mm */,
 				554AED6C2175BA90005F7847 /* GameTile.h */,
-				554AED4E2175BA90005F7847 /* GameTileArray.cc */,
+				554AED492175BA90005F7847 /* GameTile.mm */,
 				554AED512175BA90005F7847 /* GameTileArray.h */,
+				554AED4E2175BA90005F7847 /* GameTileArray.mm */,
 				554AEE5F2175BB30005F7847 /* Help */,
-				554AED1F2175BA90005F7847 /* Help.cc */,
+				554AED1F2175BA90005F7847 /* Help.mm */,
 				554AED1A2175BA90005F7847 /* Help.h */,
 				554AED2E2175BA90005F7847 /* Info.nib */,
-				554AEDC32175BA90005F7847 /* IntegerList.cc */,
 				554AED682175BA90005F7847 /* IntegerList.h */,
+				554AEDC32175BA90005F7847 /* IntegerList.mm */,
 				554AEDBA2175BA90005F7847 /* InterfaceView.h */,
 				554AED522175BA90005F7847 /* InterfaceView.m */,
 				554AED232175BA90005F7847 /* MiscPaperView.subproj */,
@@ -429,7 +430,7 @@
 				554AED4F2175BA90005F7847 /* n_9.tiff */,
 				554AED202175BA90005F7847 /* NewButton.tiff */,
 				554AEDCE2175BA90005F7847 /* NewButtonH.tiff */,
-				554AED702175BA90005F7847 /* NumberTile.cc */,
+				554AED702175BA90005F7847 /* NumberTile.mm */,
 				554AED462175BA90005F7847 /* NumberTile.h */,
 				554AEDBE2175BA90005F7847 /* NumberTileArray.cc */,
 				554AED472175BA90005F7847 /* NumberTileArray.h */,
@@ -450,11 +451,11 @@
 				554AEDDF2175BA90005F7847 /* SHInfo.m */,
 				554AED432175BA90005F7847 /* SuggestButton.tiff */,
 				554AED4C2175BA90005F7847 /* SuggestButtonH.tiff */,
-				554AEDD12175BA90005F7847 /* Tile.mm */,
 				554AED4D2175BA90005F7847 /* Tile.h */,
+				554AEDD12175BA90005F7847 /* Tile.mm */,
 				554AEDBB2175BA90005F7847 /* Tile.tiff */,
-				554AED5A2175BA90005F7847 /* TileCountManager.cc */,
 				554AEDB22175BA90005F7847 /* TileCountManager.h */,
+				554AED5A2175BA90005F7847 /* TileCountManager.mm */,
 				554AEDB52175BA90005F7847 /* TileCountView.h */,
 				554AED1D2175BA90005F7847 /* TileCountView.m */,
 				554AED5F2175BA90005F7847 /* TileDescription.cc */,
@@ -495,59 +496,59 @@
 		554AED782175BA90005F7847 /* Tiles */ = {
 			isa = PBXGroup;
 			children = (
-				554AED792175BA90005F7847 /* EastWindTile.h */,
-				554AED7A2175BA90005F7847 /* NumberNineTile.h */,
-				554AED7B2175BA90005F7847 /* SpringSeasonTile.h */,
-				554AED7C2175BA90005F7847 /* RedTile.h */,
-				554AED7D2175BA90005F7847 /* NumberSevenTile.h */,
-				554AED7E2175BA90005F7847 /* CharacterNineTile.h */,
-				554AED7F2175BA90005F7847 /* SouthWindTile.h */,
-				554AED802175BA90005F7847 /* CharacterThreeTile.h */,
-				554AED812175BA90005F7847 /* BambooNineTile.h */,
-				554AED822175BA90005F7847 /* WhiteTile.h */,
-				554AED832175BA90005F7847 /* CircleFiveTile.h */,
-				554AED842175BA90005F7847 /* NumberTwoTile.h */,
-				554AED852175BA90005F7847 /* CharacterOneTile.h */,
-				554AED862175BA90005F7847 /* NumberThreeTile.h */,
-				554AED872175BA90005F7847 /* NumberFourTile.h */,
-				554AED882175BA90005F7847 /* CircleEightTile.h */,
-				554AED892175BA90005F7847 /* BambooTwoTile.h */,
-				554AED8A2175BA90005F7847 /* CircleTwoTile.h */,
-				554AED8B2175BA90005F7847 /* BambooFourTile.h */,
-				554AED8C2175BA90005F7847 /* NorthWindTile.h */,
-				554AED8D2175BA90005F7847 /* CircleSixTile.h */,
-				554AED8E2175BA90005F7847 /* BambooEightTile.h */,
-				554AED8F2175BA90005F7847 /* BambooSixTile.h */,
-				554AED902175BA90005F7847 /* NumberSixTile.h */,
-				554AED912175BA90005F7847 /* CharacterFourTile.h */,
-				554AED922175BA90005F7847 /* SummerSeasonTile.h */,
-				554AED932175BA90005F7847 /* CharacterSevenTile.h */,
-				554AED942175BA90005F7847 /* NumberZeroTile.h */,
-				554AED952175BA90005F7847 /* BambooThreeTile.h */,
-				554AED962175BA90005F7847 /* NumberOneTile.h */,
-				554AED972175BA90005F7847 /* CharacterTwoTile.h */,
-				554AED982175BA90005F7847 /* CharacterFiveTile.h */,
-				554AED992175BA90005F7847 /* CircleNineTile.h */,
-				554AED9A2175BA90005F7847 /* BambooOneTile.h */,
-				554AED9B2175BA90005F7847 /* BambooFiveTile.h */,
-				554AED9C2175BA90005F7847 /* CircleOneTile.h */,
-				554AED9D2175BA90005F7847 /* GreenTile.h */,
-				554AED9E2175BA90005F7847 /* NumberEightTile.h */,
-				554AED9F2175BA90005F7847 /* BambooTile.h */,
-				554AEDA02175BA90005F7847 /* NumberFiveTile.h */,
-				554AEDA12175BA90005F7847 /* CircleThreeTile.h */,
-				554AEDA22175BA90005F7847 /* ChrysanthemumTile.h */,
-				554AEDA32175BA90005F7847 /* CharacterSixTile.h */,
-				554AEDA42175BA90005F7847 /* SeasonTile.h */,
-				554AEDA52175BA90005F7847 /* CircleFourTile.h */,
-				554AEDA62175BA90005F7847 /* OrchidTile.h */,
-				554AEDA72175BA90005F7847 /* CharacterEightTile.h */,
-				554AEDA82175BA90005F7847 /* BambooSevenTile.h */,
-				554AEDA92175BA90005F7847 /* WestWindTile.h */,
-				554AEDAA2175BA90005F7847 /* FlowerTile.h */,
-				554AEDAB2175BA90005F7847 /* CircleSevenTile.h */,
 				554AEDAC2175BA90005F7847 /* AutumnSeasonTile.h */,
+				554AED8E2175BA90005F7847 /* BambooEightTile.h */,
+				554AED9B2175BA90005F7847 /* BambooFiveTile.h */,
+				554AED8B2175BA90005F7847 /* BambooFourTile.h */,
+				554AED812175BA90005F7847 /* BambooNineTile.h */,
+				554AED9A2175BA90005F7847 /* BambooOneTile.h */,
+				554AEDA82175BA90005F7847 /* BambooSevenTile.h */,
+				554AED8F2175BA90005F7847 /* BambooSixTile.h */,
+				554AED952175BA90005F7847 /* BambooThreeTile.h */,
+				554AED9F2175BA90005F7847 /* BambooTile.h */,
+				554AED892175BA90005F7847 /* BambooTwoTile.h */,
+				554AEDA72175BA90005F7847 /* CharacterEightTile.h */,
+				554AED982175BA90005F7847 /* CharacterFiveTile.h */,
+				554AED912175BA90005F7847 /* CharacterFourTile.h */,
+				554AED7E2175BA90005F7847 /* CharacterNineTile.h */,
+				554AED852175BA90005F7847 /* CharacterOneTile.h */,
+				554AED932175BA90005F7847 /* CharacterSevenTile.h */,
+				554AEDA32175BA90005F7847 /* CharacterSixTile.h */,
+				554AED802175BA90005F7847 /* CharacterThreeTile.h */,
+				554AED972175BA90005F7847 /* CharacterTwoTile.h */,
+				554AEDA22175BA90005F7847 /* ChrysanthemumTile.h */,
+				554AED882175BA90005F7847 /* CircleEightTile.h */,
+				554AED832175BA90005F7847 /* CircleFiveTile.h */,
+				554AEDA52175BA90005F7847 /* CircleFourTile.h */,
+				554AED992175BA90005F7847 /* CircleNineTile.h */,
+				554AED9C2175BA90005F7847 /* CircleOneTile.h */,
+				554AEDAB2175BA90005F7847 /* CircleSevenTile.h */,
+				554AED8D2175BA90005F7847 /* CircleSixTile.h */,
+				554AEDA12175BA90005F7847 /* CircleThreeTile.h */,
+				554AED8A2175BA90005F7847 /* CircleTwoTile.h */,
+				554AED792175BA90005F7847 /* EastWindTile.h */,
+				554AEDAA2175BA90005F7847 /* FlowerTile.h */,
+				554AED9D2175BA90005F7847 /* GreenTile.h */,
+				554AED8C2175BA90005F7847 /* NorthWindTile.h */,
+				554AED9E2175BA90005F7847 /* NumberEightTile.h */,
+				554AEDA02175BA90005F7847 /* NumberFiveTile.h */,
+				554AED872175BA90005F7847 /* NumberFourTile.h */,
+				554AED7A2175BA90005F7847 /* NumberNineTile.h */,
+				554AED962175BA90005F7847 /* NumberOneTile.h */,
+				554AED7D2175BA90005F7847 /* NumberSevenTile.h */,
+				554AED902175BA90005F7847 /* NumberSixTile.h */,
+				554AED862175BA90005F7847 /* NumberThreeTile.h */,
+				554AED842175BA90005F7847 /* NumberTwoTile.h */,
+				554AED942175BA90005F7847 /* NumberZeroTile.h */,
+				554AEDA62175BA90005F7847 /* OrchidTile.h */,
 				554AEDAD2175BA90005F7847 /* PlumTile.h */,
+				554AED7C2175BA90005F7847 /* RedTile.h */,
+				554AEDA42175BA90005F7847 /* SeasonTile.h */,
+				554AED7F2175BA90005F7847 /* SouthWindTile.h */,
+				554AED7B2175BA90005F7847 /* SpringSeasonTile.h */,
+				554AED922175BA90005F7847 /* SummerSeasonTile.h */,
+				554AEDA92175BA90005F7847 /* WestWindTile.h */,
+				554AED822175BA90005F7847 /* WhiteTile.h */,
 				554AEDAE2175BA90005F7847 /* WinterSeasonTile.h */,
 			);
 			path = Tiles;
@@ -714,22 +715,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554AEE322175BA91005F7847 /* GameCoordinator.cc in Sources */,
+				554AEE322175BA91005F7847 /* GameCoordinator.mm in Sources */,
 				554AEDF12175BA91005F7847 /* Makefile in Sources */,
-				554AEDEB2175BA91005F7847 /* Help.cc in Sources */,
-				554AEE272175BA91005F7847 /* NumberTile.cc in Sources */,
+				554AEDEB2175BA91005F7847 /* Help.mm in Sources */,
+				554AEE272175BA91005F7847 /* NumberTile.mm in Sources */,
 				554AEE1B2175BA91005F7847 /* SHAppManager.m in Sources */,
 				554AEE252175BA91005F7847 /* GameBoardView.m in Sources */,
 				554AEDF02175BA91005F7847 /* MiscColorView.m in Sources */,
 				554AED122175BA27005F7847 /* main.m in Sources */,
 				554AEE312175BA91005F7847 /* Shanghai_main.m in Sources */,
-				554AEE3E2175BA91005F7847 /* IntegerList.cc in Sources */,
-				554AEE162175BA91005F7847 /* TileCountManager.cc in Sources */,
+				554AEE3E2175BA91005F7847 /* IntegerList.mm in Sources */,
+				554AEE162175BA91005F7847 /* TileCountManager.mm in Sources */,
 				554AEE4A2175BA91005F7847 /* Tile.mm in Sources */,
 				554AEDE92175BA91005F7847 /* TileCountView.m in Sources */,
-				554AEE1D2175BA91005F7847 /* BoardScramble.cc in Sources */,
-				554AEE0C2175BA91005F7847 /* GameTileArray.cc in Sources */,
-				554AEE462175BA91005F7847 /* GameInterface.cc in Sources */,
+				554AEE1D2175BA91005F7847 /* BoardScramble.mm in Sources */,
+				554AEE0C2175BA91005F7847 /* GameTileArray.mm in Sources */,
+				554AEE462175BA91005F7847 /* GameInterface.mm in Sources */,
 				554AEDF42175BA91005F7847 /* MiscPaperView.m in Sources */,
 				554AEE572175BA91005F7847 /* SHInfo.m in Sources */,
 				554AEE442175BA91005F7847 /* TileDescriptionArray.cc in Sources */,
@@ -737,7 +738,7 @@
 				554AEE3A2175BA91005F7847 /* NumberTileArray.cc in Sources */,
 				554AED0A2175BA26005F7847 /* AppDelegate.m in Sources */,
 				554AEE0E2175BA91005F7847 /* InterfaceView.m in Sources */,
-				554AEE082175BA91005F7847 /* GameTile.cc in Sources */,
+				554AEE082175BA91005F7847 /* GameTile.mm in Sources */,
 				554AEE1A2175BA91005F7847 /* TileDescription.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

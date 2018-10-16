@@ -11,7 +11,7 @@
 
 #import	"Tile.h"
 
-extern "Objective-C" {
+extern "C" {
 #import	<objc/objc.h>
 }
 
@@ -87,7 +87,7 @@ public:
 public:
 												// Game tiles highlight themselves if
 												//	they are selected.
-	virtual void	drawImage( NXPoint );
+	virtual void	drawImage( NSPoint );
 
 
 public:

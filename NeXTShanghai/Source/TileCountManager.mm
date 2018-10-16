@@ -15,6 +15,8 @@ extern "C" {
 #import	<math.h>
 }
 
+#include <cmath>
+
 
 												// This is the number of digits that
 												//	are to be maintained in the count view.
@@ -84,7 +86,7 @@ BOOL TileCountManager::isEmpty( void ) {
 void TileCountManager::drawImage( void ) {
 
 	BOOL	didDrawRealNumber = NO;
-	NXRect	bounds;
+	NSRect	bounds;
 	int		tmp_value = count(),
 			i;
 			
@@ -94,7 +96,7 @@ void TileCountManager::drawImage( void ) {
 	
 	for( i = 0; i < NUMBER_OF_DIGITS; ++i )  {
 		int		digit = tmp_value / ( int )pow( 10, ( NUMBER_OF_DIGITS - 1 - i ));
-		NXPoint	p = { 0, 0 };
+		NSPoint	p = { 0, 0 };
 		
 		p.x = i * ( SMALLTILE_WIDTH - SMALLTILE_SHIFT );
 		

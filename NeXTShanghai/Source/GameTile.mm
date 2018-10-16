@@ -93,13 +93,13 @@ void GameTile::setRemoved( BOOL flag ) {
 }
 
 
-void GameTile::drawImage( NXPoint aPoint ) {
+void GameTile::drawImage( NSPoint aPoint ) {
 
 
 	if( selected )
-		compositeImage( aPoint, NX_PLUS );
+		compositeImage( aPoint, NSCompositingOperationPlusDarker );
 	else
-		compositeImage( aPoint, NX_COPY );
+		compositeImage( aPoint, NSCompositingOperationCopy );
 }
 
 
