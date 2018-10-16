@@ -1,0 +1,42 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GameBoardView; LANGUAGE = ObjC; SUPERCLASS = InterfaceView; }, 
+        {
+            ACTIONS = {
+                againClick = id; 
+                boardNumberTarget = id; 
+                helpClick = id; 
+                newClick = id; 
+                undoClick = id; 
+            }; 
+            CLASS = GameInterface; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {gameBoardView = id; tileCountView = id; window = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = InterfaceView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {gameInterface = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                appDidBecomeActive = id; 
+                appDidInit = id; 
+                appWillInit = id; 
+                appWillTerminate = id; 
+                sendSuggestion = id; 
+                showInfo = id; 
+                showPreferences = id; 
+            }; 
+            CLASS = SHAppManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {info = id; preferences = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = TileCountView; LANGUAGE = ObjC; SUPERCLASS = InterfaceView; }
+    ); 
+    IBVersion = 1; 
+}
