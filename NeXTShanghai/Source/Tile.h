@@ -8,9 +8,9 @@
  $Log$
  */
 
-extern "Objective-C" {
-#import	<appkit/NXImage.h>
-#import	<appkit/View.h>
+extern "C" {
+#import	<AppKit/NSImage.h>
+#import	<AppKit/NSView.h>
 }
 
 
@@ -38,11 +38,11 @@ protected:
 												// This is a Image object which is
 												//	loaded with a tiff image and used
 												//	to display a tile.
-	NXImage	*my_tile_image;
+	NSImage	*my_tile_image;
 												// This member function is called by 
 												//	subclasses to load a tiff file for
 												//	tile rendering.
-	void	loadImageFromFile( const char * );
+	void	loadImageFromFile( NSString * );
 
 protected:
 												// This function does the actual drawing of
@@ -52,7 +52,7 @@ protected:
 												//	board where the tile is drawn, the 
 												//	second parameter is the composite
 												//	operation.
-	void	compositeImage( NXPoint, int );
+	void	compositeImage( NSPoint, NSCompositingOperation );
 public:
 												// This member function is called by the
 												//	Board View to composite the tile a
@@ -62,10 +62,10 @@ public:
 												// This member function must be implemented
 												//	in the subclasses since game tiles 
 												//	can be highlighted.
-	virtual void	drawImage( NXPoint ) = 0;
+	virtual void	drawImage( NSPoint ) = 0;
 
 public:
 	Tile( void );
-	~Tile( void );
+	virtual ~Tile( void );
 };
 

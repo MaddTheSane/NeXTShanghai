@@ -8,10 +8,7 @@
 
 #import	"Tile.h"
 
-extern "Objective-C" {
-#import	<appkit/appkit.h>
-#import	<dpsclient/psops.h>
-}
+#import	<AppKit/AppKit.h>
 
 extern "C" {
 #import	<assert.h>
@@ -33,36 +30,36 @@ Tile::Tile( void ) {
 
 Tile::~Tile( void ) {
 
-	[ my_tile_image free ];
+	my_tile_image=nil;
 }
 
 
-void Tile::loadImageFromFile( const char* aFile ) {
+void Tile::loadImageFromFile( NSString* aFile ) {
 
-	my_tile_image = [NXImage findImageNamed:aFile];
+	my_tile_image = [NSImage imageNamed:aFile];
 }
 
 
-void Tile::compositeImage( NXPoint aPoint, int aMode ) {
+void Tile::compositeImage( NSPoint aPoint, NSCompositingOperation aMode ) {
 
 
-	NXRect	r;
+	NSRect	r;
 	
 	// HACK: We use the compos Mode to check the tiles state...thats stupid.
 	// Sorry will change that later...
 	// NX_DOVER means...no background please...
 	
-	if( aMode == NX_COPY )
+	if( aMode == NSCompositingOperationCopy )
 		[ [NXImage findImageNamed:"Tile"] composite:NX_SOVER toPoint:&aPoint ];
 	else if( aMode != NX_DOVER )
 		[ [NXImage findImageNamed:"TileH"] composite:NX_SOVER toPoint:&aPoint ];
 
-	if( aMode != NX_DOVER )
+	if( aMode != NSCompositingOperationDestinationOver )
 	{
 		aPoint.x += 2;
 		aPoint.y += 6;
 	}
-	[ my_tile_image composite:NX_SOVER toPoint:&aPoint ];
+	[my_tile_image drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
 }
 
 
