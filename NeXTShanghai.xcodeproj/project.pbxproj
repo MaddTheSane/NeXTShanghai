@@ -18,11 +18,7 @@
 		554AEDEC2175BA91005F7847 /* NewButton.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED202175BA90005F7847 /* NewButton.tiff */; };
 		554AEDED2175BA91005F7847 /* n_4.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED212175BA90005F7847 /* n_4.tiff */; };
 		554AEDEE2175BA91005F7847 /* circ7.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 554AED222175BA90005F7847 /* circ7.tiff */; };
-		554AEDEF2175BA91005F7847 /* Makefile.preamble in Resources */ = {isa = PBXBuildFile; fileRef = 554AED252175BA90005F7847 /* Makefile.preamble */; };
 		554AEDF02175BA91005F7847 /* MiscColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED262175BA90005F7847 /* MiscColorView.m */; };
-		554AEDF12175BA91005F7847 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 554AED272175BA90005F7847 /* Makefile */; };
-		554AEDF22175BA91005F7847 /* PB.project in Resources */ = {isa = PBXBuildFile; fileRef = 554AED282175BA90005F7847 /* PB.project */; };
-		554AEDF32175BA91005F7847 /* Makefile.postamble in Resources */ = {isa = PBXBuildFile; fileRef = 554AED292175BA90005F7847 /* Makefile.postamble */; };
 		554AEDF42175BA91005F7847 /* MiscPaperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED2A2175BA90005F7847 /* MiscPaperView.m */; };
 		554AEDF52175BA91005F7847 /* MiscColorView.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 554AED2B2175BA90005F7847 /* MiscColorView.rtf */; };
 		554AEDF62175BA91005F7847 /* MiscPaperView.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 554AED2D2175BA90005F7847 /* MiscPaperView.rtf */; };
@@ -136,11 +132,7 @@
 		554AED212175BA90005F7847 /* n_4.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = n_4.tiff; sourceTree = "<group>"; };
 		554AED222175BA90005F7847 /* circ7.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = circ7.tiff; sourceTree = "<group>"; };
 		554AED242175BA90005F7847 /* MiscPaperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscPaperView.h; sourceTree = "<group>"; };
-		554AED252175BA90005F7847 /* Makefile.preamble */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.preamble; sourceTree = "<group>"; };
 		554AED262175BA90005F7847 /* MiscColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscColorView.m; sourceTree = "<group>"; };
-		554AED272175BA90005F7847 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		554AED282175BA90005F7847 /* PB.project */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PB.project; sourceTree = "<group>"; };
-		554AED292175BA90005F7847 /* Makefile.postamble */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.postamble; sourceTree = "<group>"; };
 		554AED2A2175BA90005F7847 /* MiscPaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscPaperView.m; sourceTree = "<group>"; };
 		554AED2B2175BA90005F7847 /* MiscColorView.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = MiscColorView.rtf; sourceTree = "<group>"; };
 		554AED2C2175BA90005F7847 /* MiscColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscColorView.h; sourceTree = "<group>"; };
@@ -479,15 +471,11 @@
 		554AED232175BA90005F7847 /* MiscPaperView.subproj */ = {
 			isa = PBXGroup;
 			children = (
-				554AED242175BA90005F7847 /* MiscPaperView.h */,
-				554AED252175BA90005F7847 /* Makefile.preamble */,
-				554AED262175BA90005F7847 /* MiscColorView.m */,
-				554AED272175BA90005F7847 /* Makefile */,
-				554AED282175BA90005F7847 /* PB.project */,
-				554AED292175BA90005F7847 /* Makefile.postamble */,
-				554AED2A2175BA90005F7847 /* MiscPaperView.m */,
-				554AED2B2175BA90005F7847 /* MiscColorView.rtf */,
 				554AED2C2175BA90005F7847 /* MiscColorView.h */,
+				554AED262175BA90005F7847 /* MiscColorView.m */,
+				554AED2B2175BA90005F7847 /* MiscColorView.rtf */,
+				554AED242175BA90005F7847 /* MiscPaperView.h */,
+				554AED2A2175BA90005F7847 /* MiscPaperView.m */,
 				554AED2D2175BA90005F7847 /* MiscPaperView.rtf */,
 			);
 			path = MiscPaperView.subproj;
@@ -626,7 +614,6 @@
 				554AEE182175BA91005F7847 /* Background.tiff in Resources */,
 				554AEE5A2175BA91005F7847 /* circ8.tiff in Resources */,
 				554AEE2F2175BA91005F7847 /* UndoButtonH.tiff in Resources */,
-				554AEDF22175BA91005F7847 /* PB.project in Resources */,
 				554AEE202175BA91005F7847 /* char1.tiff in Resources */,
 				554AEE192175BA91005F7847 /* d_red_bild.tiff in Resources */,
 				554AEE1E2175BA91005F7847 /* f_plum.tiff in Resources */,
@@ -670,7 +657,6 @@
 				554AEE102175BA91005F7847 /* f_mum.tiff in Resources */,
 				554AEE2E2175BA91005F7847 /* d_white_really_white.tiff in Resources */,
 				554AEE232175BA91005F7847 /* d_white_bild.tiff in Resources */,
-				554AEDEF2175BA91005F7847 /* Makefile.preamble in Resources */,
 				554AEE482175BA91005F7847 /* char4.tiff in Resources */,
 				554AEE092175BA91005F7847 /* d_green_bild.tiff in Resources */,
 				554AEE472175BA91005F7847 /* NewButtonH.tiff in Resources */,
@@ -704,7 +690,6 @@
 				554AEE552175BA91005F7847 /* circ4.tiff in Resources */,
 				554AEE352175BA91005F7847 /* bam8.tiff in Resources */,
 				554AEE282175BA91005F7847 /* f_orch.tiff in Resources */,
-				554AEDF32175BA91005F7847 /* Makefile.postamble in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,7 +701,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				554AEE322175BA91005F7847 /* GameCoordinator.mm in Sources */,
-				554AEDF12175BA91005F7847 /* Makefile in Sources */,
 				554AEDEB2175BA91005F7847 /* Help.mm in Sources */,
 				554AEE272175BA91005F7847 /* NumberTile.mm in Sources */,
 				554AEE1B2175BA91005F7847 /* SHAppManager.m in Sources */,
@@ -895,7 +879,7 @@
 		554AED172175BA27005F7847 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Shanghai;
 				CODE_SIGN_ENTITLEMENTS = NeXTShanghai/NeXTShanghai.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -912,7 +896,7 @@
 		554AED182175BA27005F7847 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Shanghai;
 				CODE_SIGN_ENTITLEMENTS = NeXTShanghai/NeXTShanghai.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
