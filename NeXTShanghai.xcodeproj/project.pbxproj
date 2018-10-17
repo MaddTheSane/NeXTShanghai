@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552B1E1F217726EB0062E4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B1E1E217726EB0062E4CC /* AppDelegate.swift */; };
+		552B1E21217726EC0062E4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552B1E20217726EC0062E4CC /* Assets.xcassets */; };
+		552B1E24217726EC0062E4CC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552B1E22217726EC0062E4CC /* MainMenu.xib */; };
+		552B1E2A2177277F0062E4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554AED0B2175BA27005F7847 /* Assets.xcassets */; };
 		554AED0C2175BA27005F7847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554AED0B2175BA27005F7847 /* Assets.xcassets */; };
 		554AED122175BA27005F7847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED112175BA27005F7847 /* main.m */; };
 		554AEDE92175BA91005F7847 /* TileCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED1D2175BA90005F7847 /* TileCountView.m */; };
@@ -40,6 +44,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		552B1E1C217726EB0062E4CC /* Shanghai Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shanghai Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		552B1E1E217726EB0062E4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		552B1E20217726EC0062E4CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		552B1E23217726EC0062E4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		552B1E25217726EC0062E4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		552B1E26217726EC0062E4CC /* Shanghai_Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shanghai_Swift.entitlements; sourceTree = "<group>"; };
 		554AED052175BA26005F7847 /* NeXTShanghai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeXTShanghai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		554AED0B2175BA27005F7847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		554AED102175BA27005F7847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +164,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		552B1E19217726EB0062E4CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		554AED022175BA26005F7847 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,10 +181,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552B1E1D217726EB0062E4CC /* Shanghai Swift */ = {
+			isa = PBXGroup;
+			children = (
+				552B1E1E217726EB0062E4CC /* AppDelegate.swift */,
+				552B1E20217726EC0062E4CC /* Assets.xcassets */,
+				552B1E22217726EC0062E4CC /* MainMenu.xib */,
+				552B1E25217726EC0062E4CC /* Info.plist */,
+				552B1E26217726EC0062E4CC /* Shanghai_Swift.entitlements */,
+			);
+			path = "Shanghai Swift";
+			sourceTree = "<group>";
+		};
 		554AECFC2175BA26005F7847 = {
 			isa = PBXGroup;
 			children = (
 				554AED072175BA26005F7847 /* NeXTShanghai */,
+				552B1E1D217726EB0062E4CC /* Shanghai Swift */,
 				554AED062175BA26005F7847 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -177,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				554AED052175BA26005F7847 /* NeXTShanghai.app */,
+				552B1E1C217726EB0062E4CC /* Shanghai Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,6 +373,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		552B1E1B217726EB0062E4CC /* Shanghai Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 552B1E27217726EC0062E4CC /* Build configuration list for PBXNativeTarget "Shanghai Swift" */;
+			buildPhases = (
+				552B1E18217726EB0062E4CC /* Sources */,
+				552B1E19217726EB0062E4CC /* Frameworks */,
+				552B1E1A217726EB0062E4CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shanghai Swift";
+			productName = "Shanghai Swift";
+			productReference = 552B1E1C217726EB0062E4CC /* Shanghai Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
 		554AED042175BA26005F7847 /* NeXTShanghai */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 554AED162175BA27005F7847 /* Build configuration list for PBXNativeTarget "NeXTShanghai" */;
@@ -365,9 +413,13 @@
 		554AECFD2175BA26005F7847 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "C.W. Betts";
 				TargetAttributes = {
+					552B1E1B217726EB0062E4CC = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					554AED042175BA26005F7847 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -388,11 +440,22 @@
 			projectRoot = "";
 			targets = (
 				554AED042175BA26005F7847 /* NeXTShanghai */,
+				552B1E1B217726EB0062E4CC /* Shanghai Swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		552B1E1A217726EB0062E4CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552B1E21217726EC0062E4CC /* Assets.xcassets in Resources */,
+				552B1E2A2177277F0062E4CC /* Assets.xcassets in Resources */,
+				552B1E24217726EC0062E4CC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		554AED032175BA26005F7847 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +474,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		552B1E18217726EB0062E4CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552B1E1F217726EB0062E4CC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		554AED012175BA26005F7847 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,6 +514,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		552B1E22217726EC0062E4CC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				552B1E23217726EC0062E4CC /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		554AED2E2175BA90005F7847 /* Info.nib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -470,6 +549,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		552B1E28217726EC0062E4CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shanghai Swift/Shanghai_Swift.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Shanghai Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.MaddTheSane.Shanghai-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		552B1E29217726EC0062E4CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shanghai Swift/Shanghai_Swift.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Shanghai Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.MaddTheSane.Shanghai-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		554AED142175BA27005F7847 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -618,6 +737,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		552B1E27217726EC0062E4CC /* Build configuration list for PBXNativeTarget "Shanghai Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552B1E28217726EC0062E4CC /* Debug */,
+				552B1E29217726EC0062E4CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		554AED002175BA26005F7847 /* Build configuration list for PBXProject "NeXTShanghai" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
