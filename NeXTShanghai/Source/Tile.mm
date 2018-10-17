@@ -41,9 +41,6 @@ void Tile::loadImageFromFile( NSString* aFile ) {
 
 
 void Tile::compositeImage( NSPoint aPoint, NSCompositingOperation aMode ) {
-
-
-	NSRect	r;
 	
 	// HACK: We use the compos Mode to check the tiles state...thats stupid.
 	// Sorry will change that later...
