@@ -184,13 +184,10 @@
 		554AED072175BA26005F7847 /* NeXTShanghai */ = {
 			isa = PBXGroup;
 			children = (
-				554AEE6221766458005F7847 /* Resources */,
-				554AEDE32175BA90005F7847 /* Documentation */,
 				554AED192175BA90005F7847 /* Source */,
-				554AED0B2175BA27005F7847 /* Assets.xcassets */,
-				554AED102175BA27005F7847 /* Info.plist */,
+				554AEDE32175BA90005F7847 /* Documentation */,
+				554AEE6221766458005F7847 /* Resources */,
 				554AED112175BA27005F7847 /* main.m */,
-				554AED132175BA27005F7847 /* NeXTShanghai.entitlements */,
 			);
 			path = NeXTShanghai;
 			sourceTree = "<group>";
@@ -198,6 +195,8 @@
 		554AED192175BA90005F7847 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				554AED232175BA90005F7847 /* MiscPaperView */,
+				554AED782175BA90005F7847 /* Tiles */,
 				554AED442175BA90005F7847 /* AllNumberTiles.h */,
 				554AED502175BA90005F7847 /* BoardScramble.h */,
 				554AED622175BA90005F7847 /* BoardScramble.mm */,
@@ -217,7 +216,6 @@
 				554AEDC32175BA90005F7847 /* IntegerList.mm */,
 				554AEDBA2175BA90005F7847 /* InterfaceView.h */,
 				554AED522175BA90005F7847 /* InterfaceView.m */,
-				554AED232175BA90005F7847 /* MiscPaperView.subproj */,
 				554AED652175BA90005F7847 /* mj.h */,
 				554AED462175BA90005F7847 /* NumberTile.h */,
 				554AED702175BA90005F7847 /* NumberTile.mm */,
@@ -239,12 +237,11 @@
 				554AEDC92175BA90005F7847 /* TileDescriptionArray.mm */,
 				554AEDC12175BA90005F7847 /* TileIterator.h */,
 				554AED6D2175BA90005F7847 /* TileIterator.cc */,
-				554AED782175BA90005F7847 /* Tiles */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		554AED232175BA90005F7847 /* MiscPaperView.subproj */ = {
+		554AED232175BA90005F7847 /* MiscPaperView */ = {
 			isa = PBXGroup;
 			children = (
 				554AED2C2175BA90005F7847 /* MiscColorView.h */,
@@ -254,9 +251,9 @@
 				554AED2A2175BA90005F7847 /* MiscPaperView.m */,
 				554AED2D2175BA90005F7847 /* MiscPaperView.rtf */,
 			);
+			name = MiscPaperView;
 			path = MiscPaperView.subproj;
 			sourceTree = "<group>";
-			usesTabs = 1;
 		};
 		554AED782175BA90005F7847 /* Tiles */ = {
 			isa = PBXGroup;
@@ -332,8 +329,11 @@
 		554AEE6221766458005F7847 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				554AED0B2175BA27005F7847 /* Assets.xcassets */,
 				554AEE5F2175BB30005F7847 /* Help */,
 				554AED2E2175BA90005F7847 /* Info.nib */,
+				554AED102175BA27005F7847 /* Info.plist */,
+				554AED132175BA27005F7847 /* NeXTShanghai.entitlements */,
 				554AED302175BA90005F7847 /* Shanghai.xib */,
 			);
 			name = Resources;
