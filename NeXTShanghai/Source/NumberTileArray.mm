@@ -12,9 +12,7 @@
 #import "AllNumberTiles.h"
 
 
-extern "C" {
-#include	<assert.h>
-}
+#include <cassert>
 
 
 NumberTileArray::NumberTileArray( void ) {

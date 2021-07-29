@@ -11,6 +11,7 @@
 		552B1E21217726EC0062E4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552B1E20217726EC0062E4CC /* Assets.xcassets */; };
 		552B1E24217726EC0062E4CC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552B1E22217726EC0062E4CC /* MainMenu.xib */; };
 		552B1E2A2177277F0062E4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554AED0B2175BA27005F7847 /* Assets.xcassets */; };
+		552B1E2C21772C390062E4CC /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B1E2B21772C390062E4CC /* Tile.swift */; };
 		554AED0C2175BA27005F7847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554AED0B2175BA27005F7847 /* Assets.xcassets */; };
 		554AED122175BA27005F7847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED112175BA27005F7847 /* main.m */; };
 		554AEDE92175BA91005F7847 /* TileCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554AED1D2175BA90005F7847 /* TileCountView.m */; };
@@ -50,6 +51,7 @@
 		552B1E23217726EC0062E4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		552B1E25217726EC0062E4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552B1E26217726EC0062E4CC /* Shanghai_Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shanghai_Swift.entitlements; sourceTree = "<group>"; };
+		552B1E2B21772C390062E4CC /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		554AED052175BA26005F7847 /* NeXTShanghai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeXTShanghai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		554AED0B2175BA27005F7847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		554AED102175BA27005F7847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				552B1E1E217726EB0062E4CC /* AppDelegate.swift */,
+				552B1E2B21772C390062E4CC /* Tile.swift */,
 				552B1E20217726EC0062E4CC /* Assets.xcassets */,
 				552B1E22217726EC0062E4CC /* MainMenu.xib */,
 				552B1E25217726EC0062E4CC /* Info.plist */,
@@ -414,7 +417,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "C.W. Betts";
 				TargetAttributes = {
 					552B1E1B217726EB0062E4CC = {
@@ -432,7 +435,6 @@
 			knownRegions = (
 				en,
 				Base,
-				English,
 			);
 			mainGroup = 554AECFC2175BA26005F7847;
 			productRefGroup = 554AED062175BA26005F7847 /* Products */;
@@ -479,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				552B1E1F217726EB0062E4CC /* AppDelegate.swift in Sources */,
+				552B1E2C21772C390062E4CC /* Tile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Shanghai Swift/Shanghai_Swift.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Shanghai Swift/Info.plist";
@@ -574,6 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Shanghai Swift/Shanghai_Swift.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Shanghai Swift/Info.plist";
@@ -615,6 +620,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -674,6 +680,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -697,6 +704,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
@@ -705,6 +713,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Shanghai;
 				CODE_SIGN_ENTITLEMENTS = NeXTShanghai/NeXTShanghai.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = NeXTShanghai/Info.plist;
@@ -722,6 +731,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Shanghai;
 				CODE_SIGN_ENTITLEMENTS = NeXTShanghai/NeXTShanghai.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = NeXTShanghai/Info.plist;

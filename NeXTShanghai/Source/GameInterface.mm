@@ -6,18 +6,16 @@
 
 #import "GameInterface.h"
 
-extern "C" {
-#import	<assert.h>
-}
+#include <cassert>
 
 
 @implementation GameInterface
 {
     GameCoordinator     *gameCoordinator;
     TileCountManager    *tileCountManager;
-    // This flag is used to prevent draw messages
-    //    from being sent to the C++ object before
-    //    the application has finished initializing.
+    //!This flag is used to prevent draw messages
+    //!from being sent to the C++ object before
+    //!the application has finished initializing.
     BOOL            application_initialized;
 }
 
@@ -50,63 +48,43 @@ extern "C" {
 
 
 - (void)undoClick:sender {
-
-
 	gameCoordinator->undoClick();
 }
 
 
 - (void)helpClick:sender {
-
 	gameCoordinator->helpClick();
-
 }
 
 
 - (void)againClick:sender {
-
-
 	gameCoordinator->againClick();
-
 }
 
 - (void)newClick:sender {
-
-
 	gameCoordinator->newClick();
-
 }
 
 
 - (void)gameBoardDraw {
-
-
 	if( application_initialized )
 		gameCoordinator->drawImage();
 }
 
 
 - (void)tileCountDraw {
-
-
 	if( application_initialized )
 		tileCountManager->drawImage();
 }
 
 
 - (void)click:(NSPoint)aPoint {
-
-
 	gameCoordinator->click( aPoint );
-	
 }
 
 
 - (void)doubleClick:(NSPoint)aPoint {
-
-
 	gameCoordinator->doubleClick( aPoint );
-
 }
 
 

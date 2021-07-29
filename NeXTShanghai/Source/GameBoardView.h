@@ -18,9 +18,7 @@
 
 #import "InterfaceView.h"
 
-@interface GameBoardView:InterfaceView {
-
-}
+@interface GameBoardView:InterfaceView
 
 
 												// As a subclass of Responder, this object

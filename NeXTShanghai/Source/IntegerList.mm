@@ -8,10 +8,9 @@
 
 #import	"IntegerList.h"
 
+#include <cassert>
 extern "C" {
-#import	<assert.h>
-
-#import	"mj.h"
+#include "mj.h"
 }
 
 												// All integers on the list are offseted
@@ -28,8 +27,7 @@ IntegerList::IntegerList( void ) {
 
 
 IntegerList::~IntegerList( void ) {
-
-
+	my_list = nil;
 }
 
 
@@ -73,7 +71,7 @@ void IntegerList::empty( void ) {
 }
 
 
-int IntegerList::count( void ) {
+NSInteger IntegerList::count( void ) {
 
 
 	return [ my_list count ];

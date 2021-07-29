@@ -8,43 +8,36 @@
 
 #import	"Tile.h"
 
-#import	<AppKit/AppKit.h>
+#import	<Cocoa/Cocoa.h>
 
-extern "C" {
-#import	<assert.h>
-#import	<libc.h>
-#import	<string.h>
-}
+#include <cassert>
+#include <cstdlib>
+#include <cstring>
 
-
-												// This is a subdirectory within
-												//	the application where the tile
-												//	tiff images are stored.
+// This is a subdirectory within
+//	the application where the tile
+//	tiff images are stored.
 #define	TILE_TIFF_DIRECTORY	"NeXTmj-tiff"
 
 
 Tile::Tile( void ) {
-
 	my_tile_image = nil;
 }
 
 Tile::~Tile( void ) {
-
 	my_tile_image=nil;
 }
 
 
 void Tile::loadImageFromFile( NSString* aFile ) {
-
 	my_tile_image = [NSImage imageNamed:aFile];
 }
 
 
 void Tile::compositeImage( NSPoint aPoint, NSCompositingOperation aMode ) {
-	
-	// HACK: We use the compos Mode to check the tiles state...thats stupid.
+	// HACK: We use the compos Mode to check the tiles state... that's stupid.
 	// Sorry will change that later...
-	// NSCompositingOperationDestinationOver means...no background please...
+	// NSCompositingOperationDestinationOver means... no background please...
 	
 	if( aMode == NSCompositingOperationCopy )
 		[ [NSImage imageNamed:@"Tile"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
@@ -58,5 +51,3 @@ void Tile::compositeImage( NSPoint aPoint, NSCompositingOperation aMode ) {
 	}
 	[my_tile_image drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
 }
-
-

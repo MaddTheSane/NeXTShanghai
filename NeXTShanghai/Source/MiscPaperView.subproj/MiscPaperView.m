@@ -31,21 +31,21 @@
 {
 	// Designated initilizer. We will set allow resizing by default and
 	// we will draw in Lightgray if we have to swap 'nil' in.
-
-    if (self = [super initWithFrame:frameRect]) {
-
-	// By default will draw a simple horizontal light gray grid with a dark
-	// gray right side border.
-
-	gridColor = [NSColor lightGrayColor];
-	gridType = Misc_PaperGridHorizontal;
-	gridOrigin = Misc_PaperGridStartsUpperLeft;
-	gridVertOffset = gridHorOffset = 20;
-
-	sidelineColor = [NSColor darkGrayColor];
-	sidelineType = Misc_PaperSidelineRight;
-	sidelineOffset = 4;
-    }
+	
+	if (self = [super initWithFrame:frameRect]) {
+		
+		// By default will draw a simple horizontal light gray grid with a dark
+		// gray right side border.
+		
+		gridColor = [NSColor lightGrayColor];
+		gridType = Misc_PaperGridHorizontal;
+		gridOrigin = Misc_PaperGridStartsUpperLeft;
+		gridVertOffset = gridHorOffset = 20;
+		
+		sidelineColor = [NSColor darkGrayColor];
+		sidelineType = Misc_PaperSidelineRight;
+		sidelineOffset = 4;
+	}
 	return self;
 }
 
@@ -57,15 +57,8 @@
 	gridOrigin = theOrigin;
 }
 
-- (Misc_PaperGridType)gridType
-{
-	return gridType;
-}
-
-- (Misc_PaperGridOrigin)gridOrigin
-{
-	return gridOrigin;
-}
+@synthesize gridType;
+@synthesize gridOrigin;
 
 - (void)setGridSizeVertical:(int)vert horizontal:(int)hor
 {

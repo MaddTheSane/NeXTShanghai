@@ -12,30 +12,29 @@
 
 class TileIterator {
 private:
-												// This is the integral value of
-												//	this object.
-
+	/// This is the integral value of
+	/// this object.
 	int		my_value;
 
 public:
-												// Return the current value of the 
-												//	object.
+	/// Return the current value of the
+	/// object.
 	int		value( void );
-												// The iterator operator increments
-												//	the value modulas the number of
-												//	tiles and retuns the next value.
+	/// The iterator operator increments
+	/// the value modulas the number of
+	/// tiles and retuns the next value.
 	int		operator()();
-												// Add to the value.
+	/// Add to the value.
 	int		operator+( int );
-												// Subrtact from the value.
+	/// Subrtact from the value.
 	int		operator-( int );					
-												// Preincrement.  Postincrement isn't
-												//	supported by the compiler.
+	/// Preincrement.  Postincrement isn't
+	/// supported by the compiler.
 	int		operator++( void );
-												// Predecrement.  Postdecrement may not be
-												//	supported.
+	/// Predecrement.  Postdecrement may not be
+	/// supported.
 	int		operator--( void );
-												// Assign a value.
+	/// Assign a value.
 	void	operator=( int );
 	
 	

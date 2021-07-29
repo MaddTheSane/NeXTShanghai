@@ -11,7 +11,7 @@
  */
 
 
-#import	"mj.h"
+#include "mj.h"
 #import	"NumberTile.h"
 
 
@@ -27,8 +27,8 @@ public:
 	NumberTileArray( void );
 	~NumberTileArray( void );	
 
-												// Index into the array to an
-												//	element.
+	/// Index into the array to an
+	/// element.
 	NumberTile&	operator[]( int );
 };
 

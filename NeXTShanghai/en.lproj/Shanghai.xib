@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,28 +17,22 @@
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="142" y="124" width="792" height="585"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
             <view key="contentView" id="50">
                 <rect key="frame" x="0.0" y="0.0" width="792" height="585"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button imageHugsTitle="YES" id="40">
+                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40" userLabel="Background View">
                         <rect key="frame" x="0.0" y="0.0" width="792" height="517"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <buttonCell key="cell" type="bevel" title="Cell" image="Background" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="96">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="cellTitle"/>
-                        </buttonCell>
-                    </button>
-                    <button imageHugsTitle="YES" id="46">
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="center" imageScaling="proportionallyDown" image="Background" id="96"/>
+                    </imageView>
+                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46" userLabel="Title View">
                         <rect key="frame" x="0.0" y="514" width="792" height="71"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <buttonCell key="cell" type="bevel" title="Cell" image="Title" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="97">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="cellTitle"/>
-                        </buttonCell>
-                    </button>
-                    <button imageHugsTitle="YES" id="3">
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="center" imageScaling="proportionallyDown" image="Title" id="97"/>
+                    </imageView>
+                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3" userLabel="Suggest">
                         <rect key="frame" x="387" y="523" width="115" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="bevel" title="Cell" image="SuggestButton" imagePosition="only" alignment="center" alternateImage="SuggestButtonH" imageScaling="proportionallyDown" inset="2" id="92">
@@ -48,7 +43,7 @@
                             <action selector="helpClick:" target="33" id="65"/>
                         </connections>
                     </button>
-                    <button imageHugsTitle="YES" id="8">
+                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8" userLabel="Restart">
                         <rect key="frame" x="571" y="521" width="112" height="47"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <buttonCell key="cell" type="bevel" title="Cell" image="RestartButton" imagePosition="only" alignment="center" alternateImage="RestartButtonH" imageScaling="proportionallyDown" inset="2" id="93">
@@ -59,10 +54,10 @@
                             <action selector="againClick:" target="33" id="66"/>
                         </connections>
                     </button>
-                    <button imageHugsTitle="YES" id="20">
+                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20" userLabel="New">
                         <rect key="frame" x="690" y="523" width="76" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <buttonCell key="cell" type="bevel" title="Cell" image="NewButton" imagePosition="only" alignment="center" alternateImage="NewButtonH" imageScaling="proportionallyDown" inset="2" id="94">
+                        <buttonCell key="cell" type="bevel" title="New" image="NewButton" imagePosition="only" alignment="center" alternateImage="NewButtonH" imageScaling="proportionallyDown" inset="2" id="94">
                             <behavior key="behavior" lightByContents="YES"/>
                             <font key="font" metaFont="cellTitle"/>
                         </buttonCell>
@@ -70,10 +65,10 @@
                             <action selector="newClick:" target="33" id="67"/>
                         </connections>
                     </button>
-                    <button imageHugsTitle="YES" id="36">
+                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36" userLabel="Undo">
                         <rect key="frame" x="287" y="521" width="97" height="47"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <buttonCell key="cell" type="bevel" title="Cell" image="UndoButton" imagePosition="only" alignment="center" alternateImage="UndoButtonH" imageScaling="proportionallyDown" inset="2" id="95">
+                        <buttonCell key="cell" type="bevel" title="Undo" image="UndoButton" imagePosition="only" alignment="center" alternateImage="UndoButtonH" imageScaling="proportionallyDown" inset="2" id="95">
                             <behavior key="behavior" lightByContents="YES"/>
                             <font key="font" metaFont="cellTitle"/>
                         </buttonCell>
@@ -81,18 +76,18 @@
                             <action selector="undoClick:" target="33" id="68"/>
                         </connections>
                     </button>
-                    <customView id="29" customClass="GameBoardView">
-                        <rect key="frame" x="9" y="25" width="776" height="477"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <connections>
-                            <outlet property="gameInterface" destination="33" id="74"/>
-                        </connections>
-                    </customView>
-                    <customView id="32" customClass="TileCountView">
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32" customClass="TileCountView">
                         <rect key="frame" x="92" y="531" width="82" height="36"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <outlet property="gameInterface" destination="33" id="73"/>
+                        </connections>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="29" customClass="GameBoardView">
+                        <rect key="frame" x="9" y="25" width="776" height="477"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="gameInterface" destination="33" id="74"/>
                         </connections>
                     </customView>
                 </subviews>
@@ -102,8 +97,8 @@
         <customObject id="14" userLabel="SHAppManager" customClass="SHAppManager"/>
         <menu title="Shanghai" systemMenu="main" id="30" userLabel="MainMenu">
             <items>
-                <menuItem title="Info" id="12">
-                    <menu key="submenu" title="Info" id="35">
+                <menuItem title="NeXTShanghai" id="12">
+                    <menu key="submenu" title="NeXTShanghai" id="35">
                         <items>
                             <menuItem title="About NeXTShanghai" id="16">
                                 <connections>
@@ -151,11 +146,13 @@
                                     <action selector="newClick:" target="33" id="77"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="UZj-qq-S35"/>
                             <menuItem title="Close Window" keyEquivalent="w" id="60">
                                 <connections>
                                     <action selector="performClose:" target="-1" id="83"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="cY3-oH-ikC"/>
                             <menuItem title="Undo Move" keyEquivalent="z" id="58">
                                 <connections>
                                     <action selector="undoClick:" target="33" id="79"/>
@@ -166,6 +163,7 @@
                                     <action selector="helpClick:" target="33" id="76"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="HDE-zn-yzh"/>
                             <menuItem title="Restart Game" keyEquivalent="r" id="62">
                                 <connections>
                                     <action selector="againClick:" target="33" id="78"/>
@@ -192,6 +190,13 @@
                                     <action selector="paste:" target="-1" id="87"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="T4Y-yF-tnv"/>
+                            <menuItem title="Select All" keyEquivalent="a" id="43">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="88"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="cOL-6r-XtW"/>
                             <menuItem title="Spelling..." id="27">
                                 <connections>
                                     <action selector="showGuessPanel:" target="-1" id="89"/>
@@ -200,11 +205,6 @@
                             <menuItem title="Check Spelling" keyEquivalent=";" id="19">
                                 <connections>
                                     <action selector="checkSpelling:" target="-1" id="90"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Select All" keyEquivalent="a" id="43">
-                                <connections>
-                                    <action selector="selectAll:" target="-1" id="88"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -245,6 +245,7 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="-203" y="-250"/>
         </menu>
         <customObject id="33" userLabel="GameInterfaceInstance" customClass="GameInterface">
             <connections>
@@ -257,47 +258,47 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="297" y="506" width="568" height="192"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
             <view key="contentView" id="23">
                 <rect key="frame" x="0.0" y="0.0" width="568" height="192"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" id="52">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52">
                         <rect key="frame" x="96" y="144" width="133" height="34"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" alignment="center" title="NeXTmj" id="103">
-                            <font key="font" size="25" name="Helvetica-Bold"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <font key="font" metaFont="systemBold" size="24"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="39">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39">
                         <rect key="frame" x="80" y="8" width="105" height="13"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" alignment="left" title="Version 2.0a, Mar-91" id="100">
-                            <font key="font" size="10" name="Helvetica"/>
-                            <color key="textColor" white="0.33333333999999998" alpha="1" colorSpace="calibratedWhite"/>
+                            <font key="font" metaFont="system" size="10"/>
+                            <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="24">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24">
                         <rect key="frame" x="104" y="128" width="140" height="20"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" alignment="left" title="by Dennis P. Glatting" id="98">
-                            <font key="font" size="14" name="Helvetica"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <font key="font" metaFont="system" size="14"/>
+                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button imageHugsTitle="YES" id="42">
+                    <button fixedFrame="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42">
                         <rect key="frame" x="22" y="112" width="64" height="64"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <buttonCell key="cell" type="bevel" title="Cell" image="NSApplicationIcon" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="101">
+                        <buttonCell key="cell" type="bevel" title="Cell" image="NSApplicationIcon" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyUpOrDown" inset="2" id="101">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="cellTitle"/>
                         </buttonCell>
                     </button>
-                    <box title="Box" titlePosition="noTitle" id="34">
+                    <box fixedFrame="YES" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="34">
                         <rect key="frame" x="0.0" y="32" width="568" height="2"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <view key="contentView" id="QIB-og-Yjn">
@@ -306,15 +307,15 @@
                         </view>
                         <font key="titleFont" size="12" name="Helvetica"/>
                     </box>
-                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="6">
+                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6">
                         <rect key="frame" x="256" y="40" width="296" height="144"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="9d7-C6-ASo">
                             <rect key="frame" x="1" y="1" width="294" height="142"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" baseWritingDirection="leftToRight" usesFontPanel="YES" usesRuler="YES" spellingCorrection="YES" smartInsertDelete="YES" id="105">
-                                    <rect key="frame" x="0.0" y="-52" width="273" height="336"/>
+                                <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" baseWritingDirection="leftToRight" usesFontPanel="YES" allowsCharacterPickerTouchBarItem="NO" usesRuler="YES" textCompletion="NO" id="105">
+                                    <rect key="frame" x="0.0" y="-182" width="273" height="446"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -338,7 +339,7 @@ Loveland, Ohio   45140
 </mutableString>
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <font key="NSFont" metaFont="system"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                     <tabStops>
                                                         <textTab alignment="left" location="26.649999618530273">
@@ -381,48 +382,53 @@ Loveland, Ohio   45140
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="eCo-yk-Tdn">
+                            <rect key="frame" x="-100" y="-100" width="294" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
                         <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="106">
                             <rect key="frame" x="279" y="1" width="16" height="142"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <textField verticalHuggingPriority="750" id="31">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="31">
                         <rect key="frame" x="8" y="89" width="76" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" alignment="left" title="Courtesy of:" id="99">
-                            <font key="font" size="12" name="Helvetica"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <font key="font" metaFont="system" size="12"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="48">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48">
                         <rect key="frame" x="83" y="59" width="165" height="45"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" alignment="left" id="102">
-                            <font key="font" size="12" name="Helvetica"/>
+                            <font key="font" metaFont="system" size="12"/>
                             <string key="title">Threaded Technologies Inc.
 339 Wiltsee Avenue
 Loveland, Ohio   45142</string>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" id="56">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56">
                         <rect key="frame" x="272" y="8" width="218" height="13"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textFieldCell key="cell" alignment="left" title="Copyright, 1991, Threaded Technologies Inc." id="104">
-                            <font key="font" size="10" name="Helvetica"/>
-                            <color key="textColor" white="0.33333333999999998" alpha="1" colorSpace="calibratedWhite"/>
+                            <font key="font" metaFont="system" size="10"/>
+                            <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="14" y="110"/>
         </window>
     </objects>
     <resources>
         <image name="Background" width="789" height="511"/>
-        <image name="NSApplicationIcon" width="128" height="128"/>
+        <image name="NSApplicationIcon" width="32" height="32"/>
         <image name="NewButton" width="76" height="44"/>
         <image name="NewButtonH" width="76" height="44"/>
         <image name="RestartButton" width="109" height="44"/>

@@ -14,16 +14,16 @@
 #import	"TileDescription.h"
 
 extern "C" {
-#import	"mj.h"
+#include "mj.h"
 }
 
 
 class TileDescriptionArray {
 private:
-												// This matrix holds a Tile Description 
-												//	for all tile locations on the
-												//	Game Board.  Effectivly, this matrix
-												//	is a const. 
+	/// This matrix holds a Tile Description
+	/// for all tile locations on the
+	/// Game Board.  Effectivly, this matrix
+	/// is a const.
 	TileDescription*	tile_descriptions[ NUMBER_OF_TILES ];
 
 
@@ -31,12 +31,12 @@ public:
 	
 	TileDescriptionArray( void );
 	~TileDescriptionArray( void );
-												// The only access to the array is to 
-												//	examine a description.  So we'll
-												//	return pointers (I don't really care
-												//	for reference types anyway).
+	/// The only access to the array is to
+	/// examine a description.  So we'll
+	/// return pointers (I don't really care
+	/// for reference types anyway).
 	TileDescription* operator[]( int );
-												// How many elements are in the array?
+	/// How many elements are in the array?
 	int			size( void );	
 };
 

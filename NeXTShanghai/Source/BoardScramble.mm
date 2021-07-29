@@ -8,13 +8,14 @@
 
 #import	"BoardScramble.h"
 
-extern "C" {
-#import	<assert.h>
-#import	<libc.h>
-#import	<stdlib.h>
-#import	<sys/time.h>
+#include <cassert>
+#include <cstdlib>
 
-#import	"mj.h"
+extern "C" {
+#include <libc.h>
+#include <sys/time.h>
+
+#include "mj.h"
 }
 
 
@@ -68,7 +69,7 @@ void BoardScramble::scramble( int level, GameTileArray& board ) {
 
 
 void BoardScramble::scramble( GameTileArray& board ) {
-
+	
 	int	pool[ NUMBER_OF_TILES ];
 	int	i, j;
 	
@@ -76,14 +77,15 @@ void BoardScramble::scramble( GameTileArray& board ) {
 	/*
 	 * Grossly abstracted from xmj.
 	 */
-	 
-												// Initialize the random number
-												//	generator.
+	
+	// Initialize the random number
+	//	generator.
 	(void)srandom( seed );
-
-												// Initialize tile pool
-	for( i = 0; i < NUMBER_OF_TILES; i++ ) 
+	
+	// Initialize tile pool
+	for( i = 0; i < NUMBER_OF_TILES; i++ ) {
 		pool[ i ] = YES;
+	}
 	
 	for( j = 0; j < NUMBER_OF_TILES; j++ ) {
 		BOOL		ok = NO;
@@ -99,15 +101,18 @@ void BoardScramble::scramble( GameTileArray& board ) {
 		while (ok == NO) {
 			i = RANDOM( NUMBER_OF_TILES -1 );
 			dir = random()&01;
-			while (( i < NUMBER_OF_TILES || i >=0 ) && pool[i] == NO ) 
+			while (( i < NUMBER_OF_TILES || i >=0 ) && pool[i] == NO ) {
 				(dir) ? i++ : i--;
+			}
 			if (i >= NUMBER_OF_TILES || i < 0 ) { /* Thud! Reverse march! */
 				i = RANDOM( NUMBER_OF_TILES -1 );
-				while (( i < NUMBER_OF_TILES || i >= 0) && pool[i] == NO ) 
+				while (( i < NUMBER_OF_TILES || i >= 0) && pool[i] == NO ) {
 					(dir) ? i-- : i++;
+				}
 			}
-			if (i >= NUMBER_OF_TILES || i < 0) 
+			if (i >= NUMBER_OF_TILES || i < 0) {
 				continue; /* Missed! try again */
+			}
 			pool[i] = NO;
 			ok = YES;
 		}

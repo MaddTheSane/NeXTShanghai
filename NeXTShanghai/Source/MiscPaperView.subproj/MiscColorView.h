@@ -22,7 +22,7 @@
 
 @property (strong) NSColor *backgroundColor;
 @property (getter=hasSameColorAsDesktop) BOOL sameColorAsDesktop;
-- (void)setUseSameColorAsDesktop:(BOOL)flag DEPRECATED_ATTRIBUTE;
+- (void)setUseSameColorAsDesktop:(BOOL)flag __API_DEPRECATED_WITH_REPLACEMENT("setSameColorAsDesktop", macos(10.0, 10.9));
 
 - (void)drawRect:(NSRect)dirtyRect;
 

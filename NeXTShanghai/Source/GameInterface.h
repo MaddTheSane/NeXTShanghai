@@ -24,9 +24,9 @@
 
 @interface GameInterface:NSObject
 {
-												// These variables are outlets.
-												//	They include the game window
-												//	and two views that display tiles.
+	// These variables are outlets.
+	//	They include the game window
+	//	and two views that display tiles.
     IBOutlet NSWindow*		window;
     IBOutlet GameBoardView*	gameBoardView;
     IBOutlet TileCountView*	tileCountView;
@@ -37,22 +37,22 @@
 //! the Game Coordinator which sets off
 //! a chain reaction of object creation.
 - (id)init;
-												// This object is the delegate of the
-												//	application.  This method completes
-												//	the initialization by creating the
-												//	Tile Count Manager and Game Coordinator.
+/// This object is the delegate of the
+/// application.  This method completes
+/// the initialization by creating the
+/// Tile Count Manager and Game Coordinator.
 - (void)awakeFromNib;
-												// These methods are targets of buttons 
-												//	and views.  The interface translates
-												//	the Objective-C calls to C++ calls of
-												//	the apprpriate object.
+/// These methods are targets of buttons
+/// and views.  The interface translates
+/// the Objective-C calls to C++ calls of
+/// the apprpriate object.
 - (IBAction)undoClick:sender;
 - (IBAction)helpClick:sender;
 - (IBAction)againClick:sender;
 - (IBAction)newClick:sender;
-												// These are interface methods
-												//	between the Game Board's
-												//	view and the Game Coordinator.
+/// These are interface methods
+/// between the Game Board's
+/// view and the Game Coordinator.
 - (void)gameBoardDraw;
 - (void)click:(NSPoint)aPoint;
 - (void)doubleClick:(NSPoint)aPoint;

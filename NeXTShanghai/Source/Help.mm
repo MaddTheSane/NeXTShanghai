@@ -10,10 +10,10 @@
 
 #import <AppKit/AppKit.h>
 
-extern "C" {
-#include <assert.h>
+#include <cassert>
 
-#import	"mj.h"
+extern "C" {
+#include "mj.h"
 }
 
 

@@ -17,7 +17,7 @@
  */
 
 
-#import <appkit/NSView.h>
+#import <AppKit/NSView.h>
 
 @class GameInterface;
 

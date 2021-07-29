@@ -9,25 +9,25 @@
 #import	"TileDescription.h"
 #import	"Tile.h"
 
-extern "C" {
-#import	<assert.h>
+#include <cassert>
 
-#import	"mj.h"
+extern "C" {
+#include "mj.h"
 }
 
 #import <Foundation/Foundation.h>
 
 TileDescription::TileDescription( int loc ) {
-
+	
 	int	my_loc_z = 0;
 	
 	
-												// Set up default cases.
+	// Set up default cases.
 	left_list	+= ( loc -1 );
 	right_list 	+= ( loc + 1 );
 	
-												// Set up the left and right
-												//	associations for the tile's location.
+	// Set up the left and right
+	//	associations for the tile's location.
 	switch( loc ) {
 		case 0:
 		case 12:
@@ -93,14 +93,14 @@ TileDescription::TileDescription( int loc ) {
 			assert( loc );
 	}
 	
-												// Set up the covered associations
-												//	for the tile's location.
+	// Set up the covered associations
+	//	for the tile's location.
 	switch( loc ) {
 		case 13:	case 14:	case 15:	case 16:
 		case 17:	case 18:
 			covered_by_list += ( 87 + loc - 13 );
 			break;
-		case 22:	case 23:	case 24:	case 25:	
+		case 22:	case 23:	case 24:	case 25:
 		case 26:	case 27:
 			covered_by_list += ( 93 + loc - 22 );
 			break;
@@ -143,12 +143,12 @@ TileDescription::TileDescription( int loc ) {
 			covered_by_list += 143;
 			break;
 	}
-
-												// Calculate the tile's location
-												//	on the Game Board.
-												// We're going to stuff row and column
-												//	values in x,y.  They're adjusted
-												//	below.
+	
+	// Calculate the tile's location
+	//	on the Game Board.
+	// We're going to stuff row and column
+	//	values in x,y.  They're adjusted
+	//	below.
 	switch( loc ) {
 		case 0:		case 1:		case 2:		case 3:
 		case 4:		case 5:		case 6:		case 7:
@@ -214,44 +214,44 @@ TileDescription::TileDescription( int loc ) {
 			my_loc.y = 0;
 			my_loc_z = 0;
 			break;
-
+			
 		case 87:	case 88:	case 89:	case 90:
-		case 91:	case 92:	
+		case 91:	case 92:
 			my_loc.x = 4 + loc - 87;
 			my_loc.y = 6;
 			my_loc_z = 1;
 			break;
-		case 93:	case 94:	case 95:	case 96:	
+		case 93:	case 94:	case 95:	case 96:
 		case 97:	case 98:
 			my_loc.x = 4 + loc - 93;
 			my_loc.y = 5;
 			my_loc_z = 1;
 			break;
 		case 99:	case 100:	case 101:	case 102:
-		case 103:	case 104:	
+		case 103:	case 104:
 			my_loc.x = 4 + loc - 99;
 			my_loc.y = 4;
 			my_loc_z = 1;
 			break;
-		case 105:	case 106:	case 107:	case 108:	
+		case 105:	case 106:	case 107:	case 108:
 		case 109:	case 110:
 			my_loc.x = 4 + loc - 105;
 			my_loc.y = 3;
 			my_loc_z = 1;
 			break;
 		case 111:	case 112:	case 113:	case 114:
-		case 115:	case 116:	
+		case 115:	case 116:
 			my_loc.x = 4 + loc - 111;
 			my_loc.y = 2;
 			my_loc_z = 1;
 			break;
-		case 117:	case 118:	case 119:	case 120:	
+		case 117:	case 118:	case 119:	case 120:
 		case 121:	case 122:
 			my_loc.x = 4 + loc - 117;
 			my_loc.y = 1;
 			my_loc_z = 1;
 			break;
-
+			
 		case 123:	case 124:	case 125:	case 126:
 			my_loc.x = 5 + loc - 123;
 			my_loc.y = 5;
@@ -272,8 +272,8 @@ TileDescription::TileDescription( int loc ) {
 			my_loc.y = 2;
 			my_loc_z = 2;
 			break;
-
-		case 139:	case 140:	
+			
+		case 139:	case 140:
 			my_loc.x = 6 + loc - 139;
 			my_loc.y = 4;
 			my_loc_z = 3;
@@ -293,11 +293,11 @@ TileDescription::TileDescription( int loc ) {
 			assert( loc );
 	}
 	
-												// Adjust the x/y location by
-												//	Game Piece size.
-												// The x location is given an additional
-												//	shift to the left for more of a 3d
-												//	effect.
+	// Adjust the x/y location by
+	//	Game Piece size.
+	// The x location is given an additional
+	//	shift to the left for more of a 3d
+	//	effect.
 	my_loc.x *= TILE_WIDTH - TILE_SHIFT;
 	my_loc.x -= my_loc_z * TILE_SHIFT;
 	my_loc.y *= TILE_HEIGHT - TILE_SHIFT;
@@ -306,29 +306,20 @@ TileDescription::TileDescription( int loc ) {
 
 
 IntegerList& TileDescription::leftList( void ) {
-	
-	
 	return left_list;
 }
 
 
 IntegerList& TileDescription::rightList( void ) {
-		
-		
 	return right_list;
 }
 
 
 IntegerList& TileDescription::coveredList( void ) {
-	
-	
 	return covered_by_list;
 }
 
 
 NSPoint TileDescription::tileLocation( void ) {
-		
-		
 	return my_loc;
 }
-

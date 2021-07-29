@@ -14,25 +14,22 @@
 #import	"GameInterface.h"
 #import <AppKit/AppKit.h>
 
-#include	<assert.h>
+#include <assert.h>
 
 
 @implementation GameBoardView
 
 
 - (void)mouseDown:(NSEvent *)theEvent {
-
 	NSPoint	clickPoint = theEvent.locationInWindow;
 	
+	clickPoint = [self convertPoint:clickPoint fromView:nil];
 	
-	clickPoint = [ self convertPoint:clickPoint fromView:nil];
-	
-	if( theEvent.clickCount == 1 )
+	if (theEvent.clickCount == 1) {
 		[gameInterface click:clickPoint];
-	
-	else
-		if( theEvent.clickCount == 2 )
-			[gameInterface doubleClick:clickPoint];
+	} else if (theEvent.clickCount == 2) {
+		[gameInterface doubleClick:clickPoint];
+	}
 }
 
 

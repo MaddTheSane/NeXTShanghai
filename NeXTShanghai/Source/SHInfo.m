@@ -80,7 +80,7 @@ Note:	For a detailed description please read the class documentation.
     [self _switchTo:_InfoShowingWolfyIcon with:wolfyImage :wolfyText];
 }
 
-- (void)_switchTo:(int)aStyle with:aImageButton :aTextField
+- (void)_switchTo:(int)aStyle with:aImageButton :(NSTextField*)aTextField
 {
 	if( !animationRunning && currentIcon != aStyle )
 	{

@@ -55,22 +55,20 @@
 #import "OrchidTile.h"
 #import "ChrysanthemumTile.h"
 
-extern "C" {
-#import	<assert.h>
-}
+#include <cassert>
 
 
 GameTileArray::GameTileArray( void ) {
-
+	
 	int				i = 0, j;
 	
-
+	
 	assert( NUMBER_OF_TILES == 144 );
-
-												// Build the table of Game Tiles.
-												//	(Could be done much more efficiently 
-												//	but C++ doesn't support aggregate
-												//	initialization.)
+	
+	// Build the table of Game Tiles.
+	//	(Could be done much more efficiently
+	//	but C++ doesn't support aggregate
+	//	initialization.)
 	
 	for( j = 0; j < NUMBER_OF_EAST_WIND; ++j, ++i )
 		game_tiles[ i ] = new EastWindTile;
@@ -161,25 +159,18 @@ GameTileArray::GameTileArray( void ) {
 
 
 GameTileArray::~GameTileArray( void ) {
-
-	
 	for( int i = 0; i < NUMBER_OF_TILES; ++i )
 		delete game_tiles[ i ];
 }
 
 
 GameTile& GameTileArray::operator[]( int loc ) {
-
-
-
 	assert( loc >= 0 && loc < NUMBER_OF_TILES );
 	return *game_tiles[ loc ];
 }
 
 
 void GameTileArray::swap( int i, int j) {
-
-
 	GameTile*	temp;
 	
 	
@@ -193,8 +184,5 @@ void GameTileArray::swap( int i, int j) {
 
 
 int GameTileArray::size( void ) {
-
-
 	return NUMBER_OF_TILES;
 }
-
