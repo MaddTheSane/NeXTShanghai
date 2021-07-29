@@ -12,16 +12,16 @@
 #import	<AppKit/NSView.h>
 
 
-// Some tiles need to be shifted by this
-//	amount so that a 3d effect can be
-//	acheived.
+/// Some tiles need to be shifted by this
+/// amount so that a 3D effect can be
+/// acheived.
 #define	TILE_SHIFT	5
 #define	SMALLTILE_SHIFT	2
 
 
-// Each tile is a square.  This constant
-//	reflects the pixels high and wide for
-//	a tile.
+/// Each tile is a square.  This constant
+/// reflects the pixels high and wide for
+/// a tile.
 #define	TILE_WIDTH	56
 #define	TILE_WIDTH_WITH_SHADOW	62
 #define	TILE_HEIGHT	64

@@ -11,10 +11,10 @@
 
 #ifndef	_mj_H
 #define	_mj_H
+#include <CoreFoundation/CFAvailability.h>
 
-
-												// Provide constants for the number of
-												//	each tile type.
+/// Provide constants for the number of
+///	each tile type.
 #define	NUMBER_OF_EAST_WIND		4
 #define	NUMBER_OF_WEST_WIND		4
 #define	NUMBER_OF_NORTH_WIND	4
@@ -59,8 +59,8 @@
 #define	NUMBER_OF_MUM			1
 
 
-												// This is the total number of game tiles
-												//	that are placed on the Game Board.
+/// This is the total number of game tiles
+/// that are placed on the Game Board.
 #define	NUMBER_OF_TILES	(	\
 	NUMBER_OF_EAST_WIND		+ 	NUMBER_OF_WEST_WIND		+ \
 	NUMBER_OF_NORTH_WIND	+	NUMBER_OF_SOUTH_WIND	+ \
@@ -85,4 +85,9 @@
 	NUMBER_OF_BAMBOO		+	NUMBER_OF_PLUM			+ \
 	NUMBER_OF_ORCHID		+	NUMBER_OF_MUM	)
 
+
+CF_ENUM(int) {
+	/// This is the total number of game tiles that are placed on the Game Board.
+	MJCountTotalTitles = NUMBER_OF_TILES
+};
 #endif

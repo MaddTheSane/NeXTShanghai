@@ -22,7 +22,7 @@ extern "C" {
 /// These types are used to identify
 /// that two peices are equal.  If equal
 /// they can be removed from the board.
-	typedef enum TYLE_TYPE {
+	typedef enum GAME_TYLE_TYPE {
 					EAST_WIND,		SOUTH_WIND,		WEST_WIND,		NORTH_WIND,
 					
 					SEASON,			FLOWER,
