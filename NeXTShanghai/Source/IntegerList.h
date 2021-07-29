@@ -36,11 +36,11 @@ private:
 	/// Used when iterating through the
 	/// list.
 	int		iterator;
-	// We can't blindly store integers
-	//	on the list.  They must be encoded.
-	//	This is because 0 is a legal value
-	//	but the list object considers it nil
-	//	and won't place it on the list.
+	/// We can't blindly store integers
+	/// on the list.  They must be encoded.
+	/// This is because 0 is a legal value
+	/// but the list object considers it nil
+	/// and won't place it on the list.
 	int		encodeValue( int ),
 			decodeValue( int );
 			

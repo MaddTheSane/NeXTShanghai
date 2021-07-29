@@ -17,7 +17,7 @@
 // This is a subdirectory within
 //	the application where the tile
 //	tiff images are stored.
-#define	TILE_TIFF_DIRECTORY	"NeXTmj-tiff"
+#define	TILE_TIFF_DIRECTORY	@"NeXTmj"
 
 
 Tile::Tile( void ) {
@@ -30,7 +30,7 @@ Tile::~Tile( void ) {
 
 
 void Tile::loadImageFromFile( NSString* aFile ) {
-	my_tile_image = [NSImage imageNamed:aFile];
+	my_tile_image = [NSImage imageNamed:[TILE_TIFF_DIRECTORY stringByAppendingPathComponent: aFile]];
 }
 
 
@@ -40,9 +40,9 @@ void Tile::compositeImage( NSPoint aPoint, NSCompositingOperation aMode ) {
 	// NSCompositingOperationDestinationOver means... no background please...
 	
 	if( aMode == NSCompositingOperationCopy )
-		[ [NSImage imageNamed:@"Tile"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
+		[ [NSImage imageNamed:TILE_TIFF_DIRECTORY @"/Tile"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
 	else if( aMode != NSCompositingOperationDestinationOver )
-		[ [NSImage imageNamed:@"TileH"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
+		[ [NSImage imageNamed:TILE_TIFF_DIRECTORY @"/TileH"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
 
 	if( aMode != NSCompositingOperationDestinationOver )
 	{
