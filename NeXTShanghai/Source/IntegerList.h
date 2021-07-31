@@ -27,7 +27,7 @@
  *	that this object is used to hold tile indexes, an offset is added to
  *	values stored on the list and subtraced when removed.
  *
- *	As of Mac OS X (and probably OpenStep), this is no longer the case, but the class
+ *	As of \c NSArray (Mac OS X and probably OpenStep), this is no longer the case, but the class
  *	is kept for backwards compatibility.
  */
 class IntegerList {

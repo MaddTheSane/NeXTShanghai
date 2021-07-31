@@ -19,7 +19,7 @@ extern "C" {
 
 
 IntegerList::IntegerList(void) {
-	my_list		= [[ NSMutableArray alloc ] init ];
+	my_list		= [[NSMutableArray alloc] init];
 	iterator = 0;
 }
 

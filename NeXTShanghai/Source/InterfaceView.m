@@ -7,8 +7,6 @@
 
 
 - (instancetype)initWithFrame:(NSRect)frameRect {
-
-
 	self = [ super initWithFrame:frameRect ];
 
 	return self;

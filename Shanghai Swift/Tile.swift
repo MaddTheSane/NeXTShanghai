@@ -103,14 +103,15 @@ class Tile {
 		myTileImage.draw(at: bPoint, from: .zero, operation: .sourceOver, fraction: 1)
 	}
 	
-	//! This member function is called by the
-	//! Board View to composite the tile a
-	//! a location within the view. (The focus
-	//! of the view must have been locked
-	//! previously.)
-	//! @discussion This member function must be implemented
-	//! in the subclasses since game tiles
-	//! can be highlighted.
+	/// This member function is called by the
+	/// Board View to composite the tile a
+	/// a location within the view. (The focus
+	/// of the view must have been locked
+	/// previously.)
+	///
+	/// This member function must be implemented
+	/// in the subclasses since game tiles
+	/// can be highlighted.
 	func drawImage(at point: NSPoint) {}
 }
 
@@ -257,3 +258,185 @@ final class WinterSeasonTile: SeasonTile {
 	}
 }
 
+// MARK: - Wind Tiles
+
+final class EastWindTile : GameTile {
+	init() {
+		super.init(tileType: .eastWind)
+		loadImage(named: "w_east")
+	}
+}
+
+final class NorthWindTile :  GameTile {
+	init() {
+		super.init(tileType: .northWind)
+		loadImage(named: "w_north")
+	}
+}
+
+final class SouthWindTile :  GameTile {
+	init() {
+		super.init(tileType: .southWind)
+		loadImage(named: "w_south")
+	}
+}
+
+final class WestWindTile : GameTile {
+	init() {
+		super.init(tileType: .westWind)
+		loadImage(named: "w_west")
+	}
+}
+
+// MARK: - Color Tiles
+
+final class RedTile: GameTile {
+	init() {
+		super.init(tileType: .red)
+		loadImage(named: "d_red")
+	}
+}
+
+final class WhiteTile: GameTile {
+	init() {
+		super.init(tileType: .white)
+		loadImage(named: "d_white")
+	}
+}
+
+final class GreenTile: GameTile {
+	init() {
+		super.init(tileType: .green)
+		loadImage(named: "d_green")
+	}
+}
+
+// MARK: - Character Tiles
+
+final class CharacterOneTile : GameTile {
+	init() {
+		super.init(tileType: .character1)
+		loadImage(named: "char1")
+	}
+}
+
+final class CharacterTwoTile : GameTile {
+	init() {
+		super.init(tileType: .character2)
+		loadImage(named: "char2")
+	}
+}
+
+final class CharacterThreeTile : GameTile {
+	init() {
+		super.init(tileType: .character3)
+		loadImage(named: "char3")
+	}
+}
+
+final class CharacterFourTile : GameTile {
+	init() {
+		super.init(tileType: .character4)
+		loadImage(named: "char4")
+	}
+}
+
+final class CharacterFiveTile : GameTile {
+	init() {
+		super.init(tileType: .character5)
+		loadImage(named: "char5")
+	}
+}
+
+final class CharacterSixTile : GameTile {
+	init() {
+		super.init(tileType: .character6)
+		loadImage(named: "char6")
+	}
+}
+
+final class CharacterSevenTile : GameTile {
+	init() {
+		super.init(tileType: .character7)
+		loadImage(named: "char7")
+	}
+}
+
+final class CharacterEightTile : GameTile {
+	init() {
+		super.init(tileType: .character8)
+		loadImage(named: "char8")
+	}
+}
+
+final class CharacterNineTile : GameTile {
+	init() {
+		super.init(tileType: .character9)
+		loadImage(named: "char9")
+	}
+}
+
+// MARK: - Circle Tiles
+
+final class CircleOneTile : GameTile {
+	init() {
+		super.init(tileType: .circle1)
+		loadImage(named: "circ1")
+	}
+}
+
+final class CircleTwoTile : GameTile {
+	init() {
+		super.init(tileType: .circle2)
+		loadImage(named: "circ2")
+	}
+}
+
+final class CircleThreeTile : GameTile {
+	init() {
+		super.init(tileType: .circle3)
+		loadImage(named: "circ3")
+	}
+}
+
+final class CircleFourTile : GameTile {
+	init() {
+		super.init(tileType: .circle4)
+		loadImage(named: "circ4")
+	}
+}
+
+final class CircleFiveTile : GameTile {
+	init() {
+		super.init(tileType: .circle5)
+		loadImage(named: "circ5")
+	}
+}
+
+final class CircleSixTile : GameTile {
+	init() {
+		super.init(tileType: .circle6)
+		loadImage(named: "circ6")
+	}
+}
+
+final class CircleSevenTile : GameTile {
+	init() {
+		super.init(tileType: .circle7)
+		loadImage(named: "circ7")
+	}
+}
+
+final class CircleEightTile : GameTile {
+	init() {
+		super.init(tileType: .circle8)
+		loadImage(named: "circ8")
+	}
+}
+
+final class CircleNineTile : GameTile {
+	init() {
+		super.init(tileType: .circle9)
+		loadImage(named: "circ9")
+	}
+}

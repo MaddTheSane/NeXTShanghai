@@ -23,7 +23,6 @@ TileDescriptionArray::TileDescriptionArray( void ) {
 	}
 }
 
-
 TileDescriptionArray::~TileDescriptionArray( void ) {
 	int	i;
 	
@@ -33,12 +32,10 @@ TileDescriptionArray::~TileDescriptionArray( void ) {
 	}
 }
 
-
 TileDescription* TileDescriptionArray::operator[]( int loc ) {
 	assert( loc >= 0 && loc < NUMBER_OF_TILES );
 	return tile_descriptions[ loc ];
 }
-
 
 int TileDescriptionArray::size( void ) {
 	return NUMBER_OF_TILES;

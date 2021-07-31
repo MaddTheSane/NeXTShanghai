@@ -20,16 +20,13 @@
 }
 
 - init {
-
-	self = [ super init ];
-	
-	gameCoordinator		= NULL;
-	tileCountManager	= NULL;
+	if (self = [super init]) {
+		gameCoordinator		= NULL;
+		tileCountManager	= NULL;
+	}
 	
 	return self;
 }
-
-
 
 - (void)awakeFromNib {
 	[super awakeFromNib];
@@ -42,20 +39,17 @@
 	
 	application_initialized = YES;
 	
-	[ tileCountView setNeedsDisplay:YES ];
-	[ gameBoardView setNeedsDisplay:YES ];
+	[tileCountView setNeedsDisplay:YES];
+	[gameBoardView setNeedsDisplay:YES];
 }
-
 
 - (void)undoClick:sender {
 	gameCoordinator->undoClick();
 }
 
-
 - (void)helpClick:sender {
 	gameCoordinator->helpClick();
 }
-
 
 - (void)againClick:sender {
 	gameCoordinator->againClick();
@@ -65,27 +59,23 @@
 	gameCoordinator->newClick();
 }
 
-
 - (void)gameBoardDraw {
-	if( application_initialized )
+	if( application_initialized ) {
 		gameCoordinator->drawImage();
+	}
 }
-
 
 - (void)tileCountDraw {
 	if( application_initialized )
 		tileCountManager->drawImage();
 }
 
-
 - (void)click:(NSPoint)aPoint {
 	gameCoordinator->click( aPoint );
 }
 
-
 - (void)doubleClick:(NSPoint)aPoint {
 	gameCoordinator->doubleClick( aPoint );
 }
-
 
 @end

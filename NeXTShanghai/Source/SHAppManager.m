@@ -32,8 +32,6 @@
 {
 	// This is some kind of late init. These object are need for working but
 	// not for reading the classes or having a class initialized.
-
-	
 }
 
 - (BOOL)appAcceptsAnotherFile:sender

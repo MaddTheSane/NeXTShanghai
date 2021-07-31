@@ -20,11 +20,11 @@
 #define	TILE_TIFF_DIRECTORY	@"NeXTmj"
 
 
-Tile::Tile( void ) {
+Tile::Tile(void) {
 	my_tile_image = nil;
 }
 
-Tile::~Tile( void ) {
+Tile::~Tile(void) {
 	my_tile_image=nil;
 }
 
@@ -37,10 +37,11 @@ void Tile::compositeImage( NSPoint aPoint, NSCompositingOperation aMode ) {
 	// Sorry will change that later...
 	// NSCompositingOperationDestinationOver means... no background please...
 	
-	if( aMode == NSCompositingOperationCopy )
-		[ [NSImage imageNamed:TILE_TIFF_DIRECTORY @"/Tile"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
-	else if( aMode != NSCompositingOperationDestinationOver )
-		[ [NSImage imageNamed:TILE_TIFF_DIRECTORY @"/TileH"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
+	if (aMode == NSCompositingOperationCopy) {
+		[[NSImage imageNamed:TILE_TIFF_DIRECTORY @"/Tile"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
+	} else if (aMode != NSCompositingOperationDestinationOver) {
+		[[NSImage imageNamed:TILE_TIFF_DIRECTORY @"/TileH"] drawAtPoint:aPoint fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1];
+	}
 
 	if (aMode != NSCompositingOperationDestinationOver) {
 		aPoint.x += 2;

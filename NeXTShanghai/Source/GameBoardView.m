@@ -19,7 +19,6 @@
 
 @implementation GameBoardView
 
-
 - (void)mouseDown:(NSEvent *)theEvent {
 	NSPoint	clickPoint = theEvent.locationInWindow;
 	
@@ -32,7 +31,6 @@
 	}
 }
 
-
 - (void)drawRect:(NSRect)dirtyRect {
 
 	
@@ -42,6 +40,5 @@
 //	NXRectFillList( rects, rectCount );
 	[gameInterface gameBoardDraw ];
 }
-
 
 @end

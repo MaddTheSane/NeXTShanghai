@@ -304,22 +304,14 @@ TileDescription::TileDescription( int loc ) {
 	my_loc.y += my_loc_z * TILE_SHIFT;
 }
 
-
 IntegerList& TileDescription::leftList( void ) {
 	return left_list;
 }
-
 
 IntegerList& TileDescription::rightList( void ) {
 	return right_list;
 }
 
-
 IntegerList& TileDescription::coveredList( void ) {
 	return covered_by_list;
-}
-
-
-NSPoint TileDescription::tileLocation( void ) {
-	return my_loc;
 }

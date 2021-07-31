@@ -18,7 +18,6 @@ extern int NXArgc;
 extern char **NXArgv;
 
 GameCoordinator::GameCoordinator( GameBoardView* view, TileCountManager* manager ) {
-
 	int		board_num = -1;
 	
 	
@@ -69,16 +68,14 @@ GameCoordinator::GameCoordinator( GameBoardView* view, TileCountManager* manager
 
 
 void GameCoordinator::updateView( void ) {
-
-
 	[ my_view setNeedsDisplay:YES ];
-	if( initialized )
+	if( initialized ) {
 		[ my_view display]; // FromOpaqueAncestor:0 :0 :NO ];
+	}
 }
 
 
 void GameCoordinator::drawImage( void ) {
-
 	BOOL didDrawTouchedTiles = NO;
 	NSPoint backgroundOrigin;
 	NSPoint aPoint;
@@ -166,7 +163,6 @@ void GameCoordinator::drawImage( void ) {
 
 
 void GameCoordinator::helpClick( void ) {
-
 	// BUG: Tiles selected by the help'object ar not removable by a double click !
 	// You have to manually select them.
 	// I did not look into that but I suspect that the first & seconed_selected
@@ -179,8 +175,6 @@ void GameCoordinator::helpClick( void ) {
 
 
 void GameCoordinator::undoClick( void ) {
-	
-	
 	assert(( undoList.count() % 2 ) == 0 );
 	
 	help.resetHelp();
@@ -210,10 +204,7 @@ void GameCoordinator::undoClick( void ) {
 	updateView();
 }
 
-
 void GameCoordinator::unselectTiles( void ) {
-
-
 	for( int i = 0; i < tile_array.size(); ++i )
 	{
 		if( tile_array[ i ].isSelected() )
@@ -229,7 +220,6 @@ void GameCoordinator::unselectTiles( void ) {
 	updateView();
 }
 
-
 void GameCoordinator::againClick( void ) {
 	// Again means to play the same tile
 	//	scramble again.
@@ -241,8 +231,6 @@ void GameCoordinator::againClick( void ) {
 	
 	tile_count_manager->resetCount();
 }
-
-
 
 void GameCoordinator::newClick( void ) {
 	// Scramble the tiles and start
@@ -258,12 +246,9 @@ void GameCoordinator::newClick( void ) {
 }
 
 void GameCoordinator::prepareTilesForPlay( void ) {
-	int	i;
-	
-	
 	// Set all tiles to a default
 	//	state.
-	for( i = 0; i < tile_array.size(); ++i ) {
+	for (int i = 0; i < tile_array.size(); ++i) {
 		tile_array[ i ].setRemoved( NO );
 		tile_array[ i ].setSelected( NO );
 		tile_array[ i ].setSelectable( NO );
@@ -273,14 +258,11 @@ void GameCoordinator::prepareTilesForPlay( void ) {
 	updateSelectablilty();
 }
 
-
 void GameCoordinator::updateSelectablilty( void ) {
-	
-	
 	// Any tile that is free on either its
 	//	left or right and isn't covered
 	//	is selectable
-	for( int i = 0; i < tile_array.size(); ++i ) {
+	for (int i = 0; i < tile_array.size(); ++i) {
 		BOOL	selectable = NO;
 		
 		if( !tile_array[ i ].isRemoved()) {
@@ -295,11 +277,9 @@ void GameCoordinator::updateSelectablilty( void ) {
 	}
 }
 
-
 BOOL GameCoordinator::isFree( IntegerList& list ) {
 	BOOL	is_free = YES;
 	int		i;
-	
 	
 	list.beginIterate();
 	while(( i = list()) != -1 ) {
@@ -311,59 +291,56 @@ BOOL GameCoordinator::isFree( IntegerList& list ) {
 	return is_free;
 }
 
-
 void GameCoordinator::click( NSPoint aPoint ) {
 	int	theTile = tileForClick( aPoint );
 	
-	
 	// Any click on the Game Board resets
 	//	Help.
-	if( help.isSelected())
+	if( help.isSelected()) {
 		unselectTiles();
+	}
 	help.resetHelp();
 	
-	if( theTile != -1 ) {
-		if( tile_array[ theTile ].isSelectable()) {
+	if (theTile != -1) {
+		if (tile_array[ theTile ].isSelectable()) {
 			
 			// If the tile is being unselected
 			//	the unselect it.
-			if( theTile == first_selected_tile ) {
-				tile_array[ first_selected_tile ].setSelected( NO );
-				tile_array[ first_selected_tile ].markTouched( YES );
+			if (theTile == first_selected_tile) {
+				tile_array[first_selected_tile].setSelected(NO);
+				tile_array[first_selected_tile].markTouched(YES);
 				first_selected_tile = -1;
+			} else if (theTile == second_selected_tile) {
+				tile_array[second_selected_tile].setSelected(NO);
+				tile_array[second_selected_tile].markTouched(YES);
+				second_selected_tile = -1;
 			} else
-				if( theTile == second_selected_tile ) {
-					tile_array[ second_selected_tile ].setSelected( NO );
-					tile_array[ second_selected_tile ].markTouched( YES );
-					second_selected_tile = -1;
-				} else
-					// If tile isn't selected then
-					//	this tile is selected.
-					if( first_selected_tile == -1 ) {
-						tile_array[ theTile ].setSelected( YES );
-						tile_array[ theTile ].markTouched( YES );
-						first_selected_tile = theTile;
-					} else
-						if( second_selected_tile == -1 ) {
-							tile_array[ theTile ].setSelected( YES );
-							tile_array[ theTile ].markTouched( YES );
-							second_selected_tile = theTile;
-						}
+				// If tile isn't selected then
+				//	this tile is selected.
+				if (first_selected_tile == -1) {
+					tile_array[ theTile ].setSelected(YES);
+					tile_array[ theTile ].markTouched(YES);
+					first_selected_tile = theTile;
+				} else if (second_selected_tile == -1) {
+					tile_array[ theTile ].setSelected(YES);
+					tile_array[ theTile ].markTouched(YES);
+					second_selected_tile = theTile;
+				}
 			
 			// If there are two tiles selected which don't share the same type...
 			// then the first tile gets unselected again and our second tile becomes
 			// the first.
 			// This makes refocusing on a different tile possible with a single click
 			
-			if(( first_selected_tile != -1 ) && ( second_selected_tile != -1 ))
-				if( tile_array[ first_selected_tile ].tileType() !=
-				   tile_array[ second_selected_tile ].tileType())
-				{
+			if ((first_selected_tile != -1) && (second_selected_tile != -1)) {
+				if (tile_array[ first_selected_tile ].tileType() !=
+					tile_array[ second_selected_tile ].tileType()) {
 					tile_array[ first_selected_tile ].setSelected( NO );
 					tile_array[ first_selected_tile ].markTouched( YES );
 					first_selected_tile = second_selected_tile;
 					second_selected_tile = -1;
 				}
+			}
 			
 			updateView();
 		} else
@@ -373,7 +350,7 @@ void GameCoordinator::click( NSPoint aPoint ) {
 }
 
 
-void GameCoordinator::doubleClick( NSPoint aPoint ) {
+void GameCoordinator::doubleClick(NSPoint aPoint) {
 	int	theTile = tileForClick( aPoint );
 	
 	if( theTile != -1 ) {
@@ -396,14 +373,16 @@ void GameCoordinator::doubleClick( NSPoint aPoint ) {
 				tile_count_manager->subtractTwo();
 				
 				unselectTiles();
-			} else
+			} else {
 				NSBeep();
-		} else
+			}
+		} else {
 			NSBeep();
-	} else
+		}
+	} else {
 		NSBeep();
+	}
 }
-
 
 int GameCoordinator::tileForClick( NSPoint aPoint ) {
 	TileIterator	index = ( NUMBER_OF_TILES - 1 );
@@ -422,7 +401,6 @@ int GameCoordinator::tileForClick( NSPoint aPoint ) {
 	
 	return theTile;
 }
-
 
 void GameCoordinator::removeTile( int tile ) {
 	undoList += tile;

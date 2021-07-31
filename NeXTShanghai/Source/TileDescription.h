@@ -47,7 +47,9 @@ private:
 public:
 	/// This function returns a point where
 	/// the tile should draw itself.
-	NSPoint tileLocation( void );
+	NSPoint tileLocation(void) {
+		return my_loc;
+	}
 
 public:
 	TileDescription( int );

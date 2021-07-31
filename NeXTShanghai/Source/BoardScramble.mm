@@ -34,18 +34,16 @@ extern "C" {
 
 
 BoardScramble::BoardScramble( void ) {
-
     struct timeval	tp;
     struct timezone	tz;
 #if BSD_RANDOM
 	static char		state[256];
 #endif
 
-													// Initialize the random number
-													//	generator used to generate tile
-													//	placement (taken directly from
-													//	xmj).
-
+	// Initialize the random number
+	//	generator used to generate tile
+	//	placement (taken directly from
+	//	xmj).
     gettimeofday( &tp, &tz );
 #if BSD_RANDOM
     (void)initstate((unsigned)(tp.tv_sec % 255), state, 256);
@@ -57,8 +55,6 @@ BoardScramble::BoardScramble( void ) {
 
 
 void BoardScramble::scramble( int level, GameTileArray& board ) {
-
-
 	assert( level <= 20011 );
 	
 	seed = level;
@@ -66,7 +62,6 @@ void BoardScramble::scramble( int level, GameTileArray& board ) {
 	
 	this->scramble( board );
 }
-
 
 void BoardScramble::scramble( GameTileArray& board ) {
 	
@@ -120,5 +115,3 @@ void BoardScramble::scramble( GameTileArray& board ) {
 		board.swap( i, j );
 	}
 }
-
-

@@ -24,15 +24,13 @@ Note:	For a detailed description please read the class documentation.
 
 @implementation SHInfo
 
-- init
+- (id)init
 {
-	self = [super init];
-	if( !self ) return self;
-
-	// OK. We really are an object...here we go with our init.
-
-	currentIcon = _InfoShowingAppIcon;
-	animationRunning = NO;
+	if (self = [super init]) {
+		// OK. We really are an object...here we go with our init.
+		currentIcon = _InfoShowingAppIcon;
+		animationRunning = NO;
+	}
 	
 	return self;
 }

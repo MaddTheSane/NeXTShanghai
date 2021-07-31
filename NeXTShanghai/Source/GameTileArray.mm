@@ -59,7 +59,6 @@
 
 
 GameTileArray::GameTileArray( void ) {
-	
 	int				i = 0, j;
 	
 	
@@ -159,8 +158,9 @@ GameTileArray::GameTileArray( void ) {
 
 
 GameTileArray::~GameTileArray( void ) {
-	for( int i = 0; i < NUMBER_OF_TILES; ++i )
-		delete game_tiles[ i ];
+	for (int i = 0; i < NUMBER_OF_TILES; ++i) {
+		delete game_tiles[i];
+	}
 }
 
 
@@ -171,17 +171,13 @@ GameTile& GameTileArray::operator[]( int loc ) {
 
 
 void GameTileArray::swap( int i, int j) {
-	GameTile*	temp;
-	
-	
 	assert( i >= 0 && i < NUMBER_OF_TILES );
 	assert( j >= 0 && j < NUMBER_OF_TILES );
 
-	temp = game_tiles[ j ];
+	GameTile*	temp = game_tiles[ j ];
 	game_tiles[ j ] = game_tiles[ i ];
 	game_tiles[ i ] = temp;
 }
-
 
 int GameTileArray::size( void ) {
 	return NUMBER_OF_TILES;

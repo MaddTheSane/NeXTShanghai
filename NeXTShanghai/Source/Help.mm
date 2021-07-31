@@ -21,7 +21,6 @@ void Help::resetHelp( void ) {
 	tiles_selected = NO;
 }
 
-
 void Help::helpClick( GameTileArray& board ) {
 	int		start_tile = findNextSelectableTile( board );
 	
@@ -57,10 +56,12 @@ void Help::helpClick( GameTileArray& board ) {
 			// At the next help pass start at the
 			//	next tile.
 			++my_iterator;
-		} else
+		} else {
 			NSBeep();
-	} else
+		}
+	} else {
 		NSBeep();
+	}
 }
 
 int Help::findNextSelectableTile( GameTileArray& board )

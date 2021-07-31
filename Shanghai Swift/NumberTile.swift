@@ -9,12 +9,11 @@
 import Foundation
 
 class NumberTile: Tile {
-
 	final override func drawImage(at aPoint: NSPoint) {
 		// Arrggll...NSCompositingOperationDestinationOver is a flag for selection...see the Tile implemetation.
 		// Its not a drawing Mode...never...
 
-		compositeImage(at: aPoint, using: .destinationOver );
+		compositeImage(at: aPoint, using: .destinationOver)
 	}
 }
 
@@ -78,5 +77,40 @@ final class NumberNineTile: NumberTile {
 	override init() {
 		super.init()
 		loadImage(named: "n_9")
+	}
+}
+
+// MARK: - Flower Tiles
+class FlowerTile : GameTile {
+	init() {
+		super.init(tileType: .flower)
+	}
+}
+
+final class BambooTile: FlowerTile {
+	override init() {
+		super.init()
+		loadImage(named: "f_bam")
+	}
+}
+
+final class ChrysanthemumTile: FlowerTile {
+	override init() {
+		super.init()
+		loadImage(named: "f_mum")
+	}
+}
+
+final class OrchidTile:  FlowerTile {
+	override init() {
+		super.init()
+		loadImage(named: "f_orch")
+	}
+}
+
+final class PlumTile: FlowerTile {
+	override init() {
+		super.init()
+		loadImage(named: "f_plum")
 	}
 }
