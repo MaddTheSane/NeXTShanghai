@@ -1,391 +1,483 @@
-{\rtf0\ansi{\fonttbl\f0\fnil Times-Roman;\f1\ftech Symbol;\f2\fswiss Helvetica;\f3\fmodern Ohlfs;}
-\paperw9840
-\paperh8400
-\margl40
-\margr40
-{\colortbl;\red0\green0\blue0;}
-\f0\b0\i0\ulnone\ql\fs24\fi0\li0\gray0\fc0\cf0\up0\dn0 Release 1.0  Copyleft 
-\f1 ã
-\f0 1995 by Thomas Engel.  All Rights Reserved.\
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\froman\fcharset0 Times-Bold;
+\f3\ftech\fcharset77 Symbol;\f4\fswiss\fcharset0 Helvetica;\f5\froman\fcharset0 Times-Italic;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl40\margr40\vieww9600\viewh8400\viewkind0
+\pard\partightenfactor0
+
+\f0\fs24 \cf0 Release 1.0  Copyleft \'a91995 by Thomas Engel.  All Rights Reserved.\
 \
+\pard\li2100\partightenfactor0
 
-\f2\b\fs56\li2100 MiscColorView\
+\f1\b\fs56 \cf0 MiscColorView\
+\pard\tx4880\li4880\fi-2780\partightenfactor0
 
-\pard\tx4880\f0\b0\fs80\fi-2780\li4880\fc0\cf0 \
+\f0\b0\fs80 \cf0 \
 
-\f2\b\fs28 Inherits From:	
+\f1\b\fs28 Inherits From:	
 \f0\b0 View : Responder : Object\
 
 \fs20 \
 
-\f2\b\fs28 Declared In:
+\f1\b\fs28 Declared In:
 \f0\b0 	misckit/MiscColorView.h\
 
 \fs20 \
+\pard\li1360\partightenfactor0
 
-\pard\f2\b\fs52\li1360\fc0\cf0 \
+\f1\b\fs52 \cf0 \
 
 \fs36 Class Description\
 
 \fs14 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\f0\b0\fs28\li2100\fc0\cf0 This view fills its contents with a specified color (
-\b setBackgroundColor:
-\b0 ). You can also use the 
-\f1  
-\f0\b setUseSameColorAsDesktop:
-\b0  method to force it to use the color of the users desktop background.\
+\f0\b0\fs28 \cf0 This view fills its contents with a specified color (
+\f2\b setBackgroundColor:
+\f0\b0 ). You can also use the 
+\f3  
+\f2\b setUseSameColorAsDesktop:
+\f0\b0  method to force it to use the color of the users desktop background.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14\fc1\cf1 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28\fc0\cf0 In this release you can not use transparency in the background.\
+\fs28 \cf0 In this release you can not use transparency in the background.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\li1360\partightenfactor0
+
+\f1\b\fs56 \cf0 \
+\pard\li1360\partightenfactor0
+
+\fs36 \cf0 Instance Variables\
 
 \fs14 \
+\pard\tx2860\li2100\partightenfactor0
 
-\pard\f2\b\fs56\li1360\fc0\cf0 \
-
-\fs36 Instance Variables\
-
-\fs14 \
-
-\pard\tx2860\f0\b0\fs28\li2100\fc0\cf0 NXColor 
-\b backgroundColor
-\b0 ;\
+\f0\b0\fs28 \cf0 NXColor 
+\f2\b backgroundColor
+\f0\b0 ;\
 
 \fs4 \
 
 \fs28 BOOL 
-\b sameColorAsDesktop
-\b0 ;\
+\f2\b sameColorAsDesktop
+\f0\b0 ;\
+\pard\tx6140\tx9660\tx10180\li6140\fi-4040\partightenfactor0
 
-\pard\tx6140\tx9660\tx10180\fs48\fi-4040\li6140\fc0\cf0 \
+\fs48 \cf0 \
 
 \fs28 backgroundColor	The views background color.\
 
 \fs10 \
 
 \fs28 sameColorAsDesktop	True if we draw in the desktop color.\
+\pard\tx6140\tx9660\tx10180\li1360\partightenfactor0
 
-\f2\b\fs70\fi0\li1360 \
+\f1\b\fs70 \cf0 \
+\pard\li1360\partightenfactor0
 
-\pard\fs36\li1360\fc0\cf0 Method Types\
+\fs36 \cf0 Method Types\
 
 \fs14 \
+\pard\tx6140\tx9660\tx10180\li6140\fi-4040\partightenfactor0
 
-\pard\tx6140\tx9660\tx10180\f0\b0\fs28\fi-4040\li6140\fc0\cf0 Initializing the class object	
-\f1\fc1\cf1 +
-\f0\fc0\cf0  initialize\
+\f0\b0\fs28 \cf0 Initializing the class object	
+\f3 +
+\f0  initialize\
 
 \fs10 \
+\pard\tx6140\li6140\fi-4040\partightenfactor0
 
-\pard\tx6140\fs28\fi-4040\li6140\fc0\cf0 Initializing a new object	
-\f1 -
+\fs28 \cf0 Initializing a new object	
+\f4 -
 \f0  initFrame:\
+\pard\tx6140\tx9660\tx10180\li6140\fi-4040\partightenfactor0
 
-\pard\tx6140\tx9660\tx10180\fs10\fi-4040\li6140\fc0\cf0 \
+\fs10 \cf0 \
 
 \fs28 Adjusting appearance	
-\f1 -
+\f4 -
 \f0  setBackgroundColor:\
 	
-\f1 -
+\f4 -
 \f0  backgroundColor\
 	
-\f1 -
+\f4 -
 \f0  setUseSameColorAsDesktop:\
 	
-\f1 -
+\f4 -
 \f0  hasSameColorAsDesktop\
 
 \fs10 \
 
-\fs28\fc1\cf1 Drawing
-\f1\fc0\cf0 	-
+\fs28 Drawing
+\f3 	
+\f4 -
 \f0  drawSelf::\
 
 \fs10 \
 
-\fs28\fc1\cf1 Archiving	
-\f1\fc0\cf0 -
+\fs28 Archiving	
+\f4 -
 \f0  read:\
+\pard\tx6140\tx9660\tx10180\li6140\fi-4040\partightenfactor0
 
-\f1 	-
+\f3 \cf0 	
+\f4 -
 \f0  write:\
 \
+\pard\li1360\partightenfactor0
 
-\pard\f2\b\fs70\li1360\fc0\cf0 \
+\f1\b\fs70 \cf0 \
+\pard\li1360\partightenfactor0
 
-\fs36 Class Methods\
+\fs36 \cf0 Class Methods\
 
 \fs14 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28\fi-380\li2480 initialize\
+\fs28 \cf0 initialize\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 +
+\f3\b0\fs28 \cf0 +
 \f0  
-\b initialize
-\b0 \
+\f2\b initialize
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Initializes the class.\
+\fs28 \cf0 Initializes the class.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b initFrame:
-\b0\fs16 \
+\f2\b initFrame:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
+
+\f1\b\fs52 \cf0 \
+\pard\li1360\partightenfactor0
+
+\fs36 \cf0 Instance Methods\
 
 \fs14 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
-
-\fs36\fi0\li1360 Instance Methods\
-
-\fs14 \
-
-\fs28\fi-380\li2480 backgroundColor\
+\fs28 \cf0 backgroundColor\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (NXColor)
-\b backgroundColor
-\b0 \
+\f2\b backgroundColor
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns the background color.\
+\fs28 \cf0 Returns the background color.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setBackgroundColor:
-\b0\fs16 \
+\f2\b setBackgroundColor:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 drawSelf::\
+\fs28 \cf0 drawSelf::\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b drawSelf:
-\b0 (const NXRect *)
-\i rects
-\b\i0  :
-\b0 (int)
-\i rectCount
-\i0 \
+\f2\b drawSelf:
+\f0\b0 (const NXRect *)
+\f5\i rects
+\f2\i0\b  :
+\f0\b0 (int)
+\f5\i rectCount
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Redraws the views whole area using the 
-\b\fc1\cf1 backgroundColor
-\b0\fc0\cf0 . If we should appear in the same color as the desktop then we will read the NeXT1/BackgroundColor default. If there is no such defaut it will use the blue color with RGB values: 0.333, 0.333, 0.466.\
+\fs28 \cf0 Redraws the views whole area using the 
+\f2\b backgroundColor
+\f0\b0 . If we should appear in the same color as the desktop then we will read the NeXT1/BackgroundColor default. If there is no such defaut it will use the blue color with RGB values: 0.333, 0.333, 0.466.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setUseSameColorAsDesktop:
-\b0\fs16 \
+\f2\b setUseSameColorAsDesktop:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 hasSameColorAsDesktop\
+\fs28 \cf0 hasSameColorAsDesktop\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (BOOL)
-\b hasSameColorAsDesktop
-\b0 \
+\f2\b hasSameColorAsDesktop
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns YES is we will always draw our background in the same color as the desktop.\
+\fs28 \cf0 Returns YES is we will always draw our background in the same color as the desktop.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setUseSameColorAsDesktop:
-\b0 , 
-\f1 -
+\f2\b setUseSameColorAsDesktop:
+\f0\b0 , 
+\f4 -
 \f0  
-\b setBackgroundColor:
-\b0\fs16 \
+\f2\b setBackgroundColor:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 initFrame:\
+\fs28 \cf0 initFrame:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b initFrame:
-\b0 (const NXRect *)
-\i frameRect
-\i0 \
+\f2\b initFrame:
+\f0\b0 (const NXRect *)
+\f5\i frameRect
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 The views designated init method sets the default background color to white.\
+\fs28 \cf0 The views designated init method sets the default background color to white.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b initialize
-\b0\fs16 \
+\f2\b initialize
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 read:\
+\fs28 \cf0 read:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b read:
-\b0 (NXTypedStream *)
-\i stream
-\i0 \
+\f2\b read:
+\f0\b0 (NXTypedStream *)
+\f5\i stream
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Reads the object fro
-\fc1\cf1 m a stream. We take 
-\fc0\cf0 care of versioning.\
+\fs28 \cf0 Reads the object from a stream. We take care of versioning.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b write:
-\b0 , 
-\f1 -
+\f2\b write:
+\f0\b0 , 
+\f4 -
 \f0  
-\b initialize
-\b0 , 
+\f2\b initialize
+\f0\b0 , 
 \fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 setBackgroundColor:\
-
-\fs6 \
-
-\f1\b0\fs28\fi-760\li3240 -
-\f0  
-\b setBackgroundColor:
-\b0 (NXColor)
-\i color
-\i0 \
-
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
-
-\fs28 Sets the background color to use if we do not restict the view to the desktop color.\
-
-\fs14 \
-
-\f2\b\fs28 See also:  
-\f1\b0 -
-\f0  
-\b setUseSameColorAsDesktop:
-\b0 , 
-\f1 -
-\f0  
-\b drawSelf::
-\b0\fs16 \
-
-\fs14 \
-
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
-
-\fs28 setUseSameColorAsDesktop:\
+\fs28 \cf0 setBackgroundColor:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b setUseSameColorAsDesktop:
-\b0 (BOOL)
-\i flag
-\i0 \
+\f2\b setBackgroundColor:
+\f0\b0 (NXColor)
+\f5\i color
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 If flag is YES then we will use the desktops color for our background.\
+\fs28 \cf0 Sets the background color to use if we do not restict the view to the desktop color.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b hasSameColorAsDesktop
-\b0\fc1\cf1 , 
-\f1\fc0\cf0 -
+\f2\b setUseSameColorAsDesktop:
+\f0\b0 , 
+\f4 -
 \f0  
-\b drawSelf::
-\b0\fs16 \
+\f2\b drawSelf::
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 write:\
+\fs28 \cf0 setUseSameColorAsDesktop:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b write:
-\b0 (NXTypedStream *)
-\i stream
-\i0 \
+\f2\b setUseSameColorAsDesktop:
+\f0\b0 (BOOL)
+\f5\i flag
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Writes the object to a stream using the latest archiving version.\
+\fs28 \cf0 If flag is YES then we will use the desktops color for our background.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b read:
-\b0 , 
-\f1 -
+\f2\b hasSameColorAsDesktop
+\f0\b0 , 
+\f4 -
 \f0  
-\b initialize
-\b0\fs16 \
+\f2\b drawSelf::
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
+\fs28 \cf0 write:\
+
+\fs6 \
+\pard\li3240\fi-760\partightenfactor0
+
+\f4\b0\fs28 \cf0 -
+\f0  
+\f2\b write:
+\f0\b0 (NXTypedStream *)
+\f5\i stream
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs28 \cf0 Writes the object to a stream using the latest archiving version.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
+\f0  
+\f2\b read:
+\f0\b0 , 
+\f4 -
+\f0  
+\f2\b initialize
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
+
+\f1\b\fs52 \cf0 \
 }

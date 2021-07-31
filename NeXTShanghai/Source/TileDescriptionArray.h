@@ -26,16 +26,16 @@ private:
 	/// is a const.
 	TileDescription*	tile_descriptions[ NUMBER_OF_TILES ];
 
-
 public:
-	
 	TileDescriptionArray( void );
 	~TileDescriptionArray( void );
+	
 	/// The only access to the array is to
 	/// examine a description.  So we'll
 	/// return pointers (I don't really care
 	/// for reference types anyway).
 	TileDescription* operator[]( int );
+	
 	/// How many elements are in the array?
 	int			size( void );	
 };

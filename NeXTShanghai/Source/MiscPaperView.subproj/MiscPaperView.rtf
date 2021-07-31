@@ -1,98 +1,114 @@
-{\rtf0\ansi{\fonttbl\f0\fnil Times-Roman;\f1\ftech Symbol;\f2\fswiss Helvetica;\f3\fmodern Ohlfs;}
-\margl40
-\margr40
-{\colortbl;\red0\green0\blue0;}
-\f0\b0\i0\ulnone\ql\fs24\fi0\li0\gray0\fc0\cf0\up0\dn0 Release 1.0  Copyleft 
-\f1 ã
-\f0 1995 by Thomas Engel.  All Rights Reserved.\
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\froman\fcharset0 Times-Bold;
+\f3\ftech\fcharset77 Symbol;\f4\fswiss\fcharset0 Helvetica;\f5\froman\fcharset0 Times-Italic;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl40\margr40\vieww12000\viewh14680\viewkind0
+\pard\partightenfactor0
+
+\f0\fs24 \cf0 Release 1.0  Copyleft \'a91995 by Thomas Engel.  All Rights Reserved.\
 \
+\pard\li2100\partightenfactor0
 
-\f2\b\fs56\li2100 MiscPaperView\
+\f1\b\fs56 \cf0 MiscPaperView\
+\pard\tx4880\li4880\fi-2780\partightenfactor0
 
-\pard\tx4880\f0\b0\fs80\fi-2780\li4880\fc0\cf0 \
+\f0\b0\fs80 \cf0 \
 
-\f2\b\fs28 Inherits From:	
+\f1\b\fs28 Inherits From:	
 \f0\b0 MiscColorView : View : Responder : Object\
 
 \fs20 \
 
-\f2\b\fs28 Declared In:
+\f1\b\fs28 Declared In:
 \f0\b0 	misckit/MiscPaperView.h\
 
 \fs20 \
+\pard\li1360\partightenfactor0
 
-\pard\f2\b\fs52\li1360\fc0\cf0 \
+\f1\b\fs52 \cf0 \
 
 \fs36 Class Description\
 
 \fs14 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\f0\b0\fs28\li2100\fc0\cf0 This class can draw its contents in many different papertypes¼white lined, gray grid, yellow card with border, etc.\
+\f0\b0\fs28 \cf0 This class can draw its contents in many different papertypes\'85white lined, gray grid, yellow card with border, etc.\
 It was inspired by the NoteBook application which itself stole the idea from the paper store down the road.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14\fc1\cf1 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28\fc0\cf0 You can change the background color, line or grid color/size and the type of border to draw. See the single method descriptions for detailed information on the possible settings.\
+\fs28 \cf0 You can change the background color, line or grid color/size and the type of border to draw. See the single method descriptions for detailed information on the possible settings.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14\fc1\cf1 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28\fc0\cf0 Sidelines (borders) use the same settings but can be turn on and off for the single sides of the view. \
+\fs28 \cf0 Sidelines (borders) use the same settings but can be turn on and off for the single sides of the view. \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\li1360\partightenfactor0
+
+\f1\b\fs56 \cf0 \
+\pard\li1360\partightenfactor0
+
+\fs36 \cf0 Instance Variables\
 
 \fs14 \
+\pard\tx2860\li2100\partightenfactor0
 
-\pard\f2\b\fs56\li1360\fc0\cf0 \
-
-\fs36 Instance Variables\
-
-\fs14 \
-
-\pard\tx2860\f0\b0\fs28\li2100\fc0\cf0 int 
-\b gridType
-\b0 ;\
+\f0\b0\fs28 \cf0 int 
+\f2\b gridType
+\f0\b0 ;\
 
 \fs4 \
 
 \fs28 int 
-\b gridVertOffset
-\b0 ;\
+\f2\b gridVertOffset
+\f0\b0 ;\
 
 \fs4 \
 
 \fs28 int 
-\b gridHorOffset
-\b0 ;\
+\f2\b gridHorOffset
+\f0\b0 ;\
 
 \fs4 \
 
 \fs28 NXColor 
-\b gridColor
-\b0 ;\
+\f2\b gridColor
+\f0\b0 ;\
 
 \fs4 \
 
 \fs28 int 
-\b gridOrigin
-\b0 ;\
+\f2\b gridOrigin
+\f0\b0 ;\
 
 \fs4 \
 
 \fs28 int 
-\b sidelineType
-\b0 ;\
+\f2\b sidelineType
+\f0\b0 ;\
 
 \fs4 \
 
 \fs28 int 
-\b sidelineOffset
-\b0 ;\
+\f2\b sidelineOffset
+\f0\b0 ;\
 
 \fs4 \
 
 \fs28 NXColor 
-\b sidelineColor
-\b0 ;\
+\f2\b sidelineColor
+\f0\b0 ;\
+\pard\tx6140\tx9660\tx10180\li6140\fi-4040\partightenfactor0
 
-\pard\tx6140\tx9660\tx10180\fs48\fi-4040\li6140\fc0\cf0 \
+\fs48 \cf0 \
 
 \fs28 gridType	Holds the type of grid.\
 
@@ -123,685 +139,853 @@ It was inspired by the NoteBook application which itself stole the idea from the
 \fs10 \
 
 \fs28 sidelineColor	The border color.\
+\pard\tx6140\tx9660\tx10180\li1360\partightenfactor0
 
-\f2\b\fs70\fi0\li1360 \
+\f1\b\fs70 \cf0 \
+\pard\li1360\partightenfactor0
 
-\pard\fs36\li1360\fc0\cf0 Method Types\
+\fs36 \cf0 Method Types\
 
 \fs14 \
+\pard\tx6140\tx9660\tx10180\li6140\fi-4040\partightenfactor0
 
-\pard\tx6140\tx9660\tx10180\f0\b0\fs28\fi-4040\li6140\fc0\cf0 Initializing the class object	
-\f1\fc1\cf1 +
-\f0\fc0\cf0  initialize\
+\f0\b0\fs28 \cf0 Initializing the class object	
+\f3 +
+\f0  initialize\
 
 \fs10 \
 
 \fs28 Initializing a new object 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  initFrame:\
+\f4 -
+\f0  initFrame:\
 
 \fs10 \
 
 \fs28 Controlling the grid	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  setGridColor:\
+\f4 -
+\f0  setGridColor:\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  gridColor\
+\f4 -
+\f0  gridColor\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  setGridType:withOrigin:\
+\f4 -
+\f0  setGridType:withOrigin:\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  gridType\
+\f4 -
+\f0  gridType\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  gridOrigin\
+\f4 -
+\f0  gridOrigin\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  setGridSizeVertical:horizontal:\
+\f4 -
+\f0  setGridSizeVertical:horizontal:\
+\pard\tx6140\tx9660\tx10180\li6140\fi-4040\partightenfactor0
 
-\f1\fc1\cf1 	-
-\f0\fc0\cf0  verticalGridSize\
+\f3 \cf0 	
+\f4 -
+\f0  verticalGridSize\
 
-\f1\fc1\cf1 	-
-\f0\fc0\cf0  horizontalGridSize\
+\f3 	
+\f4 -
+\f0  horizontalGridSize\
+\pard\tx6140\tx9660\tx10180\li6140\fi-4040\partightenfactor0
 
-\fs10 \
+\fs10 \cf0 \
 
 \fs28 Controlling the sidelines/borders\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  setSidelineColor:\
+\f4 -
+\f0  setSidelineColor:\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  sidelineColor\
+\f4 -
+\f0  sidelineColor\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  setSidelineType:\
+\f4 -
+\f0  setSidelineType:\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  sidelineType\
+\f4 -
+\f0  sidelineType\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  setSidelineOffset:\
+\f4 -
+\f0  setSidelineOffset:\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  sidelineOffset\
+\f4 -
+\f0  sidelineOffset\
 
 \fs10 \
 
 \fs28 Drawing	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  drawSelf::\
+\f4 -
+\f0  drawSelf::\
 
 \fs10 \
 
 \fs28 Archiving	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  read:\
+\f4 -
+\f0  read:\
 	
-\f1\fc1\cf1 -
-\f0\fc0\cf0  write:\
+\f4 -
+\f0  write:\
 \
+\pard\li1360\partightenfactor0
 
-\pard\f2\b\fs70\li1360\fc0\cf0 \
+\f1\b\fs70 \cf0 \
+\pard\li1360\partightenfactor0
 
-\fs36 Class Methods\
+\fs36 \cf0 Class Methods\
 
 \fs14 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28\fi-380\li2480 initialize\
+\fs28 \cf0 initialize\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 +
+\f3\b0\fs28 \cf0 +
 \f0  
-\b initialize
-\b0 \
+\f2\b initialize
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Initializes the class.\
+\fs28 \cf0 Initializes the class.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b initFrame:
-\b0\fs16 \
+\f2\b initFrame:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
+
+\f1\b\fs52 \cf0 \
+\pard\li1360\partightenfactor0
+
+\fs36 \cf0 Instance Methods\
 
 \fs14 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
-
-\fs36\fi0\li1360 Instance Methods\
-
-\fs14 \
-
-\fs28\fi-380\li2480 drawSelf::\
+\fs28 \cf0 drawSelf::\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b drawSelf:
-\b0 (const NXRect *)
-\i rects
-\b\i0  :
-\b0 (int)
-\i rectCount
-\i0 \
+\f2\b drawSelf:
+\f0\b0 (const NXRect *)
+\f5\i rects
+\f2\i0\b  :
+\f0\b0 (int)
+\f5\i rectCount
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Draws the grid and the borderlines according to the current settings.\
+\fs28 \cf0 Draws the grid and the borderlines according to the current settings.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setGridType:withOrigin:
-\b0 , 
-\f1 -
+\f2\b setGridType:withOrigin:
+\f0\b0 , 
+\f4 -
 \f0  
-\b setSidelineType:
-\b0\fs16 \
+\f2\b setSidelineType:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 gridColor\
+\fs28 \cf0 gridColor\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (NXColor)
-\b gridColor
-\b0 \
+\f2\b gridColor
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns the grid color.\
+\fs28 \cf0 Returns the grid color.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setGridColor:
-\b0 , 
-\f1 -
+\f2\b setGridColor:
+\f0\b0 , 
+\f4 -
 \f0  
-\b gridType
-\b0\fs16 \
+\f2\b gridType
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 gridOrigin\
+\fs28 \cf0 gridOrigin\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (int)
-\b gridOrigin
-\b0 \
+\f2\b gridOrigin
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns the grids origin.\
+\fs28 \cf0 Returns the grids origin.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setGridType:withOrigin:
-\b0 , 
-\f1 -
+\f2\b setGridType:withOrigin:
+\f0\b0 , 
+\f4 -
 \f0  
-\b gridType
-\b0\fs16 \
+\f2\b gridType
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 gridType\
+\fs28 \cf0 gridType\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (int)
-\b gridType
-\b0 \
+\f2\b gridType
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns the type of grid we will draw.\
+\fs28 \cf0 Returns the type of grid we will draw.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setGridType:withOrigin:
-\b0 , 
-\f1 -
+\f2\b setGridType:withOrigin:
+\f0\b0 , 
+\f4 -
 \f0  
-\b gridColor
-\b0\fs16 \
+\f2\b gridColor
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 horizontalGridSize\
+\fs28 \cf0 horizontalGridSize\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (int)
-\b horizontalGridSize
-\b0 \
+\f2\b horizontalGridSize
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns the horizontal grid size. This is the space between vertical lines.\
+\fs28 \cf0 Returns the horizontal grid size. This is the space between vertical lines.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setGridSizeVertical:horizontal:
-\b0\fs16 \
+\f2\b setGridSizeVertical:horizontal:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 initFrame:\
+\fs28 \cf0 initFrame:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b initFrame:
-\b0 (const NXRect *)
-\i frameRect
-\i0 \
+\f2\b initFrame:
+\f0\b0 (const NXRect *)
+\f5\i frameRect
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 The grid is by default light gray (33%) with offsets set to 20 in both directions. We will only draw horizontal lines starting in the top of the view on the left side.\
+\fs28 \cf0 The grid is by default light gray (33%) with offsets set to 20 in both directions. We will only draw horizontal lines starting in the top of the view on the left side.\
 The borders will be dark gray (66%) and one will be visible on the right side with and offset of 4 units (pixels)\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b initialize
-\b0\fs16 \
+\f2\b initialize
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 read:\
+\fs28 \cf0 read:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b read:
-\b0 (NXTypedStream *)
-\i stream
-\i0 \
+\f2\b read:
+\f0\b0 (NXTypedStream *)
+\f5\i stream
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Reads the object fro
-\fc1\cf1 m a stream. We take 
-\fc0\cf0 care of versioning.\
+\fs28 \cf0 Reads the object from a stream. We take care of versioning.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b write:
-\b0 , 
-\f1 -
+\f2\b write:
+\f0\b0 , 
+\f4 -
 \f0  
-\b initialize
-\b0 , 
+\f2\b initialize
+\f0\b0 , 
 \fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 setGridColor:\
-
-\fs6 \
-
-\f1\b0\fs28\fi-760\li3240 -
-\f0  
-\b setGridColor:
-\b0 (NXColor)
-\i color
-\i0 \
-
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
-
-\fs28 Sets the grids color to a color.\
-
-\fs14 \
-
-\f2\b\fs28 See also:  
-\f1\b0 -
-\f0  
-\b gridColor
-\b0 , 
-\f1 -
-\f0  
-\b setGridType:
-\b0\fs16 \
-
-\fs14 \
-
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
-
-\fs28 setGridSizeVertical:horizontal:\
+\fs28 \cf0 setGridColor:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b setGridSizeVertical:
-\b0 (int)
-\i vert
-\b\i0  horizontal:
-\b0 (int)
-\i hor
-\i0 \
+\f2\b setGridColor:
+\f0\b0 (NXColor)
+\f5\i color
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Sets the grid size in the vertical and horizontal direction. The code ensures that both are always at least 1.\
+\fs28 \cf0 Sets the grids color to a color.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
+\f0  
+\f2\b gridColor
+\f0\b0 , 
+\f4 -
+\f0  
+\f2\b setGridType:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
+
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
+
+\fs28 \cf0 setGridSizeVertical:horizontal:\
+
+\fs6 \
+\pard\li3240\fi-760\partightenfactor0
+
+\f4\b0\fs28 \cf0 -
+\f0  
+\f2\b setGridSizeVertical:
+\f0\b0 (int)
+\f5\i vert
+\f2\i0\b  horizontal:
+\f0\b0 (int)
+\f5\i hor
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
+
+\fs28 \cf0 Sets the grid size in the vertical and horizontal direction. The code ensures that both are always at least 1.\
 Remember that vertical lines are seperated by horizontal space! So never mix the direction of the lines with the space between them.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b verticalGridSize
-\b0 , 
-\f1 -
+\f2\b verticalGridSize
+\f0\b0 , 
+\f4 -
 \f0  
-\b horizontalGridSize
-\b0\fs16 \
+\f2\b horizontalGridSize
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 setGridType:withOrigin:\
+\fs28 \cf0 setGridType:withOrigin:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b setGridType:
-\b0 (int)
-\i aType
-\b\i0  withOrigin:
-\b0 (int)
-\i theOrigin
-\i0 \
+\f2\b setGridType:
+\f0\b0 (int)
+\f5\i aType
+\f2\i0\b  withOrigin:
+\f0\b0 (int)
+\f5\i theOrigin
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Sets the grids type and origin. The possible grid types are:\
+\fs28 \cf0 Sets the grids type and origin. The possible grid types are:\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx6980\tx10180\li6980\fi-4500\partightenfactor0
 
-\pard\tx6980\tx10180\f2\b\fs28\fi-4500\li6980\fc0\cf0 Constant	Grid \
+\f1\b\fs28 \cf0 Constant	Grid \
 
 \f0\b0 Misc_PaperGridNone	No grid \
 Misc_PaperGridHorizontal	Horizonal lines only \
 Misc_PaperGridVertical	Vertical lines only \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 To get a full grid combin both linetypes with an OR operation.\
+\fs28 \cf0 To get a full grid combin both linetypes with an OR operation.\
 The grid origin can be set using:\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx6980\tx10180\li6980\fi-4500\partightenfactor0
 
-\pard\tx6980\tx10180\f2\b\fs28\fi-4500\li6980\fc0\cf0 Constant	Origin \
+\f1\b\fs28 \cf0 Constant	Origin \
 
 \f0\b0 Misc_PaperGridStartsUpperLeft	Left side on the top \
 Misc_PaperGridStartsUpperRight	Right side on the top \
 Misc_PaperGridStartsLowerLeft	Left side on the bottom \
 Misc_PaperGridStartsLowerRight	Right side on the bottom\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b gridType
-\b0 , 
-\f1 -
+\f2\b gridType
+\f0\b0 , 
+\f4 -
 \f0  
-\b gridOrigin
-\b0\fc1\cf1 , 
-\f1\fc0\cf0 -
+\f2\b gridOrigin
+\f0\b0 , 
+\f4 -
 \f0  
-\b setGridSizeVertical:horizontal:
-\b0\fs16 \
+\f2\b setGridSizeVertical:horizontal:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 setSidelineColor:\
+\fs28 \cf0 setSidelineColor:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b setSidelineColor:
-\b0 (NXColor)
-\i color
-\i0 \
+\f2\b setSidelineColor:
+\f0\b0 (NXColor)
+\f5\i color
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Sets the sidelines color to color.\
+\fs28 \cf0 Sets the sidelines color to color.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b sidelineColor
-\b0\fs16 \
+\f2\b sidelineColor
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 setSidelineOffset:\
+\fs28 \cf0 setSidelineOffset:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b setSidelineOffset:
-\b0 (int)
-\i offset
-\i0 \
+\f2\b setSidelineOffset:
+\f0\b0 (int)
+\f5\i offset
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Sets the off the borderlines have to their relating view border. The offset is the same for every line we have to draw.\
+\fs28 \cf0 Sets the off the borderlines have to their relating view border. The offset is the same for every line we have to draw.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b sidelineOffset
-\b0\fs16 \
+\f2\b sidelineOffset
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 setSidelineType:\
+\fs28 \cf0 setSidelineType:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b setSidelineType:
-\b0 (int)
-\i aType
-\i0 \
+\f2\b setSidelineType:
+\f0\b0 (int)
+\f5\i aType
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Specifies which sidelines get drawn or no.\
+\fs28 \cf0 Specifies which sidelines get drawn or no.\
+\pard\tx6140\tx10180\li2480\partightenfactor0
 
-\pard\tx6140\tx10180\fs14\li2480\fc1\cf1 \
+\fs14 \cf0 \
 
-\f2\b\fs28\fc0\cf0 Constant	Lineposition \
+\f1\b\fs28 Constant	Lineposition \
 
 \f0\b0 Misc_PaperSidelineNone	Nowhere \
 Misc_PaperSidelineTop	On the top \
 Misc_PaperSidelineBottom	On the bottom \
 Misc_PaperSidelineLeft	On the left side\
 Misc_PaperSidelineRight	On the right side\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc1\cf1 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28\fc0\cf0 You can create more then a single line by combining the single type with an OR operation.\
+\fs28 \cf0 You can create more then a single line by combining the single type with an OR operation.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx6140\tx10180\li2480\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b sidelineType
-\b0 , 
-\f1 -
+\f2\b sidelineType
+\f0\b0 , 
+\f4 -
 \f0  
-\b setSidelineColor:
-\pard\tx6140\tx10180\b0\li2480\fc0\cf0 \
+\f2\b setSidelineColor:
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 sidelineColor\
+\fs28 \cf0 sidelineColor\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (NXColor)
-\b sidelineColor
-\b0 \
+\f2\b sidelineColor
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns the color of the sidelines.\
+\fs28 \cf0 Returns the color of the sidelines.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setSidelineColor:
-\b0\fs16 \
+\f2\b setSidelineColor:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 sidelineOffset\
+\fs28 \cf0 sidelineOffset\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (int)
-\b sidelineOffset
-\b0 \
+\f2\b sidelineOffset
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns the offset in which we will place the borderlines from the views frame.\
+\fs28 \cf0 Returns the offset in which we will place the borderlines from the views frame.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setSidelineOffset:
-\b0\fs16 \
+\f2\b setSidelineOffset:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 sidelineType\
+\fs28 \cf0 sidelineType\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (int)
-\b sidelineType
-\b0 \
+\f2\b sidelineType
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns the type of borders we will draw.\
+\fs28 \cf0 Returns the type of borders we will draw.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setSidelineType:
-\b0\fs16 \
+\f2\b setSidelineType:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 verticalGridSize\
+\fs28 \cf0 verticalGridSize\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  (int)
-\b verticalGridSize
-\b0 \
+\f2\b verticalGridSize
+\f0\b0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Returns the vertical grid size. This is the space between horizontal lines.\
+\fs28 \cf0 Returns the vertical grid size. This is the space between horizontal lines.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b setGridSizeVertical:horizontal:
-\b0\fs16 \
+\f2\b setGridSizeVertical:horizontal:
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
+\f1\b\fs52 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\fs28 write:\
+\fs28 \cf0 write:\
 
 \fs6 \
+\pard\li3240\fi-760\partightenfactor0
 
-\f1\b0\fs28\fi-760\li3240 -
+\f4\b0\fs28 \cf0 -
 \f0  
-\b write:
-\b0 (NXTypedStream *)
-\i stream
-\i0 \
+\f2\b write:
+\f0\b0 (NXTypedStream *)
+\f5\i stream
+\f0\i0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\pard\tx2480\tx2860\tx3240\fs14\li2100\fc0\cf0 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs28 Writes the object to a stream using the latest archiving version.\
+\fs28 \cf0 Writes the object to a stream using the latest archiving version.\
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\f2\b\fs28 See also:  
-\f1\b0 -
+\f1\b\fs28 \cf0 See also:  
+\f4\b0 -
 \f0  
-\b read:
-\b0 , 
-\f1 -
+\f2\b read:
+\f0\b0 , 
+\f4 -
 \f0  
-\b initialize
-\b0\fs16 \
+\f2\b initialize
+\f0\b0\fs16 \
+\pard\tx2480\tx2860\tx3240\li2100\partightenfactor0
 
-\fs14 \
+\fs14 \cf0 \
+\pard\li2480\fi-380\partightenfactor0
 
-\pard\f2\b\fs52\fi-380\li2480\fc0\cf0 \
-
+\f1\b\fs52 \cf0 \
 }

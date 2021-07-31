@@ -11,24 +11,18 @@
 #include <cassert>
 
 
-TileDescriptionArray::TileDescriptionArray( void ) {
-	assert( NUMBER_OF_TILES == 144 );
-	int				i = 0;
-	
-	
+TileDescriptionArray::TileDescriptionArray(void) {
+	assert(NUMBER_OF_TILES == 144);
 	// Build the array of Tile
 	//	Description objects.
-	for (i = 0; i < NUMBER_OF_TILES; ++i) {
-		tile_descriptions[ i ] = new TileDescription( i );
+	for (int i = 0; i < NUMBER_OF_TILES; ++i) {
+		tile_descriptions[i] = new TileDescription(i);
 	}
 }
 
 TileDescriptionArray::~TileDescriptionArray( void ) {
-	int	i;
-	
-	
-	for (i = 0; i < NUMBER_OF_TILES; ++i) {
-		delete tile_descriptions[ i ];
+	for (int i = 0; i < NUMBER_OF_TILES; ++i) {
+		delete tile_descriptions[i];
 	}
 }
 
