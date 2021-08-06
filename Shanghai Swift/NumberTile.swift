@@ -18,64 +18,55 @@ class NumberTile: Tile {
 }
 
 final class NumberOneTile: NumberTile {
-	override init() {
-		super.init()
-		loadImage(named: "n_1")
+	init() {
+		super.init(imageNamed: "n_1")
 	}
 }
 
 final class NumberTwoTile: NumberTile {
-	override init() {
-		super.init()
-		loadImage(named: "n_2")
+	init() {
+		super.init(imageNamed: "n_2")
 	}
 }
 
 final class NumberThreeTile: NumberTile {
-	override init() {
-		super.init()
-		loadImage(named: "n_3")
+	init() {
+		super.init(imageNamed: "n_3")
 	}
 }
 
 final class NumberFourTile: NumberTile {
-	override init() {
-		super.init()
-		loadImage(named: "n_4")
+	init() {
+		super.init(imageNamed: "n_4")
 	}
 }
 
 final class NumberFiveTile: NumberTile {
-	override init() {
-		super.init()
-		loadImage(named: "n_5")
+	init() {
+		super.init(imageNamed: "n_5")
 	}
 }
 
 final class NumberSixTile: NumberTile {
-	override init() {
-		super.init()
-		loadImage(named: "n_6")
+	init() {
+		super.init(imageNamed: "n_6")
 	}
 }
 
 final class NumberSevenTile: NumberTile {
-	override init() {
-		super.init()
-		loadImage(named: "n_7")
+	init() {
+		super.init(imageNamed: "n_7")
 	}
 }
 
 final class NumberEightTile: NumberTile {
-	override init() {
-		super.init()
-		loadImage(named: "n_8")
+	init() {
+		super.init(imageNamed: "n_8")
 	}
 }
 
 final class NumberNineTile: NumberTile {
-	override init() {
-		super.init()
-		loadImage(named: "n_9")
+	init() {
+		super.init(imageNamed: "n_9")
 	}
 }

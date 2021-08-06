@@ -11,14 +11,64 @@ import Cocoa
 /// This is the base class for tiles that are
 /// used on the game board.
 class GameTile: Tile {
+	/// This enumerated type is used to
+	/// identify tiles by type.
+	///
+	/// These types are used to identify
+	/// that two peices are equal.  If equal,
+	/// they can be removed from the board.
+	enum TileType: Int32, CaseIterable {
+		case eastWind
+		case southWind
+		case westWind
+		case northWind
+		
+		case season
+		case flower
+		
+		case circle1
+		case circle2
+		case circle3
+		case circle4
+		case circle5
+		case circle6
+		case circle7
+		case circle8
+		case circle9
+		
+		case bamboo1
+		case bamboo2
+		case bamboo3
+		case bamboo4
+		case bamboo5
+		case bamboo6
+		case bamboo7
+		case bamboo8
+		case bamboo9
+		
+		case character1
+		case character2
+		case character3
+		case character4
+		case character5
+		case character6
+		case character7
+		case character8
+		case character9
+		
+		case red
+		case white
+		case green
+	}
+	
 	/// This variable holds the tile's type.  It
 	/// is assigned in the constructor of a
 	/// a subclass.
 	let myTileType: TileType
 	
-	init(tileType: TileType) {
+	init(tileType: TileType, imageNamed name: NSImage.Name) {
 		myTileType = tileType
-		super.init()
+		super.init(imageNamed: name)
 	}
 	
 	/// This is a flag which indicates wheather
@@ -53,101 +103,88 @@ class GameTile: Tile {
 
 final class BambooOneTile: GameTile {
 	init() {
-		super.init(tileType: .bamboo1)
-		loadImage(named: "bam1")
+		super.init(tileType: .bamboo1, imageNamed: "bam1")
 	}
 }
 
 
 final class BambooTwoTile: GameTile {
 	init() {
-		super.init(tileType: .bamboo2)
-		loadImage(named: "bam2")
+		super.init(tileType: .bamboo2, imageNamed: "bam2")
 	}
 }
 
 final class BambooThreeTile: GameTile {
 	init() {
-		super.init(tileType: .bamboo3)
-		loadImage(named: "bam3")
+		super.init(tileType: .bamboo3, imageNamed: "bam3")
 	}
 }
 
 final class BambooFourTile: GameTile {
 	init() {
-		super.init(tileType: .bamboo4)
-		loadImage(named: "bam4")
+		super.init(tileType: .bamboo4, imageNamed: "bam4")
 	}
 }
 
 final class BambooFiveTile: GameTile {
 	init() {
-		super.init(tileType: .bamboo5)
-		loadImage(named: "bam5")
+		super.init(tileType: .bamboo5, imageNamed: "bam5")
 	}
 }
 
 final class BambooSixTile: GameTile {
 	init() {
-		super.init(tileType: .bamboo6)
-		loadImage(named: "bam6")
+		super.init(tileType: .bamboo6, imageNamed: "bam6")
 	}
 }
 
 final class BambooSevenTile: GameTile {
 	init() {
-		super.init(tileType: .bamboo7)
-		loadImage(named: "bam7")
+		super.init(tileType: .bamboo7, imageNamed: "bam7")
 	}
 }
 
 final class BambooEightTile: GameTile {
 	init() {
-		super.init(tileType: .bamboo8)
-		loadImage(named: "bam8")
+		super.init(tileType: .bamboo8, imageNamed: "bam8")
 	}
 }
 
 final class BambooNineTile: GameTile {
 	init() {
-		super.init(tileType: .bamboo9)
-		loadImage(named: "bam9")
+		super.init(tileType: .bamboo9, imageNamed: "bam9")
 	}
 }
 
 // MARK: - Season Tiles
 
 class SeasonTile: GameTile {
-	init() {
-		super.init(tileType: .season)
+	init(imageNamed named: NSImage.Name) {
+		super.init(tileType: .season, imageNamed: named)
 	}
 }
 
 final class AutumnSeasonTile: SeasonTile {
-	override init() {
-		super.init()
-		loadImage(named: "s_autumn")
+	init() {
+		super.init(imageNamed: "s_autumn")
 	}
 }
 
 final class SpringSeasonTile: SeasonTile {
-	override init() {
-		super.init()
-		loadImage(named: "s_spring")
+	init() {
+		super.init(imageNamed: "s_spring")
 	}
 }
 
 final class SummerSeasonTile: SeasonTile {
-	override init() {
-		super.init()
-		loadImage(named: "s_summer")
+	init() {
+		super.init(imageNamed: "s_summer")
 	}
 }
 
 final class WinterSeasonTile: SeasonTile {
-	override init() {
-		super.init()
-		loadImage(named: "s_winter")
+	init() {
+		super.init(imageNamed: "s_winter")
 	}
 }
 
@@ -155,29 +192,25 @@ final class WinterSeasonTile: SeasonTile {
 
 final class EastWindTile : GameTile {
 	init() {
-		super.init(tileType: .eastWind)
-		loadImage(named: "w_east")
+		super.init(tileType: .eastWind, imageNamed: "w_east")
 	}
 }
 
 final class NorthWindTile :  GameTile {
 	init() {
-		super.init(tileType: .northWind)
-		loadImage(named: "w_north")
+		super.init(tileType: .northWind, imageNamed: "w_north")
 	}
 }
 
 final class SouthWindTile :  GameTile {
 	init() {
-		super.init(tileType: .southWind)
-		loadImage(named: "w_south")
+		super.init(tileType: .southWind, imageNamed: "w_south")
 	}
 }
 
 final class WestWindTile : GameTile {
 	init() {
-		super.init(tileType: .westWind)
-		loadImage(named: "w_west")
+		super.init(tileType: .westWind, imageNamed: "w_west")
 	}
 }
 
@@ -185,22 +218,19 @@ final class WestWindTile : GameTile {
 
 final class RedTile: GameTile {
 	init() {
-		super.init(tileType: .red)
-		loadImage(named: "d_red")
+		super.init(tileType: .red, imageNamed: "d_red")
 	}
 }
 
 final class WhiteTile: GameTile {
 	init() {
-		super.init(tileType: .white)
-		loadImage(named: "d_white")
+		super.init(tileType: .white, imageNamed: "d_white")
 	}
 }
 
 final class GreenTile: GameTile {
 	init() {
-		super.init(tileType: .green)
-		loadImage(named: "d_green")
+		super.init(tileType: .green, imageNamed: "d_green")
 	}
 }
 
@@ -208,64 +238,55 @@ final class GreenTile: GameTile {
 
 final class CharacterOneTile : GameTile {
 	init() {
-		super.init(tileType: .character1)
-		loadImage(named: "char1")
+		super.init(tileType: .character1, imageNamed: "char1")
 	}
 }
 
 final class CharacterTwoTile : GameTile {
 	init() {
-		super.init(tileType: .character2)
-		loadImage(named: "char2")
+		super.init(tileType: .character2, imageNamed: "char2")
 	}
 }
 
 final class CharacterThreeTile : GameTile {
 	init() {
-		super.init(tileType: .character3)
-		loadImage(named: "char3")
+		super.init(tileType: .character3, imageNamed: "char3")
 	}
 }
 
 final class CharacterFourTile : GameTile {
 	init() {
-		super.init(tileType: .character4)
-		loadImage(named: "char4")
+		super.init(tileType: .character4, imageNamed: "char4")
 	}
 }
 
 final class CharacterFiveTile : GameTile {
 	init() {
-		super.init(tileType: .character5)
-		loadImage(named: "char5")
+		super.init(tileType: .character5, imageNamed: "char5")
 	}
 }
 
 final class CharacterSixTile : GameTile {
 	init() {
-		super.init(tileType: .character6)
-		loadImage(named: "char6")
+		super.init(tileType: .character6, imageNamed: "char6")
 	}
 }
 
 final class CharacterSevenTile : GameTile {
 	init() {
-		super.init(tileType: .character7)
-		loadImage(named: "char7")
+		super.init(tileType: .character7, imageNamed: "char7")
 	}
 }
 
 final class CharacterEightTile : GameTile {
 	init() {
-		super.init(tileType: .character8)
-		loadImage(named: "char8")
+		super.init(tileType: .character8, imageNamed: "char8")
 	}
 }
 
 final class CharacterNineTile : GameTile {
 	init() {
-		super.init(tileType: .character9)
-		loadImage(named: "char9")
+		super.init(tileType: .character9, imageNamed: "char9")
 	}
 }
 
@@ -273,99 +294,86 @@ final class CharacterNineTile : GameTile {
 
 final class CircleOneTile : GameTile {
 	init() {
-		super.init(tileType: .circle1)
-		loadImage(named: "circ1")
+		super.init(tileType: .circle1, imageNamed: "circ1")
 	}
 }
 
 final class CircleTwoTile : GameTile {
 	init() {
-		super.init(tileType: .circle2)
-		loadImage(named: "circ2")
+		super.init(tileType: .circle2, imageNamed: "circ2")
 	}
 }
 
 final class CircleThreeTile : GameTile {
 	init() {
-		super.init(tileType: .circle3)
-		loadImage(named: "circ3")
+		super.init(tileType: .circle3, imageNamed: "circ3")
 	}
 }
 
 final class CircleFourTile : GameTile {
 	init() {
-		super.init(tileType: .circle4)
-		loadImage(named: "circ4")
+		super.init(tileType: .circle4, imageNamed: "circ4")
 	}
 }
 
 final class CircleFiveTile : GameTile {
 	init() {
-		super.init(tileType: .circle5)
-		loadImage(named: "circ5")
+		super.init(tileType: .circle5, imageNamed: "circ5")
 	}
 }
 
 final class CircleSixTile : GameTile {
 	init() {
-		super.init(tileType: .circle6)
-		loadImage(named: "circ6")
+		super.init(tileType: .circle6, imageNamed: "circ6")
 	}
 }
 
 final class CircleSevenTile : GameTile {
 	init() {
-		super.init(tileType: .circle7)
-		loadImage(named: "circ7")
+		super.init(tileType: .circle7, imageNamed: "circ7")
 	}
 }
 
 final class CircleEightTile : GameTile {
 	init() {
-		super.init(tileType: .circle8)
-		loadImage(named: "circ8")
+		super.init(tileType: .circle8, imageNamed: "circ8")
 	}
 }
 
 final class CircleNineTile : GameTile {
 	init() {
-		super.init(tileType: .circle9)
-		loadImage(named: "circ9")
+		super.init(tileType: .circle9, imageNamed: "circ9")
 	}
 }
 
 // MARK: - Flower Tiles
 
 class FlowerTile : GameTile {
-	init() {
-		super.init(tileType: .flower)
+	init(imageNamed named: NSImage.Name) {
+		super.init(tileType: .flower, imageNamed: named)
 	}
 }
 
 final class BambooTile: FlowerTile {
-	override init() {
-		super.init()
-		loadImage(named: "f_bam")
+	init() {
+		super.init(imageNamed: "f_bam")
 	}
 }
 
 final class ChrysanthemumTile: FlowerTile {
-	override init() {
-		super.init()
-		loadImage(named: "f_mum")
+	init() {
+		super.init(imageNamed: "f_mum")
 	}
 }
 
 final class OrchidTile:  FlowerTile {
-	override init() {
-		super.init()
-		loadImage(named: "f_orch")
+	init() {
+		super.init(imageNamed: "f_orch")
 	}
 }
 
 final class PlumTile: FlowerTile {
-	override init() {
-		super.init()
-		loadImage(named: "f_plum")
+	init() {
+		super.init(imageNamed: "f_plum")
 	}
 }

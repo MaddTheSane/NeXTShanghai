@@ -8,72 +8,18 @@
 
 import Cocoa
 
-/// This is a subdirectory within
-/// the application where the tile
-/// tiff images are stored.
+/// This is a namespace within the asset catalog where the
+/// tile images are stored.
 private let TILE_TIFF_DIRECTORY	= "NeXTmj"
 
 class Tile {
-	/// This enumerated type is used to
-	/// identify tiles by type.
-	///
-	/// These types are used to identify
-	/// that two peices are equal.  If equal
-	/// they can be removed from the board.
-	enum TileType: Int32, CaseIterable {
-		case eastWind
-		case southWind
-		case westWind
-		case northWind
-		
-		case season
-		case flower
-		
-		case circle1
-		case circle2
-		case circle3
-		case circle4
-		case circle5
-		case circle6
-		case circle7
-		case circle8
-		case circle9
-		
-		case bamboo1
-		case bamboo2
-		case bamboo3
-		case bamboo4
-		case bamboo5
-		case bamboo6
-		case bamboo7
-		case bamboo8
-		case bamboo9
-		
-		case character1
-		case character2
-		case character3
-		case character4
-		case character5
-		case character6
-		case character7
-		case character8
-		case character9
-		
-		case red
-		case white
-		case green
-	}
-
 	/// This is a image object which is
 	/// loaded with an image and used
 	/// to display a tile.
-	private(set) var myTileImage: NSImage!
+	let myTileImage: NSImage
 	
-	/// This member function is called by
-	/// subclasses to load a tiff file for
-	/// tile rendering.
-	final func loadImage(named: NSImage.Name) {
-		myTileImage = NSImage(named: TILE_TIFF_DIRECTORY + "/" + named)
+	init(imageNamed named: NSImage.Name) {
+		myTileImage = NSImage(named: TILE_TIFF_DIRECTORY + "/" + named)!
 	}
 	
 	/// This function does the actual drawing of
@@ -112,5 +58,6 @@ class Tile {
 	/// This member function must be implemented
 	/// in the subclasses since game tiles
 	/// can be highlighted.
+	/// - parameter point: the point to draw the image.
 	func drawImage(at point: NSPoint) {}
 }
