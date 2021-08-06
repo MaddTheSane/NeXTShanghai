@@ -38,21 +38,25 @@ protected:
 	//! This is a Image object which is
 	//! loaded with a tiff image and used
 	//! to display a tile.
-	NSImage	*my_tile_image;
+	__strong NSImage	*my_tile_image;
 	//! This member function is called by
 	//! subclasses to load a tiff file for
 	//! tile rendering.
-	void	loadImageFromFile( NSImageName );
+	void	loadImageFromFile(NSImageName);
 
 protected:
 	//! This function does the actual drawing of
 	//!	an image to a point on the board.  All
-	//!	of the \c drawImage() routine call this.
+	//!	of the \c drawImage() routines call this.
 	//! @discussion The first parameter is a point on the
 	//!	board where the tile is drawn, the
 	//!	second parameter is the composite
 	//!	operation.
-	void	compositeImage( NSPoint, NSCompositingOperation );
+	//! @param aPoint The point on the
+	//!	board where the tile is drawn.
+	//! @param aMode The composite
+	//!	operation.
+	void	compositeImage(NSPoint aPoint, NSCompositingOperation aMode);
 public:
 	//! This member function is called by the
 	//! Board View to composite the tile a
@@ -62,10 +66,10 @@ public:
 	//! @discussion This member function must be implemented
 	//! in the subclasses since game tiles
 	//! can be highlighted.
-	virtual void	drawImage( NSPoint ) = 0;
+	virtual void drawImage(NSPoint aPoint) = 0;
 
 public:
-	Tile( void );
-	virtual ~Tile( void );
+	Tile(void) = default;
+	virtual ~Tile(void) = default;
 };
 

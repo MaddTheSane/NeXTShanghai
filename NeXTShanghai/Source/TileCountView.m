@@ -13,22 +13,16 @@
 #import "TileCountView.h"
 #import	"GameInterface.h"
 #import <Cocoa/Cocoa.h>
-
-#import	<assert.h>
+#include <assert.h>
 
 
 @implementation TileCountView
 
-
 - (void)drawRect:(NSRect)dirtyRect
 {
+	assert(gameInterface);
 	
-	assert( gameInterface );
-	
-//	PSsetgray( NX_WHITE );
-//	NXRectFillList( rects, rectCount );
-	[gameInterface tileCountDraw ];
+	[gameInterface tileCountDraw];
 }
-
 
 @end

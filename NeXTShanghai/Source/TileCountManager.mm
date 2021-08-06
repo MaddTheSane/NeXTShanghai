@@ -19,33 +19,33 @@
 #define	NUMBER_OF_DIGITS	3
 
 
-TileCountManager::TileCountManager( TileCountView* view ) {
-	assert( view );
+TileCountManager::TileCountManager(TileCountView* view) {
+	assert(view);
 	my_view = view;
 	[my_view setNeedsDisplay:YES];
 
 	count_value = NUMBER_OF_TILES;
 }
 
-void TileCountManager::updateView( void ) {
+void TileCountManager::updateView(void) {
 	[ my_view setNeedsDisplay:YES ];
 	//[my_view displayFromOpaqueAncestor:0 :0 :NO ];
 }
 
-void TileCountManager::resetCount( void ) {
+void TileCountManager::resetCount(void) {
 	count_value = NUMBER_OF_TILES;
 	updateView();
 }
 
-void TileCountManager::addTwo( void ) {
+void TileCountManager::addTwo(void) {
 	count_value += 2;
-	assert( count_value <= NUMBER_OF_TILES );
+	assert(count_value <= NUMBER_OF_TILES);
 	updateView();
 }
 
-void TileCountManager::subtractTwo( void ) {
+void TileCountManager::subtractTwo(void) {
 	count_value -= 2;
-	assert( count_value >= 0 );
+	assert(count_value >= 0);
 	updateView();
 }
 
@@ -65,13 +65,13 @@ void TileCountManager::drawImage(void) {
 	//assert([ my_view isFocusView ]);
     bounds = my_view.bounds;
 	
-	for (int i = 0; i < NUMBER_OF_DIGITS; ++i) {
+	for (int i = 0; i < NUMBER_OF_DIGITS; i++) {
 		int		digit = tmp_value / (int)pow(10, (NUMBER_OF_DIGITS - 1 - i));
 		NSPoint	p = NSZeroPoint;
 		
 		p.x = i * (SMALLTILE_WIDTH - SMALLTILE_SHIFT);
 		
-		if( didDrawRealNumber || digit > 0 ) {
+		if (didDrawRealNumber || digit > 0) {
 			number_array[digit].drawImage(p);
 			didDrawRealNumber = YES;
 		}

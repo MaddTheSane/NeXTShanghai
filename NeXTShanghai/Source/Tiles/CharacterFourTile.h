@@ -13,10 +13,8 @@
 class CharacterFourTile : public GameTile {
 
 public:
-	CharacterFourTile( void ) {
-	
+	CharacterFourTile(void): GameTile() {
 		my_tile_type = CHARACTER_4;
-		loadImageFromFile( @"char4" );
+		loadImageFromFile(@"char4");
 	}
 };
-

@@ -13,9 +13,7 @@
 class FlowerTile : public GameTile {
 
 public:
-	FlowerTile( void ) {
-	
+	FlowerTile(void): GameTile() {
 		my_tile_type = FLOWER;
 	}
 };
-

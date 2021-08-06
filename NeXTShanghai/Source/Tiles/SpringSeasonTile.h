@@ -13,9 +13,7 @@
 class SpringSeasonTile : public SeasonTile {
 
 public:
-	SpringSeasonTile( void ) {
-	
-		loadImageFromFile( @"s_spring" );
+	SpringSeasonTile(void): SeasonTile() {
+		loadImageFromFile(@"s_spring");
 	}
 };
-

@@ -13,10 +13,8 @@
 class WestWindTile : public GameTile {
 
 public:
-	WestWindTile( void ) {
-	
+	WestWindTile(void): GameTile() {
 		my_tile_type = WEST_WIND;
-		loadImageFromFile( @"w_west" );
+		loadImageFromFile(@"w_west");
 	}
 };
-

@@ -38,7 +38,7 @@
 	
 //	PSsetgray( NX_WHITE );
 //	NXRectFillList( rects, rectCount );
-	[gameInterface gameBoardDraw ];
+	[gameInterface gameBoardDraw];
 }
 
 @end

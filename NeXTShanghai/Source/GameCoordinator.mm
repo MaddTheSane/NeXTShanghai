@@ -20,7 +20,6 @@ extern char **NXArgv;
 GameCoordinator::GameCoordinator( GameBoardView* view, TileCountManager* manager ) {
 	int		board_num = -1;
 	
-	
 	initialized = NO;
 	
 	assert( view );
@@ -32,12 +31,14 @@ GameCoordinator::GameCoordinator( GameBoardView* view, TileCountManager* manager
 	//	for an optional board number.  The
 	//	board number is a seed to the random
 	//	number generator.
-	for( int i = 0; i < NXArgc; ++i )
-		if( !strncmp( NXArgv[ i ], "-b", strlen( "-b" )))
-			if(( i + 1 ) < NXArgc ) {
-				board_num = atoi( NXArgv[ i + 1 ] );
+	for (int i = 0; i < NXArgc; i++) {
+		if (!strncmp(NXArgv[ i ], "-b", strlen( "-b"))) {
+			if ((i + 1) < NXArgc ) {
+				board_num = atoi(NXArgv[i + 1]);
 				board_num %= 20011;
 			}
+		}
+	}
 
 	// Scramble the tiles on the game
 	//	board.
@@ -77,7 +78,7 @@ void GameCoordinator::updateView( void ) {
 
 void GameCoordinator::drawImage( void ) {
 	BOOL didDrawTouchedTiles = NO;
-	NSPoint backgroundOrigin;
+	NSPoint backgroundOrigin = NSMakePoint(-8, -22);
 	NSPoint aPoint;
 	NSRect	aClipRect;
 	NSPoint checkPoint;
@@ -100,15 +101,9 @@ void GameCoordinator::drawImage( void ) {
 	// Sorry..this is not really cool. I could do something like [myView - superview coords]
 	// but that wouldn't make the overall code any better :-(
 	
-	backgroundOrigin.x = -8;
-	backgroundOrigin.y = -22;
-	
-
-	for( int i = 0; i < tile_array.size(); ++i )
-	{
-		if( tile_array[ i ].gotTouched() )
-		{
-			aPoint = description_array[ i ]->tileLocation();
+	for (int i = 0; i < tile_array.size(); i++) {
+		if (tile_array[i].gotTouched()) {
+			aPoint = description_array[i]->tileLocation();
 			
 			aClipRect.origin = aPoint;
 			aClipRect.size.width = TILE_WIDTH_WITH_SHADOW;
@@ -127,19 +122,20 @@ void GameCoordinator::drawImage( void ) {
 			// Now draw all the tiles which are necessary for the right layering
 			// This affects the visible and which somehow intersect with the tiles region. 
 			
-			for( int t = 0; t < tile_array.size(); ++t )
-				if( !tile_array[ t ].isRemoved() )
-				{
-					checkPoint = description_array[ t ]->tileLocation();
+			for (int t = 0; t < tile_array.size(); t++) {
+				if (!tile_array[t].isRemoved()) {
+					checkPoint = description_array[t]->tileLocation();
 			
 					checkClipRect.origin = checkPoint;
 					checkClipRect.size.width = TILE_WIDTH_WITH_SHADOW;
 					checkClipRect.size.height = TILE_HEIGHT;
 
-					if( NSIntersectsRect( aClipRect, checkClipRect ))
-						tile_array[ t ].drawImage( checkPoint );
+					if (NSIntersectsRect(aClipRect, checkClipRect)) {
+						tile_array[t].drawImage(checkPoint);
+					}
 				}
-			tile_array[ i ].markTouched( NO );	
+			}
+			tile_array[i].markTouched(NO);
 			didDrawTouchedTiles = YES;
 			
 			// Get the WindowServer where we want it to be again
@@ -151,31 +147,32 @@ void GameCoordinator::drawImage( void ) {
 	// If we did not redraw any single tiles then if might be about time to redraw the 
 	// whole board.
 	
-	if( !didDrawTouchedTiles )
-	{
+	if (!didDrawTouchedTiles) {
 		[[NSImage imageNamed:@"Background"] drawAtPoint:backgroundOrigin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1];
 	
-		for( int i = 0; i < tile_array.size(); ++i )
-			if( !tile_array[ i ].isRemoved())
-				tile_array[ i ].drawImage( description_array[ i ]->tileLocation());
+		for (int i = 0; i < tile_array.size(); i++) {
+			if (!tile_array[i].isRemoved()) {
+				tile_array[i].drawImage(description_array[i]->tileLocation());
+			}
+		}
 	}
 }
 
 
 void GameCoordinator::helpClick( void ) {
-	// BUG: Tiles selected by the help'object ar not removable by a double click !
+	// BUG: Tiles selected by the help object are not removable by a double click!
 	// You have to manually select them.
 	// I did not look into that but I suspect that the first & seconed_selected
 	// ivars do not reflect the state of the selected objects.
 
 	unselectTiles();
-	help.helpClick( tile_array );
+	help.helpClick(tile_array);
 	updateView();
 }
 
 
 void GameCoordinator::undoClick( void ) {
-	assert(( undoList.count() % 2 ) == 0 );
+	assert((undoList.count() % 2) == 0);
 	
 	help.resetHelp();
 	
@@ -183,13 +180,12 @@ void GameCoordinator::undoClick( void ) {
 	//	list then mark them as not removed,
 	//	redraw the board, and mark all
 	//	tiles as not selected.
-	if( undoList.count()) {
-		
-		for( int i = 0; i < 2; ++i ) {
+	if (undoList.count()) {
+		for ( int i = 0; i < 2; i++) {
 			int	tile = undoList.lastValue();
 			
-			tile_array[ tile ].setRemoved( NO );
-			tile_array[ tile ].markTouched( YES );
+			tile_array[tile].setRemoved(NO);
+			tile_array[tile].markTouched(YES);
 			
 			undoList -= tile;
 		}
@@ -197,20 +193,19 @@ void GameCoordinator::undoClick( void ) {
 		updateSelectablilty();
 		
 		tile_count_manager->addTwo();
-	} else
+	} else {
 		NSBeep();
+	}
 	
 	unselectTiles();
 	updateView();
 }
 
-void GameCoordinator::unselectTiles( void ) {
-	for( int i = 0; i < tile_array.size(); ++i )
-	{
-		if( tile_array[ i ].isSelected() )
-		{
-			tile_array[ i ].setSelected( NO );
-			tile_array[ i ].markTouched( YES );
+void GameCoordinator::unselectTiles(void) {
+	for (int i = 0; i < tile_array.size(); i++) {
+		if (tile_array[i].isSelected()) {
+			tile_array[i].setSelected( NO );
+			tile_array[i].markTouched( YES );
 		}
 	}
 	
@@ -220,7 +215,7 @@ void GameCoordinator::unselectTiles( void ) {
 	updateView();
 }
 
-void GameCoordinator::againClick( void ) {
+void GameCoordinator::againClick(void) {
 	// Again means to play the same tile
 	//	scramble again.
 	help.resetHelp();
@@ -232,7 +227,7 @@ void GameCoordinator::againClick( void ) {
 	tile_count_manager->resetCount();
 }
 
-void GameCoordinator::newClick( void ) {
+void GameCoordinator::newClick(void) {
 	// Scramble the tiles and start
 	//	a new game.
 	scrambler.scramble( tile_array );
@@ -248,11 +243,11 @@ void GameCoordinator::newClick( void ) {
 void GameCoordinator::prepareTilesForPlay( void ) {
 	// Set all tiles to a default
 	//	state.
-	for (int i = 0; i < tile_array.size(); ++i) {
-		tile_array[ i ].setRemoved( NO );
-		tile_array[ i ].setSelected( NO );
-		tile_array[ i ].setSelectable( NO );
-		tile_array[ i ].markTouched( NO );
+	for (int i = 0; i < tile_array.size(); i++) {
+		tile_array[i].setRemoved( NO );
+		tile_array[i].setSelected( NO );
+		tile_array[i].setSelectable( NO );
+		tile_array[i].markTouched( NO );
 	}
 	
 	updateSelectablilty();
@@ -262,18 +257,18 @@ void GameCoordinator::updateSelectablilty( void ) {
 	// Any tile that is free on either its
 	//	left or right and isn't covered
 	//	is selectable
-	for (int i = 0; i < tile_array.size(); ++i) {
+	for (int i = 0; i < tile_array.size(); i++) {
 		BOOL	selectable = NO;
 		
-		if( !tile_array[ i ].isRemoved()) {
-			if( !isCovered( i )) {
-				if( isRightFree( i ) || isLeftFree( i )) {
+		if (!tile_array[i].isRemoved()) {
+			if (!isCovered(i)) {
+				if (isRightFree(i) || isLeftFree(i)) {
 					selectable = YES;
 				}
 			}
 		}
 		
-		tile_array[ i ].setSelectable( selectable );
+		tile_array[i].setSelectable(selectable);
 	}
 }
 
@@ -282,8 +277,8 @@ BOOL GameCoordinator::isFree( IntegerList& list ) {
 	int		i;
 	
 	list.beginIterate();
-	while(( i = list()) != -1 ) {
-		if( !tile_array[ i ].isRemoved()) {
+	while ((i = list()) != -1) {
+		if (!tile_array[i].isRemoved()) {
 			is_free = NO;
 		}
 	}
@@ -291,18 +286,18 @@ BOOL GameCoordinator::isFree( IntegerList& list ) {
 	return is_free;
 }
 
-void GameCoordinator::click( NSPoint aPoint ) {
-	int	theTile = tileForClick( aPoint );
+void GameCoordinator::click(NSPoint aPoint) {
+	int	theTile = tileForClick(aPoint);
 	
 	// Any click on the Game Board resets
 	//	Help.
-	if( help.isSelected()) {
+	if (help.isSelected()) {
 		unselectTiles();
 	}
 	help.resetHelp();
 	
 	if (theTile != -1) {
-		if (tile_array[ theTile ].isSelectable()) {
+		if (tile_array[theTile].isSelectable()) {
 			
 			// If the tile is being unselected
 			//	the unselect it.
@@ -343,33 +338,35 @@ void GameCoordinator::click( NSPoint aPoint ) {
 			}
 			
 			updateView();
-		} else
+		} else {
 			NSBeep();
-	} else
+		}
+	} else {
 		NSBeep();
+	}
 }
 
 
 void GameCoordinator::doubleClick(NSPoint aPoint) {
 	int	theTile = tileForClick( aPoint );
 	
-	if( theTile != -1 ) {
-		if( tile_array[ theTile ].isSelectable()) {
+	if (theTile != -1) {
+		if (tile_array[theTile].isSelectable()) {
 			
 			// if there isn't two tiles selected then
 			//	try to select the tile double clicked.
-			if(( first_selected_tile == -1 ) || ( second_selected_tile == -1 ))
+			if ((first_selected_tile == -1) || (second_selected_tile == -1))
 				click( aPoint );
 			// There must be two tiles
 			//	selected.
-			if(( first_selected_tile != -1 ) && ( second_selected_tile != -1 )) {
+			if ((first_selected_tile != -1) && (second_selected_tile != -1)) {
 				
 				// Remove the tiles from the
 				//	board and update the selectability
 				//	of the surrounding tiles.
-				assert( tile_array[ first_selected_tile ].tileType() == tile_array[ second_selected_tile ].tileType());
-				removeTile( first_selected_tile );
-				removeTile( second_selected_tile );
+				assert(tile_array[ first_selected_tile ].tileType() == tile_array[ second_selected_tile ].tileType());
+				removeTile(first_selected_tile);
+				removeTile(second_selected_tile);
 				tile_count_manager->subtractTwo();
 				
 				unselectTiles();
@@ -389,15 +386,15 @@ int GameCoordinator::tileForClick( NSPoint aPoint ) {
 	int				theTile = -1;
 	
 	do {
-		if( !tile_array[ index.value() ].isRemoved()) {
-			NSRect	r = {	0, 0,
-				TILE_WIDTH - TILE_SHIFT, TILE_HEIGHT - TILE_SHIFT };
+		if (!tile_array[index.value()].isRemoved()) {
+			NSRect	r = NSMakeRect(0, 0, TILE_WIDTH - TILE_SHIFT, TILE_HEIGHT - TILE_SHIFT);
 			
-			r.origin = description_array[ index.value() ]->tileLocation();
-			if( NSPointInRect( aPoint, r ))
+			r.origin = description_array[index.value()]->tileLocation();
+			if (NSPointInRect(aPoint, r)) {
 				theTile = index.value();
+			}
 		}
-	} while(( theTile == -1 ) && ( --index >= 0 ));
+	} while ((theTile == -1) && (--index >= 0));
 	
 	return theTile;
 }
@@ -407,10 +404,10 @@ void GameCoordinator::removeTile( int tile ) {
 	
 	// romoving a tile definitly marks it as touched...
 	
-	tile_array[ tile ].setRemoved( YES );
-	tile_array[ tile ].setSelected( NO );
-	tile_array[ tile ].setSelectable( NO );
-	tile_array[ tile ].markTouched( YES );
+	tile_array[tile].setRemoved(YES);
+	tile_array[tile].setSelected(NO);
+	tile_array[tile].setSelectable(NO);
+	tile_array[tile].markTouched(YES);
 	
 	updateSelectablilty();
 }

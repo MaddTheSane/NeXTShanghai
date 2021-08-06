@@ -39,7 +39,7 @@ public:
 	/// object and from there the Game Board's
 	/// view.  It is called when the view
 	/// receives a drawSelf:: method.
-	void					drawImage( void );
+	void					drawImage(void);
 						
 private:
 	NumberTileArray			number_array;
@@ -51,22 +51,22 @@ private:
 	int						count_value;
 	/// This method updates the view with
 	/// the current count.
-	void					updateView( void );
+	void					updateView(void);
 public:
 	/// This method resets the count to 144.
-	void					resetCount( void );
+	void					resetCount(void);
 	/// This method adds to the current
 	/// count.
-	void					addTwo( void );
+	void					addTwo(void);
 	/// This method subtracts two from the
 	/// current count.
-	void					subtractTwo( void );
+	void					subtractTwo(void);
 	/// This method returns the current count.
-	int						count( void );
+	int						count(void);
 	/// This method tests to determine if the
 	/// Game Board is empty.
-	BOOL					isEmpty( void );
+	BOOL					isEmpty(void);
 
 public:
-	TileCountManager( TileCountView* );
+	TileCountManager(TileCountView *view);
 };

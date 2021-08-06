@@ -13,10 +13,8 @@
 class WhiteTile : public GameTile {
 
 public:
-	WhiteTile( void ) {
-	
+	WhiteTile(void): GameTile() {
 		my_tile_type = WHITE;
-		loadImageFromFile( @"d_white" );
+		loadImageFromFile(@"d_white");
 	}
 };
-

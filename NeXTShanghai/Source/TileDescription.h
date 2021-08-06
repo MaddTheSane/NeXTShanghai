@@ -19,7 +19,6 @@
 #import <Foundation/NSGeometry.h>
 
 class TileDescription {
-
 private:
 	/// These lists hold integers to locate
 	/// tiles of an object to its left, right,
@@ -36,9 +35,9 @@ private:
 public:
 	/// These routines returns a list of
 	/// tiles on a side.
-	IntegerList		&leftList( void ),
-					&rightList( void ),
-					&coveredList( void );
+	IntegerList		&leftList(void),
+					&rightList(void),
+					&coveredList(void);
 
 private:
 	/// Location of tile in the Game Board
@@ -52,5 +51,5 @@ public:
 	}
 
 public:
-	TileDescription( int );
+	TileDescription(int loc);
 };

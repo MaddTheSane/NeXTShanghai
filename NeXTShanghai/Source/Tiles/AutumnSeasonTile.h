@@ -13,9 +13,7 @@
 class AutumnSeasonTile : public SeasonTile {
 
 public:
-	AutumnSeasonTile( void ) {
-	
-		loadImageFromFile( @"s_autumn" );
+	AutumnSeasonTile(void): SeasonTile() {
+		loadImageFromFile(@"s_autumn");
 	}
 };
-

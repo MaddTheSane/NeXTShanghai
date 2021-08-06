@@ -13,9 +13,7 @@
 class SummerSeasonTile : public SeasonTile {
 
 public:
-	SummerSeasonTile( void ) {
-	
-		loadImageFromFile( @"s_summer" );
+	SummerSeasonTile(void): SeasonTile() {
+		loadImageFromFile(@"s_summer");
 	}
 };
-

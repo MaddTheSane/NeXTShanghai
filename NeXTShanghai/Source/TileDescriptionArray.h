@@ -17,7 +17,6 @@ extern "C" {
 #include "mj.h"
 }
 
-
 class TileDescriptionArray {
 private:
 	/// This matrix holds a Tile Description
@@ -27,16 +26,16 @@ private:
 	TileDescription*	tile_descriptions[ NUMBER_OF_TILES ];
 
 public:
-	TileDescriptionArray( void );
-	~TileDescriptionArray( void );
+	TileDescriptionArray(void);
+	~TileDescriptionArray(void);
 	
 	/// The only access to the array is to
 	/// examine a description.  So we'll
 	/// return pointers (I don't really care
 	/// for reference types anyway).
-	TileDescription* operator[]( int );
+	TileDescription* operator[](int loc);
 	
 	/// How many elements are in the array?
-	int			size( void );	
+	int			size(void);	
 };
 

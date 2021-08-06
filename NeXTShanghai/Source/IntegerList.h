@@ -44,12 +44,15 @@ private:
 	/// This is because 0 is a legal value
 	/// but the list object considers it nil
 	/// and won't place it on the list.
-	int		encodeValue( int integer),
-			decodeValue( int integer);
+	///
+	/// Note: This is no longer the case, but these are kept for backwards-compatibility.
+	/// This method is pretty much a no-op now.
+	int		encodeValue(int integer),
+			decodeValue(int integer);
 			
 public:
-	IntegerList( void );
-	~IntegerList( void );
+	IntegerList(void);
+	~IntegerList(void);
 	
 	
 	/// This operator indexes through the list
@@ -62,16 +65,16 @@ public:
 	/// Prepare for list iteration.
 	void	beginIterate();
 	/// Add a integer to the list.
-	void	operator+=( int integer);
+	void	operator+=(int integer);
 	/// Remove a integer from this list.
-	void	operator-=( int integer);
+	void	operator-=(int integer);
 	/// Empty the list of all values.
-	void	empty( void );
+	void	empty(void);
 	/// Return the number of items on
 	/// the list.
-	NSInteger count( void );
+	NSInteger count(void);
 	/// Return the value of the last integer
 	/// on the list.
-	int		lastValue( void );
+	int		lastValue(void);
 };
 

@@ -14,56 +14,56 @@ extern "C" {
 }
 
 
-GameTile::GameTile( void ) {
+GameTile::GameTile(void) {
 	selected		= NO;
 	selectable		= NO;
 	touched			= NO;
 }
 
-BOOL GameTile::isSelected( void ) {
+BOOL GameTile::isSelected(void) {
 	return	selected;
 }
 
-void GameTile::setSelected( BOOL flag ) {
+void GameTile::setSelected(BOOL flag) {
 	selected = flag;
 }
 
-BOOL GameTile::gotTouched( void ) {
+BOOL GameTile::gotTouched(void) {
 	return touched;
 }
 
-void GameTile::markTouched( BOOL flag ) {
+void GameTile::markTouched(BOOL flag) {
 	touched = flag;
 }
 
-TILE_TYPE GameTile::tileType( void ) {
+TILE_TYPE GameTile::tileType(void) {
 	return my_tile_type;
 }
 
-BOOL GameTile::isTileType( TILE_TYPE aType ) {
+BOOL GameTile::isTileType(TILE_TYPE aType) {
 	return aType == my_tile_type ? YES : NO ;
 }
 
-BOOL GameTile::isSelectable( void ) {
+BOOL GameTile::isSelectable(void) {
 	return selectable;
 }	
 
-void GameTile::setSelectable( BOOL flag ) {
+void GameTile::setSelectable(BOOL flag) {
 	selectable = flag;
 }
 
-BOOL GameTile::isRemoved( void ) {
+BOOL GameTile::isRemoved(void) {
 	return removed;
 }	
 
-void GameTile::setRemoved( BOOL flag ) {
+void GameTile::setRemoved(BOOL flag) {
 	removed = flag;
 }
 
-void GameTile::drawImage( NSPoint aPoint ) {
-	if( selected ) {
-		compositeImage( aPoint, NSCompositingOperationPlusDarker );
+void GameTile::drawImage(NSPoint aPoint) {
+	if (selected) {
+		compositeImage(aPoint, NSCompositingOperationPlusDarker);
 	} else {
-		compositeImage( aPoint, NSCompositingOperationCopy );
+		compositeImage(aPoint, NSCompositingOperationCopy);
 	}
 }

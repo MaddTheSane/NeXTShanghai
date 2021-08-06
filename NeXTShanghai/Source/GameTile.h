@@ -22,25 +22,25 @@ extern "C" {
 /// These types are used to identify
 /// that two peices are equal.  If equal
 /// they can be removed from the board.
-	typedef enum GAME_TYLE_TYPE {
-					EAST_WIND,		SOUTH_WIND,		WEST_WIND,		NORTH_WIND,
-					
-					SEASON,			FLOWER,
-					
-					CIRCLE_1,		CIRCLE_2,		CIRCLE_3,		CIRCLE_4,
-					CIRCLE_5,		CIRCLE_6,		CIRCLE_7,		CIRCLE_8,
-					CIRCLE_9,
-					
-					BAMBOO_1,		BAMBOO_2,		BAMBOO_3,		BAMBOO_4,
-					BAMBOO_5,		BAMBOO_6,		BAMBOO_7,		BAMBOO_8,
-					BAMBOO_9,
-					
-					CHARACTER_1,	CHARACTER_2,	CHARACTER_3,	CHARACTER_4,
-					CHARACTER_5,	CHARACTER_6,	CHARACTER_7,	CHARACTER_8,
-					CHARACTER_9,
-					
-					RED,			WHITE,			GREEN
-	} TILE_TYPE;
+typedef enum GAME_TYLE_TYPE {
+	EAST_WIND,		SOUTH_WIND,		WEST_WIND,		NORTH_WIND,
+	
+	SEASON,			FLOWER,
+	
+	CIRCLE_1,		CIRCLE_2,		CIRCLE_3,		CIRCLE_4,
+	CIRCLE_5,		CIRCLE_6,		CIRCLE_7,		CIRCLE_8,
+	CIRCLE_9,
+	
+	BAMBOO_1,		BAMBOO_2,		BAMBOO_3,		BAMBOO_4,
+	BAMBOO_5,		BAMBOO_6,		BAMBOO_7,		BAMBOO_8,
+	BAMBOO_9,
+	
+	CHARACTER_1,	CHARACTER_2,	CHARACTER_3,	CHARACTER_4,
+	CHARACTER_5,	CHARACTER_6,	CHARACTER_7,	CHARACTER_8,
+	CHARACTER_9,
+	
+	RED,			WHITE,			GREEN
+} TILE_TYPE;
 					
 
 /*!
@@ -56,8 +56,8 @@ private:
 	/// in reverse highlighting.
 	BOOL		selected;
 public:
-	BOOL		isSelected( void );
-	void		setSelected( BOOL );
+	BOOL		isSelected(void);
+	void		setSelected(BOOL flag);
 
 protected:
 	/// This variable holds the tile's type.  It
@@ -65,8 +65,8 @@ protected:
 	/// a subclass.
 	TILE_TYPE	my_tile_type;
 public:
-	TILE_TYPE	tileType( void );
-	BOOL		isTileType( TILE_TYPE aType );
+	TILE_TYPE	tileType(void);
+	BOOL		isTileType(TILE_TYPE aType);
 	
 
 private:
@@ -74,8 +74,8 @@ private:
 	/// selectable.
 	BOOL	selectable;
 public:
-	BOOL	isSelectable( void );	
-	void	setSelectable( BOOL );
+	BOOL	isSelectable(void);
+	void	setSelectable(BOOL flag);
 
 private:
 	/// A Tile Removed from the Game Board
@@ -85,19 +85,19 @@ private:
 	BOOL	removed;
 	BOOL	touched;
 public:
-	BOOL	isRemoved( void );
-	void	setRemoved( BOOL );
-	BOOL	gotTouched( void );
-	void	markTouched( BOOL );
+	BOOL	isRemoved(void);
+	void	setRemoved(BOOL flag);
+	BOOL	gotTouched(void);
+	void	markTouched(BOOL flag);
 
 public:
 	/// Game tiles highlight themselves if
 	/// they are selected.
-	virtual void	drawImage( NSPoint );
+	virtual void drawImage(NSPoint aPoint) final;
 
 
 public:
-	GameTile( void );
+	GameTile(void);
 
 };
 

@@ -13,10 +13,8 @@
 class CircleNineTile : public GameTile {
 
 public:
-	CircleNineTile( void ) {
-	
+	CircleNineTile(void): GameTile() {
 		my_tile_type = CIRCLE_9;
-		loadImageFromFile( @"circ9" );
+		loadImageFromFile(@"circ9");
 	}
 };
-

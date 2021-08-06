@@ -13,9 +13,7 @@
 class OrchidTile : public FlowerTile {
 
 public:
-	OrchidTile( void ) {
-	
-		loadImageFromFile( @"f_orch" );
+	OrchidTile(void): FlowerTile() {
+		loadImageFromFile(@"f_orch");
 	}
 };
-

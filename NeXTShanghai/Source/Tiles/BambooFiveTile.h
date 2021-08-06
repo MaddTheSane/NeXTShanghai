@@ -13,10 +13,8 @@
 class BambooFiveTile : public GameTile {
 
 public:
-	BambooFiveTile( void ) {
-	
+	BambooFiveTile(void): GameTile() {
 		my_tile_type = BAMBOO_5;
-		loadImageFromFile( @"bam5" );
+		loadImageFromFile(@"bam5");
 	}
 };
-

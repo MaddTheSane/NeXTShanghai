@@ -13,9 +13,9 @@
 {
     GameCoordinator     *gameCoordinator;
     TileCountManager    *tileCountManager;
-    //!This flag is used to prevent draw messages
-    //!from being sent to the C++ object before
-    //!the application has finished initializing.
+    //! This flag is used to prevent draw messages
+    //! from being sent to the C++ object before
+    //! the application has finished initializing.
     BOOL            application_initialized;
 }
 
@@ -60,22 +60,23 @@
 }
 
 - (void)gameBoardDraw {
-	if( application_initialized ) {
+	if (application_initialized) {
 		gameCoordinator->drawImage();
 	}
 }
 
 - (void)tileCountDraw {
-	if( application_initialized )
+	if (application_initialized) {
 		tileCountManager->drawImage();
+	}
 }
 
 - (void)click:(NSPoint)aPoint {
-	gameCoordinator->click( aPoint );
+	gameCoordinator->click(aPoint);
 }
 
 - (void)doubleClick:(NSPoint)aPoint {
-	gameCoordinator->doubleClick( aPoint );
+	gameCoordinator->doubleClick(aPoint);
 }
 
 @end

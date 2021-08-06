@@ -20,19 +20,12 @@
 #define	TILE_TIFF_DIRECTORY	@"NeXTmj"
 
 
-Tile::Tile(void) {
-	my_tile_image = nil;
+void Tile::loadImageFromFile(NSString* aFile) {
+	NSString *tileName = [TILE_TIFF_DIRECTORY stringByAppendingPathComponent:aFile];
+	my_tile_image = [NSImage imageNamed:tileName];
 }
 
-Tile::~Tile(void) {
-	my_tile_image=nil;
-}
-
-void Tile::loadImageFromFile( NSString* aFile ) {
-	my_tile_image = [NSImage imageNamed:[TILE_TIFF_DIRECTORY stringByAppendingPathComponent: aFile]];
-}
-
-void Tile::compositeImage( NSPoint aPoint, NSCompositingOperation aMode ) {
+void Tile::compositeImage(NSPoint aPoint, NSCompositingOperation aMode) {
 	// HACK: We use the compos Mode to check the tiles state... that's stupid.
 	// Sorry will change that later...
 	// NSCompositingOperationDestinationOver means... no background please...

@@ -65,8 +65,8 @@ void BoardScramble::scramble( int level, GameTileArray& board ) {
 
 void BoardScramble::scramble( GameTileArray& board ) {
 	
-	int	pool[ NUMBER_OF_TILES ];
-	int	i, j;
+	BOOL pool[NUMBER_OF_TILES];
+	int	i=NUMBER_OF_TILES;
 	
 	
 	/*
@@ -78,11 +78,11 @@ void BoardScramble::scramble( GameTileArray& board ) {
 	(void)srandom( seed );
 	
 	// Initialize tile pool
-	for( i = 0; i < NUMBER_OF_TILES; i++ ) {
-		pool[ i ] = YES;
+	for (int i = 0; i < NUMBER_OF_TILES; i++) {
+		pool[i] = YES;
 	}
 	
-	for( j = 0; j < NUMBER_OF_TILES; j++ ) {
+	for (int j = 0; j < NUMBER_OF_TILES; j++) {
 		BOOL		ok = NO;
 		int			dir;
 		
@@ -96,12 +96,12 @@ void BoardScramble::scramble( GameTileArray& board ) {
 		while (ok == NO) {
 			i = RANDOM( NUMBER_OF_TILES -1 );
 			dir = random()&01;
-			while (( i < NUMBER_OF_TILES || i >=0 ) && pool[i] == NO ) {
+			while ((i < NUMBER_OF_TILES || i >=0) && pool[i] == NO) {
 				(dir) ? i++ : i--;
 			}
-			if (i >= NUMBER_OF_TILES || i < 0 ) { /* Thud! Reverse march! */
-				i = RANDOM( NUMBER_OF_TILES -1 );
-				while (( i < NUMBER_OF_TILES || i >= 0) && pool[i] == NO ) {
+			if (i >= NUMBER_OF_TILES || i < 0) { /* Thud! Reverse march! */
+				i = RANDOM(NUMBER_OF_TILES - 1);
+				while ((i < NUMBER_OF_TILES || i >= 0) && pool[i] == NO) {
 					(dir) ? i-- : i++;
 				}
 			}
@@ -112,6 +112,6 @@ void BoardScramble::scramble( GameTileArray& board ) {
 			ok = YES;
 		}
 		
-		board.swap( i, j );
+		board.swap(i, j);
 	}
 }

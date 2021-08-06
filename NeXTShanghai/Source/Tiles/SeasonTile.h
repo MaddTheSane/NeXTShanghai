@@ -13,9 +13,7 @@
 class SeasonTile : public GameTile {
 
 public:
-	SeasonTile( void ) {
-	
+	SeasonTile(void): GameTile() {
 		my_tile_type = SEASON;
 	}
 };
-

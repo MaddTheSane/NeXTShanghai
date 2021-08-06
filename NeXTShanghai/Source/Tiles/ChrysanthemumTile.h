@@ -13,9 +13,7 @@
 class ChrysanthemumTile : public FlowerTile {
 
 public:
-	ChrysanthemumTile( void ) {
-	
-		loadImageFromFile( @"f_mum" );
+	ChrysanthemumTile(void): FlowerTile() {
+		loadImageFromFile(@"f_mum");
 	}
 };
-

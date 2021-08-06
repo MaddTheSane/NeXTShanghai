@@ -13,10 +13,8 @@
 class GreenTile : public GameTile {
 
 public:
-	GreenTile( void ) {
-	
+	GreenTile(void): GameTile() {
 		my_tile_type = GREEN;
-		loadImageFromFile( @"d_green" );
+		loadImageFromFile(@"d_green");
 	}
 };
-

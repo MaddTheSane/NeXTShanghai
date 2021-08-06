@@ -13,9 +13,7 @@
 class NumberNineTile : public NumberTile {
 
 public:
-	NumberNineTile( void ) {
-	
-		loadImageFromFile( @"n_9" );
+	NumberNineTile(void): NumberTile() {
+		loadImageFromFile(@"n_9");
 	}
 };
-

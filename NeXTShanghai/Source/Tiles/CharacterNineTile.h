@@ -13,10 +13,8 @@
 class CharacterNineTile : public GameTile {
 
 public:
-	CharacterNineTile( void ) {
-	
+	CharacterNineTile(void): GameTile() {
 		my_tile_type = CHARACTER_9;
-		loadImageFromFile( @"char9" );
+		loadImageFromFile(@"char9");
 	}
 };
-

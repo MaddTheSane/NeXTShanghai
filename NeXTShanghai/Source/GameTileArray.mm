@@ -56,13 +56,13 @@
 #import "ChrysanthemumTile.h"
 
 #include <cassert>
+#include <algorithm>
 
 
-GameTileArray::GameTileArray( void ) {
+GameTileArray::GameTileArray(void) {
 	int				i = 0, j;
 	
-	
-	assert( NUMBER_OF_TILES == 144 );
+	assert(NUMBER_OF_TILES == 144);
 	
 	// Build the table of Game Tiles.
 	//	(Could be done much more efficiently
@@ -153,32 +153,27 @@ GameTileArray::GameTileArray( void ) {
 		game_tiles[ i ] = new OrchidTile;
 	for( j = 0; j < NUMBER_OF_MUM; ++j, ++i )
 		game_tiles[ i ] = new ChrysanthemumTile;
-	assert( i == NUMBER_OF_TILES );
+	assert(i == NUMBER_OF_TILES);
 }
 
-
-GameTileArray::~GameTileArray( void ) {
-	for (int i = 0; i < NUMBER_OF_TILES; ++i) {
+GameTileArray::~GameTileArray(void) {
+	for (int i = 0; i < NUMBER_OF_TILES; i++) {
 		delete game_tiles[i];
 	}
 }
 
-
-GameTile& GameTileArray::operator[]( int loc ) {
-	assert( loc >= 0 && loc < NUMBER_OF_TILES );
-	return *game_tiles[ loc ];
+GameTile& GameTileArray::operator[](int loc) {
+	assert(loc >= 0 && loc < NUMBER_OF_TILES);
+	return *game_tiles[loc];
 }
 
+void GameTileArray::swap(int i, int j) {
+	assert(i >= 0 && i < NUMBER_OF_TILES);
+	assert(j >= 0 && j < NUMBER_OF_TILES);
 
-void GameTileArray::swap( int i, int j) {
-	assert( i >= 0 && i < NUMBER_OF_TILES );
-	assert( j >= 0 && j < NUMBER_OF_TILES );
-
-	GameTile*	temp = game_tiles[ j ];
-	game_tiles[ j ] = game_tiles[ i ];
-	game_tiles[ i ] = temp;
+	std::swap(game_tiles[j], game_tiles[i]);
 }
 
-int GameTileArray::size( void ) {
+int GameTileArray::size(void) {
 	return NUMBER_OF_TILES;
 }

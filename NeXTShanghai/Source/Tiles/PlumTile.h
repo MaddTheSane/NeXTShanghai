@@ -13,9 +13,7 @@
 class PlumTile : public FlowerTile {
 
 public:
-	PlumTile( void ) {
-	
-		loadImageFromFile( @"f_plum" );
+	PlumTile(void): FlowerTile() {
+		loadImageFromFile(@"f_plum");
 	}
 };
-

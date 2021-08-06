@@ -13,9 +13,7 @@
 class NumberZeroTile : public NumberTile {
 
 public:
-	NumberZeroTile( void ) {
-	
-		loadImageFromFile( @"n_0" );
+	NumberZeroTile(void): NumberTile() {
+		loadImageFromFile(@"n_0");
 	}
 };
-

@@ -18,7 +18,6 @@
 class NumberTile : public Tile {
 
 public:
-	virtual void	drawImage( NSPoint );
-
+	virtual void drawImage(NSPoint aPoint) final;
 };
 

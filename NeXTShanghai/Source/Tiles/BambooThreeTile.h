@@ -13,10 +13,9 @@
 class BambooThreeTile : public GameTile {
 
 public:
-	BambooThreeTile( void ) {
-	
+	BambooThreeTile(void): GameTile() {
 		my_tile_type = BAMBOO_3;
-		loadImageFromFile( @"bam3" );
+		loadImageFromFile(@"bam3");
 	}
 };
 
