@@ -79,38 +79,3 @@ final class NumberNineTile: NumberTile {
 		loadImage(named: "n_9")
 	}
 }
-
-// MARK: - Flower Tiles
-class FlowerTile : GameTile {
-	init() {
-		super.init(tileType: .flower)
-	}
-}
-
-final class BambooTile: FlowerTile {
-	override init() {
-		super.init()
-		loadImage(named: "f_bam")
-	}
-}
-
-final class ChrysanthemumTile: FlowerTile {
-	override init() {
-		super.init()
-		loadImage(named: "f_mum")
-	}
-}
-
-final class OrchidTile:  FlowerTile {
-	override init() {
-		super.init()
-		loadImage(named: "f_orch")
-	}
-}
-
-final class PlumTile: FlowerTile {
-	override init() {
-		super.init()
-		loadImage(named: "f_plum")
-	}
-}
