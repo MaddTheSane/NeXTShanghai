@@ -72,7 +72,7 @@ class Tile {
 	/// This member function is called by
 	/// subclasses to load a tiff file for
 	/// tile rendering.
-	func loadImage(named: NSImage.Name) {
+	final func loadImage(named: NSImage.Name) {
 		myTileImage = NSImage(named: TILE_TIFF_DIRECTORY + "/" + named)
 	}
 	
@@ -80,9 +80,9 @@ class Tile {
 	///	an image to a point on the board.  All
 	///	of the `drawImage()` routine call this.
 	///
-	/// The first parameter is a point on the
-	///	board where the tile is drawn, the
-	///	second parameter is the composite
+	/// - parameter aPoint: The point on the
+	///	board where the tile is drawn.
+	///	- parameter aMode: The composite
 	///	operation.
 	final func compositeImage(at aPoint: NSPoint, using aMode: NSCompositingOperation) {
 		var bPoint = aPoint
