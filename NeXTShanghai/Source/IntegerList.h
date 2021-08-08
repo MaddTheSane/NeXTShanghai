@@ -51,8 +51,8 @@ private:
 			decodeValue(int integer);
 			
 public:
-	IntegerList(void);
-	~IntegerList(void);
+	IntegerList(void): my_list([[NSMutableArray alloc] init]), iterator(0) {};
+	~IntegerList(void) = default;
 	
 	
 	/// This operator indexes through the list

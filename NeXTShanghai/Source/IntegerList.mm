@@ -18,15 +18,6 @@ extern "C" {
 #define	OFFSET	0
 
 
-IntegerList::IntegerList(void) {
-	my_list		= [[NSMutableArray alloc] init];
-	iterator = 0;
-}
-
-IntegerList::~IntegerList(void) {
-	my_list = nil;
-}
-
 int IntegerList::operator()() {
 	int	rVal = -1;
 	

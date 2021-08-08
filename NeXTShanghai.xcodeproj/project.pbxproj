@@ -96,20 +96,15 @@
 		554AED702175BA90005F7847 /* NumberTile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NumberTile.mm; sourceTree = "<group>"; };
 		554AED742175BA90005F7847 /* GameCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCoordinator.h; sourceTree = "<group>"; };
 		554AED792175BA90005F7847 /* EastWindTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EastWindTile.h; sourceTree = "<group>"; };
-		554AED7A2175BA90005F7847 /* NumberNineTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberNineTile.h; sourceTree = "<group>"; };
 		554AED7B2175BA90005F7847 /* SpringSeasonTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringSeasonTile.h; sourceTree = "<group>"; };
 		554AED7C2175BA90005F7847 /* RedTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedTile.h; sourceTree = "<group>"; };
-		554AED7D2175BA90005F7847 /* NumberSevenTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberSevenTile.h; sourceTree = "<group>"; };
 		554AED7E2175BA90005F7847 /* CharacterNineTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterNineTile.h; sourceTree = "<group>"; };
 		554AED7F2175BA90005F7847 /* SouthWindTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SouthWindTile.h; sourceTree = "<group>"; };
 		554AED802175BA90005F7847 /* CharacterThreeTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterThreeTile.h; sourceTree = "<group>"; };
 		554AED812175BA90005F7847 /* BambooNineTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BambooNineTile.h; sourceTree = "<group>"; };
 		554AED822175BA90005F7847 /* WhiteTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteTile.h; sourceTree = "<group>"; };
 		554AED832175BA90005F7847 /* CircleFiveTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleFiveTile.h; sourceTree = "<group>"; };
-		554AED842175BA90005F7847 /* NumberTwoTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberTwoTile.h; sourceTree = "<group>"; };
 		554AED852175BA90005F7847 /* CharacterOneTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterOneTile.h; sourceTree = "<group>"; };
-		554AED862175BA90005F7847 /* NumberThreeTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberThreeTile.h; sourceTree = "<group>"; };
-		554AED872175BA90005F7847 /* NumberFourTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberFourTile.h; sourceTree = "<group>"; };
 		554AED882175BA90005F7847 /* CircleEightTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleEightTile.h; sourceTree = "<group>"; };
 		554AED892175BA90005F7847 /* BambooTwoTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BambooTwoTile.h; sourceTree = "<group>"; };
 		554AED8A2175BA90005F7847 /* CircleTwoTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTwoTile.h; sourceTree = "<group>"; };
@@ -118,13 +113,10 @@
 		554AED8D2175BA90005F7847 /* CircleSixTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSixTile.h; sourceTree = "<group>"; };
 		554AED8E2175BA90005F7847 /* BambooEightTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BambooEightTile.h; sourceTree = "<group>"; };
 		554AED8F2175BA90005F7847 /* BambooSixTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BambooSixTile.h; sourceTree = "<group>"; };
-		554AED902175BA90005F7847 /* NumberSixTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberSixTile.h; sourceTree = "<group>"; };
 		554AED912175BA90005F7847 /* CharacterFourTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterFourTile.h; sourceTree = "<group>"; };
 		554AED922175BA90005F7847 /* SummerSeasonTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummerSeasonTile.h; sourceTree = "<group>"; };
 		554AED932175BA90005F7847 /* CharacterSevenTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterSevenTile.h; sourceTree = "<group>"; };
-		554AED942175BA90005F7847 /* NumberZeroTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberZeroTile.h; sourceTree = "<group>"; };
 		554AED952175BA90005F7847 /* BambooThreeTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BambooThreeTile.h; sourceTree = "<group>"; };
-		554AED962175BA90005F7847 /* NumberOneTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOneTile.h; sourceTree = "<group>"; };
 		554AED972175BA90005F7847 /* CharacterTwoTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterTwoTile.h; sourceTree = "<group>"; };
 		554AED982175BA90005F7847 /* CharacterFiveTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterFiveTile.h; sourceTree = "<group>"; };
 		554AED992175BA90005F7847 /* CircleNineTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleNineTile.h; sourceTree = "<group>"; };
@@ -132,9 +124,7 @@
 		554AED9B2175BA90005F7847 /* BambooFiveTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BambooFiveTile.h; sourceTree = "<group>"; };
 		554AED9C2175BA90005F7847 /* CircleOneTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleOneTile.h; sourceTree = "<group>"; };
 		554AED9D2175BA90005F7847 /* GreenTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenTile.h; sourceTree = "<group>"; };
-		554AED9E2175BA90005F7847 /* NumberEightTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberEightTile.h; sourceTree = "<group>"; };
 		554AED9F2175BA90005F7847 /* BambooTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BambooTile.h; sourceTree = "<group>"; };
-		554AEDA02175BA90005F7847 /* NumberFiveTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberFiveTile.h; sourceTree = "<group>"; };
 		554AEDA12175BA90005F7847 /* CircleThreeTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleThreeTile.h; sourceTree = "<group>"; };
 		554AEDA22175BA90005F7847 /* ChrysanthemumTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChrysanthemumTile.h; sourceTree = "<group>"; };
 		554AEDA32175BA90005F7847 /* CharacterSixTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterSixTile.h; sourceTree = "<group>"; };
@@ -342,16 +332,6 @@
 				554AEDAA2175BA90005F7847 /* FlowerTile.h */,
 				554AED9D2175BA90005F7847 /* GreenTile.h */,
 				554AED8C2175BA90005F7847 /* NorthWindTile.h */,
-				554AED9E2175BA90005F7847 /* NumberEightTile.h */,
-				554AEDA02175BA90005F7847 /* NumberFiveTile.h */,
-				554AED872175BA90005F7847 /* NumberFourTile.h */,
-				554AED7A2175BA90005F7847 /* NumberNineTile.h */,
-				554AED962175BA90005F7847 /* NumberOneTile.h */,
-				554AED7D2175BA90005F7847 /* NumberSevenTile.h */,
-				554AED902175BA90005F7847 /* NumberSixTile.h */,
-				554AED862175BA90005F7847 /* NumberThreeTile.h */,
-				554AED842175BA90005F7847 /* NumberTwoTile.h */,
-				554AED942175BA90005F7847 /* NumberZeroTile.h */,
 				554AEDA62175BA90005F7847 /* OrchidTile.h */,
 				554AEDAD2175BA90005F7847 /* PlumTile.h */,
 				554AED7C2175BA90005F7847 /* RedTile.h */,

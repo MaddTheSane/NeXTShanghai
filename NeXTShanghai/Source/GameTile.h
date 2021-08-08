@@ -56,8 +56,12 @@ private:
 	/// in reverse highlighting.
 	BOOL		selected;
 public:
-	BOOL		isSelected(void);
-	void		setSelected(BOOL flag);
+	BOOL		isSelected(void) {
+		return	selected;
+	}
+	void		setSelected(BOOL flag) {
+		selected = flag;
+	}
 
 protected:
 	/// This variable holds the tile's type.  It
@@ -65,7 +69,9 @@ protected:
 	/// a subclass.
 	TILE_TYPE	my_tile_type;
 public:
-	TILE_TYPE	tileType(void);
+	TILE_TYPE	tileType(void) {
+		return my_tile_type;
+	}
 	BOOL		isTileType(TILE_TYPE aType);
 	
 
@@ -74,8 +80,12 @@ private:
 	/// selectable.
 	BOOL	selectable;
 public:
-	BOOL	isSelectable(void);
-	void	setSelectable(BOOL flag);
+	BOOL	isSelectable(void) {
+		return selectable;
+	}
+	void	setSelectable(BOOL flag) {
+		selectable = flag;
+	}
 
 private:
 	/// A Tile Removed from the Game Board
@@ -85,10 +95,18 @@ private:
 	BOOL	removed;
 	BOOL	touched;
 public:
-	BOOL	isRemoved(void);
-	void	setRemoved(BOOL flag);
-	BOOL	gotTouched(void);
-	void	markTouched(BOOL flag);
+	BOOL	isRemoved(void) {
+		return removed;
+	}
+	void	setRemoved(BOOL flag) {
+		removed = flag;
+	}
+	BOOL	gotTouched(void) {
+		return touched;
+	}
+	void	markTouched(BOOL flag) {
+		touched = flag;
+	}
 
 public:
 	/// Game tiles highlight themselves if
@@ -97,7 +115,7 @@ public:
 
 
 public:
-	GameTile(void);
+	GameTile(void) : selected(NO), selectable(NO), touched(NO) {}
 
 };
 
