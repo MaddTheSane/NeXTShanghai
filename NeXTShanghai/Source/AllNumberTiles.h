@@ -3,7 +3,7 @@
 
 #import "NumberTile.h"
 
-class NumberZeroTile : public NumberTile {
+class NumberZeroTile final: public NumberTile {
 
 public:
 	NumberZeroTile(void): NumberTile() {
@@ -11,7 +11,7 @@ public:
 	}
 };
 
-class NumberOneTile : public NumberTile {
+class NumberOneTile final: public NumberTile {
 
 public:
 	NumberOneTile(void): NumberTile() {
@@ -19,7 +19,7 @@ public:
 	}
 };
 
-class NumberTwoTile : public NumberTile {
+class NumberTwoTile final: public NumberTile {
 
 public:
 	NumberTwoTile(void): NumberTile() {
@@ -27,7 +27,7 @@ public:
 	}
 };
 
-class NumberThreeTile : public NumberTile {
+class NumberThreeTile final: public NumberTile {
 
 public:
 	NumberThreeTile(void): NumberTile() {
@@ -35,7 +35,7 @@ public:
 	}
 };
 
-class NumberFourTile : public NumberTile {
+class NumberFourTile final: public NumberTile {
 
 public:
 	NumberFourTile(void): NumberTile() {
@@ -43,7 +43,7 @@ public:
 	}
 };
 
-class NumberFiveTile : public NumberTile {
+class NumberFiveTile final: public NumberTile {
 
 public:
 	NumberFiveTile(void): NumberTile() {
@@ -51,7 +51,7 @@ public:
 	}
 };
 
-class NumberSixTile : public NumberTile {
+class NumberSixTile final: public NumberTile {
 
 public:
 	NumberSixTile(void): NumberTile() {
@@ -59,7 +59,7 @@ public:
 	}
 };
 
-class NumberSevenTile : public NumberTile {
+class NumberSevenTile final: public NumberTile {
 
 public:
 	NumberSevenTile(void): NumberTile() {
@@ -67,7 +67,7 @@ public:
 	}
 };
 
-class NumberEightTile : public NumberTile {
+class NumberEightTile final: public NumberTile {
 
 public:
 	NumberEightTile(void): NumberTile() {
@@ -75,7 +75,7 @@ public:
 	}
 };
 
-class NumberNineTile : public NumberTile {
+class NumberNineTile final: public NumberTile {
 
 public:
 	NumberNineTile(void): NumberTile() {

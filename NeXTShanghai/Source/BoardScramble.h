@@ -27,7 +27,7 @@ public:
 	/// These functions scramble a new game
 	/// board based from a board level or a
 	/// random scramble.
-	void		scramble( int , GameTileArray& ),
-				scramble( GameTileArray& );
+	void		scramble(int level, GameTileArray& board),
+				scramble(GameTileArray& board);
 };
 

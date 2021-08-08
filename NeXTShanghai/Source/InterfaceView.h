@@ -28,7 +28,7 @@
     IBOutlet GameInterface	*gameInterface;
 }
 
-//! Sets up some additional View
+//! Sets up some additional view
 //! defaults.
 - (instancetype)initWithFrame:(NSRect)frameRect;
 
