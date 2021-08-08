@@ -12,7 +12,7 @@
 #import "MiscPaperView.h"
 
 #define MISC_PAPERVIEW_VERSION 0
-#define MISC_PAPERVIEW_CLASSNAME "MiscPaperView"
+#define MISC_PAPERVIEW_CLASSNAME @"MiscPaperView"
 
 
 @implementation MiscPaperView
@@ -33,7 +33,6 @@
 	// we will draw in Lightgray if we have to swap 'nil' in.
 	
 	if (self = [super initWithFrame:frameRect]) {
-		
 		// By default will draw a simple horizontal light gray grid with a dark
 		// gray right side border.
 		
@@ -62,10 +61,14 @@
 
 - (void)setGridSizeVertical:(int)vert horizontal:(int)hor
 {
-	// Well there has to be some progress so forbit useless offsets
+	// Well there has to be some progress so forbid useless offsets
 
-	if( vert < 1 ) vert = 1;
-	if( hor < 1 ) hor = 1;
+	if (vert < 1) {
+		vert = 1;
+	}
+	if (hor < 1) {
+		hor = 1;
+	}
 
 	gridVertOffset = vert;
 	gridHorOffset = hor;
@@ -87,7 +90,6 @@
 
 	CGFloat	offset;
 	CGFloat	coord;
-	int		i;
 	int		count;
 
 	[super drawRect:rects];
@@ -115,24 +117,20 @@
 	NSBezierPath *lines = [NSBezierPath bezierPath];
 	lines.lineWidth = 1;
 	
-	if( gridType & Misc_PaperGridHorizontal )
-	{
+	if (gridType & Misc_PaperGridHorizontal) {
 		count = bounds.size.height / gridVertOffset;
 
 		// If we start from the top then the values are different...
 
-		if( gridOrigin & Misc_PaperGridStartsLow )
-		{
+		if (gridOrigin & Misc_PaperGridStartsLow) {
 			coord = yMin - 1;
 			offset = gridVertOffset;
-		}
-		else
-		{
+		} else {
 			coord = yMax + 1;
 			offset = -gridVertOffset;
 		}
-		for( i=0; i<count; i++ )
-		{
+		
+		for (int i=0; i<count; i++) {
 			coord += offset;
 			[lines moveToPoint:NSMakePoint(xMin, coord)];
 			[lines lineToPoint:NSMakePoint(xMax, coord)];
@@ -141,24 +139,20 @@
 
 	// Now lets do the same for Vertical lines.
 
-	if( gridType & Misc_PaperGridVertical )
-	{
+	if (gridType & Misc_PaperGridVertical) {
 		count = bounds.size.width / gridHorOffset;
 
 		// If we start from the left side then the values are different...
 
-		if( gridOrigin & Misc_PaperGridStartsRight )
-		{
+		if (gridOrigin & Misc_PaperGridStartsRight) {
 			coord = xMax + 1;
 			offset = -gridHorOffset;
-		}
-		else
-		{
+		} else {
 			coord = xMin - 1;
 			offset = gridHorOffset;
 		}
-		for( i=0; i<count; i++ )
-		{
+		
+		for (int i=0; i<count; i++) {
 			coord += offset;
 			[lines moveToPoint:NSMakePoint(coord, yMin)];
 			[lines lineToPoint:NSMakePoint(coord, yMax)];
@@ -172,78 +166,96 @@
 	lines = [NSBezierPath bezierPath];
 	lines.lineWidth = 1.0;
 	
-	if( sidelineType & Misc_PaperSidelineTop )
-	{
+	if (sidelineType & Misc_PaperSidelineTop) {
 		[lines moveToPoint:NSMakePoint(xMin, yMax - sidelineOffset)];
 		[lines lineToPoint:NSMakePoint(xMax, yMax - sidelineOffset)];
 	}
 
-	if( sidelineType & Misc_PaperSidelineBottom )
-	{
+	if (sidelineType & Misc_PaperSidelineBottom) {
 		[lines moveToPoint:NSMakePoint(xMin, yMin - sidelineOffset)];
 		[lines lineToPoint:NSMakePoint(xMax, yMin - sidelineOffset)];
 	}
 
-	if( sidelineType & Misc_PaperSidelineLeft )
-	{
+	if (sidelineType & Misc_PaperSidelineLeft) {
 		[lines moveToPoint:NSMakePoint( xMin + sidelineOffset, yMin )];
 		[lines lineToPoint:NSMakePoint( xMin + sidelineOffset, yMax )];
 	}
 
-	if( sidelineType & Misc_PaperSidelineRight )
-	{
+	if (sidelineType & Misc_PaperSidelineRight) {
 		[lines moveToPoint:NSMakePoint( xMax - sidelineOffset, yMin )];
 		[lines lineToPoint:NSMakePoint( xMax - sidelineOffset, yMax )];
 	}
 	[lines stroke];
 }
 
-#if 0
-- read:(NXTypedStream *)stream
-{
-	int  version;
-  
-	[super read:stream];
-	
-	version = NXTypedStreamClassVersion( stream, MISC_PAPERVIEW_CLASSNAME );
-	
-	switch( version )
-	{
-		case 0:
-			gridColor = NXReadColor( stream );
-			NXReadType( stream, "i", &gridType );
-			NXReadType( stream, "i", &gridOrigin );
-			NXReadType( stream, "i", &gridVertOffset );
-			NXReadType( stream, "i", &gridHorOffset );
+#define MISCPVGridColor @"MiscPaperViewGridColor"
+#define MISCPVGridType @"MiscPaperViewGridType"
+#define MISCPVGridOrigin @"MiscPaperViewGridOrigin"
+#define MISCPVGridVertOffset @"MiscPaperViewGridVerticalOffset"
+#define MISCPVGridHorOffset @"MiscPaperViewGridHorizontalOffset"
+#define MISCPVSidelineColor @"MiscPaperViewSidelineColor"
+#define MISCPVSidelineType @"MiscPaperViewSidelineType"
+#define MISCPVSidelineOffset @"MiscPaperViewSidelineOffset"
 
-			sidelineColor = NXReadColor( stream );
-			NXReadType( stream, "i", &sidelineType );
-			NXReadType( stream, "i", &sidelineOffset );
-			break;
-		
-		default:
-			break;
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+	if (self = [super initWithCoder:coder]) {
+		if (coder.allowsKeyedCoding) {
+			gridColor = [coder decodeObjectOfClass:[NSColor class] forKey:MISCPVGridColor];
+			gridType = [coder decodeIntForKey:MISCPVGridType];
+			gridOrigin = [coder decodeIntForKey:MISCPVGridOrigin];
+			gridVertOffset = [coder decodeIntForKey:MISCPVGridVertOffset];
+			gridHorOffset = [coder decodeIntForKey:MISCPVGridHorOffset];
+			
+			sidelineColor = [coder decodeObjectOfClass:[NSColor class] forKey:MISCPVSidelineColor];
+			sidelineType = [coder decodeIntForKey:MISCPVSidelineType];
+			sidelineOffset = [coder decodeIntForKey:MISCPVSidelineOffset];
+		} else if ([coder versionForClassName:MISC_PAPERVIEW_CLASSNAME] == 0) {
+			int tmpInt;
+			gridColor = [coder decodeNXColor];
+			[coder decodeValueOfObjCType:@encode(int) at:&tmpInt];
+			gridType = tmpInt;
+			[coder decodeValueOfObjCType:@encode(int) at:&tmpInt];
+			gridOrigin = tmpInt;
+			[coder decodeValueOfObjCType:@encode(int) at:&tmpInt];
+			gridVertOffset = tmpInt;
+			[coder decodeValueOfObjCType:@encode(int) at:&tmpInt];
+			gridHorOffset = tmpInt;
+			
+			sidelineColor = [coder decodeNXColor];
+			[coder decodeValueOfObjCType:@encode(int) at:&tmpInt];
+			sidelineType = tmpInt;
+			[coder decodeValueOfObjCType:@encode(int) at:&tmpInt];
+			sidelineOffset = tmpInt;
+		} else {
+			// The defaults
+			gridColor = [NSColor lightGrayColor];
+			gridType = Misc_PaperGridHorizontal;
+			gridOrigin = Misc_PaperGridStartsUpperLeft;
+			gridVertOffset = gridHorOffset = 20;
+			
+			sidelineColor = [NSColor darkGrayColor];
+			sidelineType = Misc_PaperSidelineRight;
+			sidelineOffset = 4;
+		}
 	}
-
 	return self;
 }
 
-- write:(NXTypedStream *)stream
+- (void)encodeWithCoder:(NSCoder *)coder
 {
-	[super write:stream];
+	NSAssert(coder.allowsKeyedCoding == YES, @"Only keyed coding can be saved!");
+	[super encodeWithCoder:coder];
+	
+	[coder encodeObject:gridColor forKey:MISCPVGridColor];
+	[coder encodeInt:gridType forKey:MISCPVGridType];
+	[coder encodeInt:gridOrigin forKey:MISCPVGridOrigin];
+	[coder encodeInt:gridVertOffset forKey:MISCPVGridVertOffset];
+	[coder encodeInt:gridHorOffset forKey:MISCPVGridHorOffset];
 
-	NXWriteColor( stream, gridColor );
-	NXWriteType( stream, "i", &gridType );
-	NXWriteType( stream, "i", &gridOrigin );
-	NXWriteType( stream, "i", &gridVertOffset );
-	NXWriteType( stream, "i", &gridHorOffset );
-
-	NXWriteColor( stream, sidelineColor );
-	NXWriteType( stream, "i", &sidelineType );
-	NXWriteType( stream, "i", &sidelineOffset );
-
-	return self;
+	[coder encodeObject:sidelineColor forKey:MISCPVSidelineColor];
+	[coder encodeInt:sidelineType forKey:MISCPVSidelineType];
+	[coder encodeInt:sidelineOffset forKey:MISCPVSidelineOffset];
 }
-#endif
 
 @end

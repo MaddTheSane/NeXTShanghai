@@ -63,7 +63,4 @@ typedef NS_OPTIONS(int, Misc_PaperGridOrigin)
 @property Misc_PaperSideline sidelineType;
 @property int sidelineOffset;
 
-//- read:(NXTypedStream *)stream;
-//- write:(NXTypedStream *)stream;
-
 @end

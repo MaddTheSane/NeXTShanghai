@@ -12,7 +12,7 @@
 #import "MiscColorView.h"
 
 #define MISC_COLORVIEW_VERSION 0
-#define MISC_COLORVIEW_CLASSNAME "MiscColorView"
+#define MISC_COLORVIEW_CLASSNAME @"MiscColorView"
 
 
 @implementation  MiscColorView
@@ -32,13 +32,12 @@
 	// Designated initilizer. We will set allow resizing by default and
 	// we will draw in Lightgray if we have to swap 'nil' in.
 
-	self = [super initWithFrame:frameRect];
-	if( !self ) return self;
-
-	// By default we have a white background and don't focus on the
-	// desktops background.
-
-	backgroundColor = [NSColor whiteColor];
+	if (self = [super initWithFrame:frameRect]) {
+		// By default we have a white background and don't focus on the
+		// desktops background.
+		
+		backgroundColor = [NSColor whiteColor];
+	}
 
 	return self;
 }
@@ -53,19 +52,18 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-	const char *	defaultVal;
 	float	red;
 	float	green;
 	float	blue;
 	
-	if( sameColorAsDesktop )
-	{
+	if (sameColorAsDesktop) {
+		const char *	defaultVal;
 		// Read the desktops color form the defaults database.
 
 		defaultVal = /*NXReadDefault( "NeXT1", "BackgroundColor" );*/ NULL;
 
-		if( defaultVal != NULL ) {
-			sscanf( defaultVal, "%f %f %f",&red, &green, &blue );
+		if (defaultVal != NULL) {
+			sscanf(defaultVal, "%f %f %f",&red, &green, &blue);
 
 			// If there is no default we will take a shade of blue.
 			// This seems to be the color NeXT uses as a default.
@@ -80,41 +78,40 @@
 		[backgroundColor set];
 	}
 
-	NSRectFill( self.bounds );
+	NSRectFill(self.bounds);
 }
 
-#if 0
-- read:(NXTypedStream *)stream
+#define MISCCVBackgroundColor @"MiscColorViewBackgroundColor"
+#define MISCCVSCAS @"MiscColorViewSameColorAsDesktop"
+
+- (instancetype)initWithCoder:(NSCoder *)coder
 {
-	int  version;
-  
-	[super read:stream];
-	
-	version = NXTypedStreamClassVersion( stream, MISC_COLORVIEW_CLASSNAME );
-	
-	switch( version )
-	{
-		case 0:
-			backgroundColor = NXReadColor( stream );
-			NXReadType( stream, "c", &sameColorAsDesktop );
-			break;
-		
-		default:
-			break;
+	if (self = [super initWithCoder:coder]) {
+		if (coder.allowsKeyedCoding) {
+			backgroundColor = [coder decodeObjectOfClass:[NSColor class] forKey:MISCCVBackgroundColor];
+			sameColorAsDesktop = [coder decodeBoolForKey:MISCCVSCAS];
+			
+		} else if ([coder versionForClassName:MISC_COLORVIEW_CLASSNAME] == 0) {
+			//For compatibility:
+			char useDeskCol;
+			
+			backgroundColor = [coder decodeNXColor];
+			[coder decodeValueOfObjCType:"c" at:&useDeskCol];
+			sameColorAsDesktop = useDeskCol;
+		} else {
+			// the defaults
+			backgroundColor = [NSColor whiteColor];
+		}
 	}
-
 	return self;
 }
 
-- write:(NXTypedStream *)stream
+- (void)encodeWithCoder:(NSCoder *)coder
 {
-	[super write:stream];
-
-	NXWriteColor( stream, backgroundColor );
-	NXWriteType( stream, "c", &sameColorAsDesktop );
-
-	return self;
+	NSAssert(coder.allowsKeyedCoding == YES, @"Only keyed coding can be saved!");
+	[super encodeWithCoder:coder];
+	[coder encodeObject:backgroundColor forKey:MISCCVBackgroundColor];
+	[coder encodeBool:sameColorAsDesktop forKey:MISCCVSCAS];
 }
-#endif
 
 @end

@@ -14,10 +14,9 @@
 @interface MiscColorView:NSView
 {
 	NSColor	*backgroundColor;
-	BOOL		sameColorAsDesktop;
+	BOOL	sameColorAsDesktop;
 }
 
-+ (void)initialize;
 - (instancetype)initWithFrame:(NSRect)frameRect;
 
 @property (strong) NSColor *backgroundColor;
@@ -25,8 +24,5 @@
 - (void)setUseSameColorAsDesktop:(BOOL)flag __API_DEPRECATED_WITH_REPLACEMENT("setSameColorAsDesktop", macos(10.0, 10.9));
 
 - (void)drawRect:(NSRect)dirtyRect;
-
-//- read:(NXTypedStream *)stream;
-//- write:(NXTypedStream *)stream;
 
 @end
