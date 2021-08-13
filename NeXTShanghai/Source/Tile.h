@@ -8,6 +8,9 @@
  $Log$
  */
 
+#ifndef __NeXTSHANGHAI_TILES_H__
+#define __NeXTSHANGHAI_TILES_H__
+
 #import	<AppKit/NSImage.h>
 #import	<AppKit/NSView.h>
 
@@ -73,3 +76,4 @@ public:
 	virtual ~Tile(void) = default;
 };
 
+#endif

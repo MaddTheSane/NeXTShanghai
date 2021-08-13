@@ -9,7 +9,10 @@
  $Log$
  */
 
-#import	"Tile.h"
+#ifndef __NeXTSHANGHAI_GAMETILES_H__
+#define __NeXTSHANGHAI_GAMETILES_H__
+
+#include "Tile.h"
 
 extern "C" {
 #import	<objc/objc.h>
@@ -56,7 +59,7 @@ private:
 	/// in reverse highlighting.
 	BOOL		selected;
 public:
-	BOOL		isSelected(void) {
+	inline const BOOL isSelected(void) {
 		return	selected;
 	}
 	void		setSelected(BOOL flag) {
@@ -69,10 +72,10 @@ protected:
 	/// a subclass.
 	TILE_TYPE	my_tile_type;
 public:
-	TILE_TYPE	tileType(void) {
+	inline const TILE_TYPE	tileType(void) {
 		return my_tile_type;
 	}
-	BOOL		isTileType(TILE_TYPE aType);
+	const BOOL		isTileType(TILE_TYPE aType);
 	
 
 private:
@@ -80,7 +83,7 @@ private:
 	/// selectable.
 	BOOL	selectable;
 public:
-	BOOL	isSelectable(void) {
+	inline const BOOL isSelectable(void) {
 		return selectable;
 	}
 	void	setSelectable(BOOL flag) {
@@ -95,13 +98,13 @@ private:
 	BOOL	removed;
 	BOOL	touched;
 public:
-	BOOL	isRemoved(void) {
+	inline const BOOL isRemoved(void) {
 		return removed;
 	}
 	void	setRemoved(BOOL flag) {
 		removed = flag;
 	}
-	BOOL	gotTouched(void) {
+	inline const BOOL gotTouched(void) {
 		return touched;
 	}
 	void	markTouched(BOOL flag) {
@@ -114,8 +117,9 @@ public:
 	virtual void drawImage(NSPoint aPoint) final;
 
 
-public:
-	GameTile(void) : selected(NO), selectable(NO), touched(NO) {}
+protected:
+	GameTile(TILE_TYPE the_tile_type) : selected(NO), selectable(NO), touched(NO), my_tile_type(the_tile_type) {}
 
 };
 
+#endif

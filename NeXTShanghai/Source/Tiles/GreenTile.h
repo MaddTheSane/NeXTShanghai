@@ -8,13 +8,17 @@
  $Log$
  */
 
-#import	"GameTile.h"
+#ifndef __TILES_GREENTILE_H__
+#define __TILES_GREENTILE_H__
+
+#include "GameTile.h"
 
 class GreenTile final: public GameTile {
 
 public:
-	GreenTile(void): GameTile() {
-		my_tile_type = GREEN;
+	GreenTile(void): GameTile(GREEN) {
 		loadImageFromFile(@"d_green");
 	}
 };
+
+#endif

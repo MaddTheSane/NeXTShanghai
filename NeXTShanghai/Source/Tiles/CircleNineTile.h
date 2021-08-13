@@ -8,13 +8,17 @@
  $Log$
  */
 
-#import	"GameTile.h"
+#ifndef __TILES_CIRCLENINETILE_H__
+#define __TILES_CIRCLENINETILE_H__
+
+#include "GameTile.h"
 
 class CircleNineTile final: public GameTile {
 
 public:
-	CircleNineTile(void): GameTile() {
-		my_tile_type = CIRCLE_9;
+	CircleNineTile(void): GameTile(CIRCLE_9) {
 		loadImageFromFile(@"circ9");
 	}
 };
+
+#endif

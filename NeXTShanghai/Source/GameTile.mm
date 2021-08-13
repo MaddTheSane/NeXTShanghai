@@ -13,7 +13,7 @@ extern "C" {
 #include "mj.h"
 }
 
-BOOL GameTile::isTileType(TILE_TYPE aType) {
+const BOOL GameTile::isTileType(TILE_TYPE aType) {
 	return aType == my_tile_type ? YES : NO ;
 }
 

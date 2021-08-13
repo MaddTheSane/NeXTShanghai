@@ -8,12 +8,15 @@
  $Log$
  */
 
-#import	"GameTile.h"
+#ifndef __TILES_FLOWERTILE_H__
+#define __TILES_FLOWERTILE_H__
+
+#include "GameTile.h"
 
 class FlowerTile : public GameTile {
 
 public:
-	FlowerTile(void): GameTile() {
-		my_tile_type = FLOWER;
-	}
+	FlowerTile(void): GameTile(FLOWER) { }
 };
+
+#endif

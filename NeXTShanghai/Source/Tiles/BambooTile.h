@@ -8,7 +8,10 @@
  $Log$
  */
 
-#import	"FlowerTile.h"
+#ifndef __TILES_BAMBOOTILE_H__
+#define __TILES_BAMBOOTILE_H__
+
+#include "FlowerTile.h"
 
 class BambooTile final: public FlowerTile {
 
@@ -17,3 +20,5 @@ public:
 		loadImageFromFile(@"f_bam");
 	}
 };
+
+#endif

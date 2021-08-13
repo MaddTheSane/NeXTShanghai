@@ -8,13 +8,17 @@
  $Log$
  */
 
-#import	"GameTile.h"
+#ifndef __TILES_CHARACTERFIVETILE_H__
+#define __TILES_CHARACTERFIVETILE_H__
+
+#include "GameTile.h"
 
 class CharacterFiveTile final: public GameTile {
 
 public:
-	CharacterFiveTile(void): GameTile() {
-		my_tile_type = CHARACTER_5;
+	CharacterFiveTile(void): GameTile(CHARACTER_5) {
 		loadImageFromFile(@"char5");
 	}
 };
+
+#endif

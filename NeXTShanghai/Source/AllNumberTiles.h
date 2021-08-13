@@ -1,6 +1,9 @@
 // Sucks the number tile definitions...
 // which actually have some cone inside..:-)
 
+#ifndef __TILES_NUMBERTILES_H__
+#define __TILES_NUMBERTILES_H__
+
 #import "NumberTile.h"
 
 class NumberZeroTile final: public NumberTile {
@@ -82,3 +85,5 @@ public:
 		loadImageFromFile(@"n_9");
 	}
 };
+
+#endif

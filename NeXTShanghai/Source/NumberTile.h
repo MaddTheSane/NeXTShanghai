@@ -10,7 +10,10 @@
  $Log$
  */
 
-#import	"Tile.h"
+#ifndef __NeXTSHANGHAI_NUMBERTILES_H__
+#define __NeXTSHANGHAI_NUMBERTILES_H__
+
+#include "Tile.h"
 
 #import	<Foundation/Foundation.h>
 
@@ -21,3 +24,4 @@ public:
 	virtual void drawImage(NSPoint aPoint) final;
 };
 
+#endif

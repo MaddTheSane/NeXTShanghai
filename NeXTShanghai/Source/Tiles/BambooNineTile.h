@@ -8,13 +8,17 @@
  $Log$
  */
 
-#import	"GameTile.h"
+#ifndef __TILES_BAMBOONINETILE_H__
+#define __TILES_BAMBOONINETILE_H__
+
+#include "GameTile.h"
 
 class BambooNineTile final: public GameTile {
 
 public:
-	BambooNineTile(void): GameTile() {
-		my_tile_type = BAMBOO_9;
+	BambooNineTile(void): GameTile(BAMBOO_9) {
 		loadImageFromFile(@"bam9");
 	}
 };
+
+#endif

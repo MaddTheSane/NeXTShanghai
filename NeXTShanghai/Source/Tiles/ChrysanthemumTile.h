@@ -8,7 +8,10 @@
  $Log$
  */
 
-#import	"FlowerTile.h"
+#ifndef __TILES_CHRYSANTHEMUMTILE_H__
+#define __TILES_CHRYSANTHEMUMTILE_H__
+
+#include "FlowerTile.h"
 
 class ChrysanthemumTile final: public FlowerTile {
 
@@ -17,3 +20,5 @@ public:
 		loadImageFromFile(@"f_mum");
 	}
 };
+
+#endif

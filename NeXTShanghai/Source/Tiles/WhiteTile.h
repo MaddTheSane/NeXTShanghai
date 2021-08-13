@@ -8,13 +8,17 @@
  $Log$
  */
 
-#import	"GameTile.h"
+#ifndef __TILES_WHITETILE_H__
+#define __TILES_WHITETILE_H__
+
+#include "GameTile.h"
 
 class WhiteTile final: public GameTile {
 
 public:
-	WhiteTile(void): GameTile() {
-		my_tile_type = WHITE;
+	WhiteTile(void): GameTile(WHITE) {
 		loadImageFromFile(@"d_white");
 	}
 };
+
+#endif

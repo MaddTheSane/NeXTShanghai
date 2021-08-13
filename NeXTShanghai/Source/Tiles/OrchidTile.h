@@ -8,7 +8,10 @@
  $Log$
  */
 
-#import	"FlowerTile.h"
+#ifndef __TILES_ORCHIDTILE_H__
+#define __TILES_ORCHIDTILE_H__
+
+#import "FlowerTile.h"
 
 class OrchidTile final: public FlowerTile {
 
@@ -17,3 +20,5 @@ public:
 		loadImageFromFile(@"f_orch");
 	}
 };
+
+#endif

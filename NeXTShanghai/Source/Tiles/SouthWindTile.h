@@ -8,13 +8,17 @@
  $Log$
  */
 
-#import	"GameTile.h"
+#ifndef __TILES_SOUTHWINDTILE_H__
+#define __TILES_SOUTHWINDTILE_H__
+
+#include "GameTile.h"
 
 class SouthWindTile final: public GameTile {
 
 public:
-	SouthWindTile(void): GameTile() {
-		my_tile_type = SOUTH_WIND;
+	SouthWindTile(void): GameTile(SOUTH_WIND) {
 		loadImageFromFile(@"w_south");
 	}
 };
+
+#endif
