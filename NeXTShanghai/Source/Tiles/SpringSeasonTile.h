@@ -10,7 +10,7 @@
 
 #import	"SeasonTile.h"
 
-class SpringSeasonTile : public SeasonTile {
+class SpringSeasonTile final: public SeasonTile {
 
 public:
 	SpringSeasonTile(void): SeasonTile() {

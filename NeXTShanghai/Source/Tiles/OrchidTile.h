@@ -10,7 +10,7 @@
 
 #import	"FlowerTile.h"
 
-class OrchidTile : public FlowerTile {
+class OrchidTile final: public FlowerTile {
 
 public:
 	OrchidTile(void): FlowerTile() {

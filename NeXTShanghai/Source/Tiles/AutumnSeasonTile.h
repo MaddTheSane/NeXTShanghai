@@ -10,7 +10,7 @@
 
 #import	"SeasonTile.h"
 
-class AutumnSeasonTile : public SeasonTile {
+class AutumnSeasonTile final: public SeasonTile {
 
 public:
 	AutumnSeasonTile(void): SeasonTile() {

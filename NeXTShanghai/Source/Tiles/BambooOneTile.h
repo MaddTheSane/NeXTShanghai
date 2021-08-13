@@ -10,7 +10,7 @@
 
 #import	"GameTile.h"
 
-class BambooOneTile : public GameTile {
+class BambooOneTile final: public GameTile {
 
 public:
 	BambooOneTile(void): GameTile() {

@@ -79,10 +79,6 @@ void GameCoordinator::updateView( void ) {
 void GameCoordinator::drawImage( void ) {
 	BOOL didDrawTouchedTiles = NO;
 	NSPoint backgroundOrigin = NSMakePoint(-8, -22);
-	NSPoint aPoint;
-	NSRect	aClipRect;
-	NSPoint checkPoint;
-	NSRect	checkClipRect;
 	
 	//assert([ my_view isFocusView ]);
 	// Have each tile that is marked as
@@ -101,9 +97,11 @@ void GameCoordinator::drawImage( void ) {
 	// Sorry..this is not really cool. I could do something like [myView - superview coords]
 	// but that wouldn't make the overall code any better :-(
 	
+#if 0
 	for (int i = 0; i < tile_array.size(); i++) {
 		if (tile_array[i].gotTouched()) {
-			aPoint = description_array[i]->tileLocation();
+			NSPoint aPoint = description_array[i]->tileLocation();
+			NSRect	aClipRect;
 			
 			aClipRect.origin = aPoint;
 			aClipRect.size.width = TILE_WIDTH_WITH_SHADOW;
@@ -124,8 +122,9 @@ void GameCoordinator::drawImage( void ) {
 			
 			for (int t = 0; t < tile_array.size(); t++) {
 				if (!tile_array[t].isRemoved()) {
-					checkPoint = description_array[t]->tileLocation();
+					NSPoint checkPoint = description_array[t]->tileLocation();
 			
+					NSRect	checkClipRect;
 					checkClipRect.origin = checkPoint;
 					checkClipRect.size.width = TILE_WIDTH_WITH_SHADOW;
 					checkClipRect.size.height = TILE_HEIGHT;
@@ -143,6 +142,7 @@ void GameCoordinator::drawImage( void ) {
             [NSGraphicsContext restoreGraphicsState];
 		}
 	}
+#endif
 	
 	// If we did not redraw any single tiles then if might be about time to redraw the 
 	// whole board.

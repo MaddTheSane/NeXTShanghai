@@ -10,7 +10,7 @@
 
 #import	"GameTile.h"
 
-class CircleEightTile : public GameTile {
+class CircleEightTile final: public GameTile {
 
 public:
 	CircleEightTile(void): GameTile() {
