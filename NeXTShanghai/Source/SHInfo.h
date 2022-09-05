@@ -19,7 +19,7 @@
 #import <AppKit/AppKit.h>
 
 //! Handles the Icon switching in the Info panel. Just basic actions.
-@interface SHInfo:NSObject
+@interface SHInfo:NSObject <NSAnimationDelegate>
 {
 	IBOutlet NSPanel *panel;
 	IBOutlet id		imageButton;
@@ -35,8 +35,8 @@
 	IBOutlet NSTextField *wolfyText;
 		
 	BOOL	animationRunning;
-	id		currentAnimator;
-	id		someAnimator;		// Objects that do some nice animations
+	NSAnimation		*currentAnimator;
+	NSAnimation		*someAnimator;		// Objects that do some nice animations
 }
 
 - init;
@@ -57,7 +57,6 @@
 // Delegatemethods to stop a animation properly even when our window closes.
 // Attention. We´re the animators delegate and the windows delegate. 
 
-- (void)animationDidStop:sender;
 - (void)windowWillClose:sender;
 
 @end

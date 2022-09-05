@@ -105,10 +105,10 @@ Note:	For a detailed description please read the class documentation.
 	currentAnimator = someAnimator;
 		
 	[currentAnimator setDelegate:self];
-	[currentAnimator startAnimation:self];
+	[currentAnimator startAnimation];
 }
 
-- (IBAction)animationDidStop:sender
+- (void)animationDidStop:(NSAnimation *)animation
 {
 	// After the animation we have to switch to the original BeakerIcon
 	// we are also registered as the animators delegate.
